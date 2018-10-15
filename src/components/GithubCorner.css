@@ -1,0 +1,53 @@
+.GithubCorner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.GithubCorner svg {
+  color: #fff;
+  border: 0;
+  max-width: 6rem;
+  max-height: 6rem;
+}
+
+.GithubCorner .octo-arm {
+  transform-origin: 130px 106px;
+}
+
+.GithubCorner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .GithubCorner {
+    position: absolute;
+    top: 6rem;
+    z-index: 1;
+  }
+
+  .GithubCorner:hover .octo-arm {
+    animation: none;
+  }
+
+  .GithubCorner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}

@@ -1,0 +1,38 @@
+.Contact {
+}
+
+.Contact--Details {
+  margin-top: 3rem;
+}
+
+.Contact--Details--Item {
+  display: flex;
+  padding: 2rem 0;
+  border-top: 1px solid var(--lightGrey);
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.Contact--Details--Item:hover,
+.Contact--Details--Item:focus {
+  color: var(--primary);
+}
+
+.Contact--Details--Item svg {
+  margin-right: 1.5rem;
+  color: var(--primary);
+}
+
+@media (min-width: 750px) {
+  .Contact--Section1--Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .Contact--Section1--Container > * {
+    width: calc(50% - 2rem);
+  }
+}

@@ -1,0 +1,142 @@
+.Nav {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid var(--lightGrey);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.025);
+}
+
+.Nav--Container {
+  display: flex;
+  align-items: center;
+  height: 6rem;
+}
+
+.Nav--Links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.Nav--Links > * + * {
+  margin-left: 1rem;
+}
+
+.Nav .Logo {
+  margin-right: 3rem;
+  position: relative;
+}
+
+.Nav--MenuButton {
+  display: none;
+}
+
+.NavLink {
+  padding: 0.5rem 1rem;
+  display: block;
+  font-weight: 500;
+  transition: color 0.2s, border-bottom-color 0.2s;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  border-bottom-color: transparent;
+}
+
+.NavLink:hover,
+.NavLink.active,
+.NavLink:focus {
+  color: var(--primary);
+  border-bottom-color: currentColor;
+}
+
+@media (max-width: 600px) {
+  .Nav--Container {
+    display: flex;
+  }
+
+  .Nav--MenuButton {
+    display: block;
+    margin-left: auto;
+    z-index: 1;
+  }
+  .Nav .Logo {
+    z-index: 1;
+  }
+
+  .Nav--Links {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    animation: Nav--Links 0.2s ease;
+  }
+
+  .Nav--Links > * + * {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .Nav-active .Nav--Links {
+    display: flex;
+  }
+
+  .Nav-active .NavLink {
+    animation: Nav--Link 0.3s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .Nav .NavLink {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  .Nav .NavLink:nth-of-type(2) {
+    animation-delay: 0.1s;
+  }
+  .Nav .NavLink:nth-of-type(3) {
+    animation-delay: 0.2s;
+  }
+  .Nav .NavLink:nth-of-type(4) {
+    animation-delay: 0.3s;
+  }
+  .Nav .NavLink:nth-of-type(5) {
+    animation-delay: 0.4s;
+  }
+  .Nav .NavLink:nth-of-type(6) {
+    animation-delay: 0.5s;
+  }
+  .Nav .NavLink:nth-of-type(7) {
+    animation-delay: 0.6s;
+  }
+  .Nav .NavLink:nth-of-type(8) {
+    animation-delay: 0.7s;
+  }
+  .Nav .NavLink:nth-of-type(7) {
+    animation-delay: 0.6s;
+  }
+}
+
+@keyframes Nav--Link {
+  from {
+    transform: translate(0rem, 1rem);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes Nav--Links {
+  from {
+    opacity: 0;
+  }
+}

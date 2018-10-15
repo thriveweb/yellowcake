@@ -1,0 +1,88 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 500px;
+  margin: 2.5rem 0;
+}
+
+.Form > * + * {
+  margin-top: 2rem;
+}
+
+.Form--Label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.Form--Input {
+  font-family: inherit;
+  flex-grow: 1;
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  border: 1px solid #bababa;
+  padding: 1.5rem 2rem;
+  border-radius: var(--borderRadius);
+  line-height: 1.25em;
+  transition: border-color 0.2s;
+  resize: none;
+}
+
+.Form--Select {
+  background: none;
+  appearance: none;
+}
+
+.Form--Label.has-arrow:after {
+  content: '';
+  position: absolute;
+  right: 2.5rem;
+  top: 50%;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  height: 10px;
+  width: 10px;
+  transform: translateY(-75%) rotate(45deg);
+  pointer-events: none;
+}
+
+.Form--Input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.Form--Input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.Form--Input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.Form--Input[disabled],
+.Form--SubmitButton[disabled] {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: progress;
+}
+
+.Form--Input::placeholder {
+  text-transform: none;
+}
+
+.Form--Alert {
+  background: var(--lightGrey);
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.Form--Input-honey {
+  display: none;
+}

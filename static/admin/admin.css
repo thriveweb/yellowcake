@@ -1,0 +1,82 @@
+/* Admin tweaks 1.0.3 */
+.nc-mediaLibrary-cardImage {
+  object-fit: contain;
+  height: auto;
+  width: auto;
+  object-position: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nc-mediaLibrary-cardImage-container {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: whitesmoke;
+  flex-grow: 1;
+}
+
+.nc-imageControl-imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dfdfe3;
+}
+
+.nc-imageControl-imageWrapper img {
+  object-fit: contain;
+  object-position: center;
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.nc-entryListing-cardImage {
+  background-size: contain;
+  background-color: whitesmoke;
+}
+
+.nc-mediaLibrary-cardText {
+  margin: 0;
+}
+
+.nc-mediaLibrary-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.nc-entryEditor-container {
+  max-width: 96%;
+}
+
+/* Custom logo */
+
+.nc-githubAuthenticationPage-logo {
+  background-image: url(/images/logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+
+.nc-githubAuthenticationPage-logo svg {
+  display: none;
+}
+
+.nc-githubAuthenticationPage-button {
+  text-indent: -1000px;
+  overflow: hidden;
+  width: 8rem;
+}
+
+.nc-githubAuthenticationPage-button:after {
+  content: 'Login';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  text-indent: 0;
+}

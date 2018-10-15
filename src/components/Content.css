@@ -1,0 +1,24 @@
+.Content--Image,
+.Content img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin-bottom: 2.5rem;
+}
+
+.Content--Iframe {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.Content--Iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

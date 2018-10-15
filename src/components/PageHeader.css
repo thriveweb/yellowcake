@@ -1,0 +1,36 @@
+.PageHeader {
+  background-color: var(--darkGrey);
+  color: white;
+  padding: 15rem 0;
+}
+
+.PageHeader .BackgroundImage {
+  opacity: 0.8;
+}
+
+.PageHeader-large {
+  padding: 20rem 0;
+}
+
+.PageHeader--Title {
+  font-size: 6rem;
+  margin-bottom: 0;
+}
+
+.PageHeader--Subtitle {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.PageHeader .container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@media (max-width: 600px) {
+  .PageHeader {
+    padding: 7rem 0;
+  }
+  .PageHeader-large {
+    padding: 12.5rem 0;
+  }
+}

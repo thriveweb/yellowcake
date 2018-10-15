@@ -1,0 +1,37 @@
+.Form-controlled .Form--Input {
+  border: none;
+}
+
+.Form--Line {
+  width: 100%;
+  height: 1px;
+  stroke: #bababa;
+  stroke-width: 2px;
+}
+
+.Form--Line .focus,
+.Form--Line .valid,
+.Form--Line .invalid {
+  transition: all 0.2s;
+  stroke-dasharray: 0, 20;
+  stroke-dashoffset: -20;
+}
+
+.Form--Line .focus {
+  stroke: black;
+}
+
+.Form--Line .valid {
+  stroke: hsl(166, 72%, 40%);
+}
+
+.Form--Line .invalid {
+  stroke: var(--danger);
+}
+
+.Form--Input:focus ~ .Form--Line .focus,
+.Form--Input:valid ~ .Form--Line .valid,
+.Form--Input[data-touched]:invalid ~ .Form--Line .invalid {
+  stroke-dasharray: 40, 0;
+  stroke-dashoffset: 0;
+}

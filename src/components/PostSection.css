@@ -1,0 +1,51 @@
+.PostSection {
+}
+
+.PostSection--Grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.PostSection--Grid > * {
+  width: calc(33.33% - 2rem);
+  margin-bottom: 4rem;
+}
+
+@supports (display: grid) {
+  .PostSection--Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+  }
+
+  .PostSection--Grid > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.PostSection--Title {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 888px) {
+  .PostSection--Grid > * {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto 4rem;
+    display: block;
+  }
+
+  @supports (display: grid) {
+    .PostSection--Grid {
+      display: block;
+      grid-template-columns: 1;
+      grid-gap: 0;
+    }
+  }
+}

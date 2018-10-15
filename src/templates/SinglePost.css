@@ -1,0 +1,82 @@
+.SinglePost {
+}
+
+.SinglePost--BackgroundImage {
+  height: 50rem;
+}
+
+.SinglePost--BackButton {
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+.SinglePost--BackButton svg {
+  transition: transform 0.2s ease-out;
+  transform: translateX(0);
+  height: 1.2em;
+}
+
+.SinglePost--BackButton:hover svg,
+.SinglePost--BackButton:focus svg {
+  transform: translateX(-0.25em);
+}
+
+.SinglePost--Content {
+  background: white;
+  margin-top: 30rem;
+  padding: 8rem 8rem 4rem 8rem;
+}
+
+@media screen and (max-width: 750px) {
+  .SinglePost--Content {
+    padding: 4rem 2rem;
+  }
+}
+
+.SinglePost--Meta {
+  font-size: 1rem;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.SinglePost--Meta > * + * {
+  margin-left: 0.75em;
+}
+
+.SinglePost--Title {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.SinglePost--InnerContent {
+  padding: 0 8rem;
+}
+
+@media screen and (max-width: 750px) {
+  .SinglePost--InnerContent {
+    padding: 0;
+  }
+}
+
+.SinglePost--Pagination {
+  margin: 4rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SinglePost--Pagination--Link {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.SinglePost--Pagination--Link.next {
+  margin-left: auto;
+}
