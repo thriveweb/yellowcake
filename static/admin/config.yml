@@ -31,7 +31,18 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Slug, name: slug, widget: hidden, default: 'contact' }
           - { label: Title, name: title, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
+          - {
+              label: Featured Image,
+              name: featuredImage,
+              widget: image,
+              options: { media_library: { config: { multiple: false } } },
+            }
+          - {
+              label: Cheesy Image,
+              name: cheesyImage,
+              widget: image,
+              options: { media_library: { config: { multiple: false } } },
+            }
           - { label: Subtitle, name: subtitle, widget: markdown }
           - { label: Body, name: body, widget: markdown }
           - { label: Address, name: address, widget: text }

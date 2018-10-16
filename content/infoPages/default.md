@@ -2,7 +2,7 @@
 template: DefaultPage
 slug: default
 title: Default
-featuredImage: /images/uploads/nitish-meena-37745.jpg
+featuredImage: 'https://ucarecdn.com/3ce1b407-7d43-413f-a45a-c0699ede8f8b/'
 ---
 
 ## This is the DefaultPage template

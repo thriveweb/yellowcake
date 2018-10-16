@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: Hello World!
-featuredImage: /images/uploads/yellowcake.jpg
+featuredImage: 'https://ucarecdn.com/3ce1b407-7d43-413f-a45a-c0699ede8f8b/'
 subtitle: This is the home page subtitle test
 meta:
   title: ''

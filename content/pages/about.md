@@ -2,7 +2,7 @@
 template: AboutPage
 slug: about
 title: About page title
-featuredImage: /images/uploads/yellowcake1.jpg
+featuredImage: 'https://ucarecdn.com/3ce1b407-7d43-413f-a45a-c0699ede8f8b/'
 subtitle: Test subtitle
 section1: >-
   ## Lorem Ipsum

@@ -89,9 +89,7 @@ export const pageQuery = graphql`
         excerpt
         template
         subtitle
-        featuredImage {
-          ...FluidImage
-        }
+        featuredImage
       }
     }
 
@@ -110,9 +108,7 @@ export const pageQuery = graphql`
             categories {
               category
             }
-            featuredImage {
-              ...SmallImage
-            }
+            featuredImage
           }
         }
       }

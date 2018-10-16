@@ -3,7 +3,7 @@ template: SinglePost
 title: Hello World!
 status: Featured / Published
 date: '2018-03-27'
-featuredImage: /images/uploads/smoke1.jpg
+featuredImage: 'https://ucarecdn.com/3ce1b407-7d43-413f-a45a-c0699ede8f8b/'
 excerpt: >-
   Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam
   interdum arcu vitae augue pulvinar sodales. Sed non dui diam. Quisque lectus
