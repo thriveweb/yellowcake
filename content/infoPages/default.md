@@ -2,7 +2,7 @@
 template: DefaultPage
 slug: default
 title: Default
-featuredImage: 'https://ucarecdn.com/3ce1b407-7d43-413f-a45a-c0699ede8f8b/'
+featuredImage: 'https://ucarecdn.com/35cfa999-16a8-4427-8d1c-145de09e4916/'
 ---
 
 ## This is the DefaultPage template
