@@ -35,19 +35,19 @@ export default class Nav extends Component {
             <Logo />
           </Link>
           <div className="Nav--Links">
-            <NavLink to="/" exact>
+            <NavLink to="/" exact="true">
               Home
             </NavLink>
-            <NavLink to="/about/" exact>
+            <NavLink to="/about/" exact="true">
               About
             </NavLink>
-            <NavLink to="/blog/" exact>
+            <NavLink to="/blog/" exact="true">
               Blog
             </NavLink>
-            <NavLink to="/default/" exact>
+            <NavLink to="/default/" exact="true">
               Default
             </NavLink>
-            <NavLink to="/contact/" exact>
+            <NavLink to="/contact/" exact="true">
               Contact
             </NavLink>
           </div>

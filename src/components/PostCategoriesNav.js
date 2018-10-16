@@ -5,12 +5,12 @@ import './PostCategoriesNav.css'
 
 const PostCategoriesNav = ({ categories }) => (
   <div className="PostCategoriesNav">
-    <Link className="NavLink" exact to={`/blog/`}>
+    <Link className="NavLink" exact="true" to={`/blog/`}>
       All
     </Link>
     {categories.map((category, index) => (
       <Link
-        exact
+        exact="true"
         className="NavLink"
         key={category.title + index}
         to={category.slug}
