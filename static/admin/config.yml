@@ -10,6 +10,7 @@ media_library:
   name: uploadcare
   config:
     publicKey: a73a170cb5cdef662983
+    multiple: true
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'
