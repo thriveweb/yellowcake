@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Image from '../components/Image'
 import Content from '../components/Content.js'
+import Layout from '../components/Layout.js'
 import './AboutPage.css'
 
 // Export Template for use in CMS preview
@@ -17,7 +18,7 @@ export const AboutPageTemplate = ({
   testImage,
   body
 }) => (
-  <main className="About">
+  <Layout className="About">
     <Helmet>
       <title>{title}</title>
     </Helmet>
@@ -40,7 +41,7 @@ export const AboutPageTemplate = ({
         <Image src={testImage} alt="Image" />
       </div>
     </section>
-  </main>
+  </Layout>
 )
 
 const AboutPage = ({ data: { page } }) => (

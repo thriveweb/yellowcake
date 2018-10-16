@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import Content from '../components/Content'
+import Layout from '../components/Layout'
 import './ContactPage.css'
 
 // Export Template for use in CMS preview
@@ -18,7 +19,7 @@ export const ContactPageTemplate = ({
   phone,
   email
 }) => (
-  <main className="Contact">
+  <Layout className="Contact">
     <Helmet>
       <title>{title}</title>
     </Helmet>
@@ -65,7 +66,7 @@ export const ContactPageTemplate = ({
         </div>
       </div>
     </section>
-  </main>
+  </Layout>
 )
 
 const ContactPage = ({ data: { page } }) => (
