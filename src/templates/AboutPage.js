@@ -45,7 +45,7 @@ const AboutPage = ({ data: { page } }) => (
     <AboutPageTemplate {...page} {...page.frontmatter} body={page.html} />
   </Layout>
 )
-console.log(AboutPageTemplate)
+
 export default AboutPage
 
 export const pageQuery = graphql`
