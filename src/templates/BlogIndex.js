@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import PostSection from '../components/PostSection'
 import PostCategoriesNav from '../components/PostCategoriesNav'
+import Layout from '../components/Layout'
 
 // Export Template for use in CMS preview
 export const BlogIndexTemplate = ({
@@ -22,7 +23,7 @@ export const BlogIndexTemplate = ({
   const filteredPosts = isCategory ? posts.filter(byCategory) : posts
 
   return (
-    <main className="Blog">
+    <Layout className="Blog">
       <Helmet>
         <title>{title}</title>
       </Helmet>
@@ -48,7 +49,7 @@ export const BlogIndexTemplate = ({
           </div>
         </section>
       )}
-    </main>
+    </Layout>
   )
 }
 
