@@ -15,7 +15,6 @@ export const AboutPageTemplate = ({
   featuredImage,
   section1,
   section2,
-  testImage,
   body
 }) => (
   <Layout className="About">
@@ -37,8 +36,6 @@ export const AboutPageTemplate = ({
     <section className="section">
       <div className="container">
         <Content source={section2} />
-        <p>The image below is a {'<Image />'}</p>
-        <Image src={testImage} alt="Image" />
       </div>
     </section>
   </Layout>
