@@ -83,9 +83,7 @@ export const pageQuery = graphql`
         title
         template
         subtitle
-        featuredImage {
-          ...FluidImage
-        }
+        featuredImage
         address
         phone
         email
