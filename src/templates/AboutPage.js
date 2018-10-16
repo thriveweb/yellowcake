@@ -16,7 +16,7 @@ export const AboutPageTemplate = ({
   section2,
   body
 }) => (
-  <Layout className="About">
+  <main className="About">
     <Helmet>
       <title>{title}</title>
     </Helmet>
@@ -37,13 +37,15 @@ export const AboutPageTemplate = ({
         <Content source={section2} />
       </div>
     </section>
-  </Layout>
+  </main>
 )
 
 const AboutPage = ({ data: { page } }) => (
-  <AboutPageTemplate {...page} {...page.frontmatter} body={page.html} />
+  <Layout>
+    <AboutPageTemplate {...page} {...page.frontmatter} body={page.html} />
+  </Layout>
 )
-
+console.log(AboutPageTemplate)
 export default AboutPage
 
 export const pageQuery = graphql`

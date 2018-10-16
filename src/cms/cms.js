@@ -9,7 +9,7 @@ import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
 
-CMS.registerPreviewStyle('/styles.css')
+CMS.registerPreviewStyle('https://yellowcake.netlify.com/styles.css')
 
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <HomePageTemplate {...entry.toJS().data} />

@@ -19,7 +19,7 @@ export const ContactPageTemplate = ({
   phone,
   email
 }) => (
-  <Layout className="Contact">
+  <main className="Contact">
     <Helmet>
       <title>{title}</title>
     </Helmet>
@@ -66,11 +66,13 @@ export const ContactPageTemplate = ({
         </div>
       </div>
     </section>
-  </Layout>
+  </main>
 )
 
 const ContactPage = ({ data: { page } }) => (
-  <ContactPageTemplate {...page.frontmatter} body={page.html} />
+  <Layout>
+    <ContactPageTemplate {...page.frontmatter} body={page.html} />
+  </Layout>
 )
 
 export default ContactPage

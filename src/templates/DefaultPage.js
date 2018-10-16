@@ -13,7 +13,7 @@ export const DefaultPageTemplate = ({
   featuredImage,
   body
 }) => (
-  <Layout className="DefaultPage">
+  <main className="DefaultPage">
     <Helmet>
       <title>{title}</title>
     </Helmet>
@@ -29,11 +29,13 @@ export const DefaultPageTemplate = ({
         <Content source={body} />
       </div>
     </section>
-  </Layout>
+  </main>
 )
 
 const DefaultPage = ({ data: { page } }) => (
-  <DefaultPageTemplate {...page.frontmatter} body={page.html} />
+  <Layout>
+    <DefaultPageTemplate {...page.frontmatter} body={page.html} />
+  </Layout>
 )
 export default DefaultPage
 

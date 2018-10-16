@@ -23,7 +23,7 @@ export const BlogIndexTemplate = ({
   const filteredPosts = isCategory ? posts.filter(byCategory) : posts
 
   return (
-    <Layout className="Blog">
+    <main className="Blog">
       <Helmet>
         <title>{title}</title>
       </Helmet>
@@ -49,27 +49,29 @@ export const BlogIndexTemplate = ({
           </div>
         </section>
       )}
-    </Layout>
+    </main>
   )
 }
 
 // Export Default BlogIndex for front-end
 const BlogIndex = ({ data }) => (
-  <BlogIndexTemplate
-    {...data.page}
-    {...data.page.fields}
-    {...data.page.frontmatter}
-    posts={data.posts.edges.map(post => ({
-      ...post.node,
-      ...post.node.frontmatter,
-      ...post.node.fields
-    }))}
-    postCategories={data.postCategories.edges.map(post => ({
-      ...post.node,
-      ...post.node.frontmatter,
-      ...post.node.fields
-    }))}
-  />
+  <Layout>
+    <BlogIndexTemplate
+      {...data.page}
+      {...data.page.fields}
+      {...data.page.frontmatter}
+      posts={data.posts.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+      postCategories={data.postCategories.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+    />
+  </Layout>
 )
 
 export default BlogIndex

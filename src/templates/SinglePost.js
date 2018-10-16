@@ -19,7 +19,7 @@ export const SinglePostTemplate = ({
   prevPostURL,
   categories = []
 }) => (
-  <Layout>
+  <main>
     <article
       className="SinglePost section light"
       itemScope
@@ -101,7 +101,7 @@ export const SinglePostTemplate = ({
         </div>
       </div>
     </article>
-  </Layout>
+  </main>
 )
 
 // Export Default SinglePost for front-end
@@ -109,13 +109,15 @@ const SinglePost = ({ data, pageContext }) => {
   const { post, allPosts } = data
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
-    <SinglePostTemplate
-      {...post}
-      {...post.frontmatter}
-      body={post.html}
-      nextPostURL={_get(thisEdge, 'next.fields.slug')}
-      prevPostURL={_get(thisEdge, 'previous.fields.slug')}
-    />
+    <Layout>
+      <SinglePostTemplate
+        {...post}
+        {...post.frontmatter}
+        body={post.html}
+        nextPostURL={_get(thisEdge, 'next.fields.slug')}
+        prevPostURL={_get(thisEdge, 'previous.fields.slug')}
+      />
+    </Layout>
   )
 }
 

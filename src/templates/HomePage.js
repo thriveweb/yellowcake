@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
-  <Layout className="Home">
+  <main className="Home">
     <PageHeader
       large
       title={title}
@@ -20,12 +20,14 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
         <Content source={body} />
       </div>
     </section>
-  </Layout>
+  </main>
 )
 
 // Export Default HomePage for front-end
 const HomePage = ({ data: { page } }) => (
-  <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
+  <Layout>
+    <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
+  </Layout>
 )
 
 export default HomePage
