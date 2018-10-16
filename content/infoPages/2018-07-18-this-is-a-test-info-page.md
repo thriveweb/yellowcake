@@ -2,7 +2,7 @@
 template: DefaultPage
 slug: test-info-page
 title: This is a test info page
-featuredImage: 'https://ucarecdn.com/3ce1b407-7d43-413f-a45a-c0699ede8f8b/'
+featuredImage: 'https://ucarecdn.com/13ce6316-28c0-4e2d-b60e-5d999e7fdb57/'
 ---
 
 This is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language.

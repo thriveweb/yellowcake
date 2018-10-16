@@ -3,7 +3,7 @@ template: SinglePost
 title: Gatsby Test
 status: Published
 date: '2018-07-18'
-featuredImage: 'https://ucarecdn.com/3ce1b407-7d43-413f-a45a-c0699ede8f8b/'
+featuredImage: 'https://ucarecdn.com/bc11d5d0-76a9-4a28-ad22-ae500b9894ee/'
 excerpt: This is the excerpt
 categories:
   - category: Updates
