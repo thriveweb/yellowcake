@@ -1,9 +1,9 @@
 ---
-title: Post Two
 template: SinglePost
+title: Post Two
 status: Published
 date: '2018-03-28'
-featuredImage: 'https://ucarecdn.com/3ce1b407-7d43-413f-a45a-c0699ede8f8b/'
+featuredImage: 'https://ucarecdn.com/bf271870-1344-43ff-9fee-5127f834a9e9/'
 excerpt: This is an excerpt of Post Two
 categories:
   - category: Updates
