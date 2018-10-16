@@ -59,9 +59,6 @@ export const pageQuery = graphql`
         template
         subtitle
         featuredImage
-        testImage {
-          ...FluidImage
-        }
         section1
         section2
       }
