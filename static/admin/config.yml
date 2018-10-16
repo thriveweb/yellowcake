@@ -10,7 +10,7 @@ media_library:
   name: uploadcare
   config:
     publicKey: a73a170cb5cdef662983
-    multiple: true
+    multiple: false
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'
@@ -34,12 +34,6 @@ collections: # A list of collections the CMS should be able to edit
           - {
               label: Featured Image,
               name: featuredImage,
-              widget: image,
-              options: { media_library: { config: { multiple: false } } },
-            }
-          - {
-              label: Cheesy Image,
-              name: cheesyImage,
               widget: image,
               options: { media_library: { config: { multiple: false } } },
             }
