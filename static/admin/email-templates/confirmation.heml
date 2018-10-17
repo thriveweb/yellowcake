@@ -1,0 +1,26 @@
+<heml>
+  <head>
+    <subject>Confirm your signup</subject>
+    <style>
+      body {
+        text-align: center;
+      }
+      .button {
+        background: #366dc7;
+      }
+      .logo {
+        margin: 25px auto;
+        width: 100px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <container>
+      <img class='logo' src='{{ .SiteURL }}/images/logo.png' />
+      <h2>Confirm your signup</h2>
+      <p>Follow this link to confirm your account:</p>
+      <button class='button' href="{{ .ConfirmationURL }}" style="margin: auto;">Confirm your mail</button>
+    </container>
+  </body>
+</heml>

@@ -1,0 +1,26 @@
+<heml>
+  <head>
+    <subject>Confirm Change of Email</subject>
+    <style>
+      body {
+        text-align: center;
+      }
+      .button {
+        background: #366dc7;
+      }
+      .logo {
+        margin: 25px auto;
+        width: 100px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <container>
+      <img class='logo' src='{{ .SiteURL }}/images/logo.png' />
+      <h2>Confirm Change of Email</h2>
+      <p>Follow this link to confirm the update of your email from {{ .Email }} to {{ .NewEmail }}:</p>
+      <button class='button' href="{{ .ConfirmationURL }}" style="margin: auto;">Change Email</button>
+    </container>
+  </body>
+</heml>
