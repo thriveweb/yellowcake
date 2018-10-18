@@ -2,7 +2,7 @@
 template: BlogIndex
 slug: blog
 title: Blog
-featuredImage: 'https://ucarecdn.com/240adfe4-b336-4f9d-b71c-87642a8a5e15/'
+featuredImage: 'https://ucarecdn.com/b6254577-26bf-4b79-aa9b-f3793e2aebdc/'
 subtitle: Blog subtitle
 ---
 
