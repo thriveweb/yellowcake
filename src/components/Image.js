@@ -3,6 +3,16 @@ import React from 'react'
 import './Image.css'
 
 class Image extends React.Component {
+  checkIfIsLocalSrc(src) {
+    if (
+      src.includes('http://') ||
+      src.includes('https://') ||
+      src.includes('www.')
+    )
+      return false
+    return true
+  }
+
   render() {
     let {
       background,
@@ -14,8 +24,22 @@ class Image extends React.Component {
       onClick,
       alt = ''
     } = this.props
+    const isLocalImg = this.checkIfIsLocalSrc(src)
     /* create source set for images */
-    srcset = `${src}-/resize/320x/320.jpg 320w,${src}-/resize/450x/450.jpg 450w,${src}-/resize/640x/640.jpg 640w,${src}-/resize/750x/750.jpg 750w,${src}-/resize/800x/800.jpg 800w,${src}-/resize/900x/900.jpg 900w,${src}-/resize/1000x/-/quality/lighter/1000.jpg 1000w,${src}-/resize/1200x/-/quality/lighter/1200.jpg 1200w,${src}-/resize/1500x/-/quality/lighter/1500.jpg 1500w,${src}-/resize/1600x/-/quality/lighter/1600.jpg 16000w,${src}-/resize/2000x/-/quality/lightest/2000.jpg 2000w`
+    if (!isLocalImg) {
+      srcset = `
+      ${src}-/resize/320x/320.jpg 320w,
+      ${src}-/resize/450x/450.jpg 450w,
+      ${src}-/resize/640x/640.jpg 640w,
+      ${src}-/resize/750x/750.jpg 750w,
+      ${src}-/resize/800x/800.jpg 800w,
+      ${src}-/resize/900x/900.jpg 900w,
+      ${src}-/resize/1000x/-/quality/lighter/1000.jpg 1000w,
+      ${src}-/resize/1200x/-/quality/lighter/1200.jpg 1200w,
+      ${src}-/resize/1500x/-/quality/lighter/1500.jpg 1500w,
+      ${src}-/resize/1600x/-/quality/lighter/1600.jpg 16000w,
+      ${src}-/resize/2000x/-/quality/lightest/2000.jpg 2000w`
+    }
     /* add resolutions options for inline images */
     if (resolutions === 'small') {
       resolutions = '800x'
@@ -28,7 +52,7 @@ class Image extends React.Component {
     if (background) {
       let style = {}
       style = {
-        backgroundImage: `url(${src}/-/resize/2000x/)`,
+        backgroundImage: `url(${src}${isLocalImg ? '' : '/-/resize/2000x/'})`,
         backgroundSize
       }
       return (
@@ -42,7 +66,7 @@ class Image extends React.Component {
     return (
       <img
         className={`Image ${className}`}
-        src={`${src}/-/resize/${resolutions}/`}
+        src={`${src}${isLocalImg ? '' : '/-/resize/'.resolutions}/`}
         srcSet={srcset}
         sizes={'100vw'}
         onClick={onClick}
