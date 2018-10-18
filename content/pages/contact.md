@@ -2,7 +2,8 @@
 template: ContactPage
 slug: contact
 title: Contact
-featuredImage: 'https://ucarecdn.com/55a7520f-afa5-4d8b-b541-f57bb4163c14/'
+featuredImage: >-
+  https://ucarecdn.com/2887a647-5756-459e-bdca-7f8476a1285c/-/preview/-/rotate/270/
 subtitle: Contact Page has a subtitle
 address: '404 James St, Burleigh Heads QLD 4220'
 phone: 0987 123 456
