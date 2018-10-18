@@ -38,7 +38,8 @@ collections: # A list of collections the CMS should be able to edit
               label: Featured Image,
               name: featuredImage,
               widget: image,
-              options: { media_library: { config: { imageShrink: 640x480 } } },
+              options:
+                { media_library: { config: { imageShrink: 2600x2600 } } },
             }
           - { label: Subtitle, name: subtitle, widget: markdown }
           - { label: Body, name: body, widget: markdown }
