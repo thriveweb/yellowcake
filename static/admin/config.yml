@@ -9,6 +9,11 @@ media_library:
   config:
     publicKey: a73a170cb5cdef662983
     multiple: false
+    tabs: 'file camera url facebook gdrive'
+    effects: 'crop,rotate,enhance,grayscale'
+    imageShrink: '2000x2000'
+    previewStep: true
+    clearable: true
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'
@@ -33,7 +38,7 @@ collections: # A list of collections the CMS should be able to edit
               label: Featured Image,
               name: featuredImage,
               widget: image,
-              options: { media_library: { config: { imageshrink: 640x480 } } },
+              options: { media_library: { config: { imageShrink: 640x480 } } },
             }
           - { label: Subtitle, name: subtitle, widget: markdown }
           - { label: Body, name: body, widget: markdown }
