@@ -1,8 +1,8 @@
 siteTitle: Yellow Cake
 siteUrl: 'https://yellowcake.netlify.com'
 siteDescription: >-
-  A starter project for creating lightning-fast websites with Gatsby Netlify
-  CMS.
+  A starter project for creating lightning-fast websites with Gatsby v2 Netlify
+  CMS v2 and Uploadcare media library.
 socialMediaCard:
-  image: 'https://ucarecdn.com/f31683d7-8fe7-431c-86d6-97f0f097657a/'
+  image: 'https://ucarecdn.com/fcc8d148-a9a8-42ee-a793-0f12b1437f61/'
 headerScripts: <!-- Add your analytics scripts / verification meta here -->
