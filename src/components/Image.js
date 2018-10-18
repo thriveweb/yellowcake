@@ -4,12 +4,7 @@ import './Image.css'
 
 class Image extends React.Component {
   checkIfIsLocalSrc(src) {
-    if (
-      src.includes('http://') ||
-      src.includes('https://') ||
-      src.includes('www.')
-    )
-      return false
+    if (src.includes('ucarecdn.com')) return false
     return true
   }
 
