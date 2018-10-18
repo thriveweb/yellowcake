@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import './Image.css'
 
@@ -8,56 +7,49 @@ class Image extends React.Component {
     let {
       background,
       backgroundSize = 'cover',
+      resolutions = '1000x',
       className = '',
       src,
+      srcset = '',
       onClick,
-      sizes,
-      alt
+      alt = ''
     } = this.props
-
-    const imageSrc = src
+    /* create source set for images */
+    srcset = `${src}-/resize/320x/320.jpg 320w,${src}-/resize/450x/450.jpg 450w,${src}-/resize/640x/640.jpg 640w,${src}-/resize/750x/750.jpg 750w,${src}-/resize/800x/800.jpg 800w,${src}-/resize/900x/900.jpg 900w,${src}-/resize/1000x/-/quality/lighter/1000.jpg 1000w,${src}-/resize/1200x/-/quality/lighter/1200.jpg 1200w,${src}-/resize/1500x/-/quality/lighter/1500.jpg 1500w,${src}-/resize/1600x/-/quality/lighter/1600.jpg 16000w,${src}-/resize/2000x/-/quality/lightest/2000.jpg 2000w`
+    /* add resolutions options for inline images */
+    if (resolutions === 'small') {
+      resolutions = '800x'
+    } else if (resolutions === 'medium') {
+      resolutions = '1000x'
+    } else if (resolutions === 'large') {
+      resolutions = '2000x'
+    }
 
     if (background) {
       let style = {}
-
-      if (typeof imageSrc === 'string') {
-        style = { backgroundImage: `url(${imageSrc})`, backgroundSize }
+      style = {
+        backgroundImage: `url(${src}/-/resize/2000x/)`,
+        backgroundSize
       }
-
       return (
-        <div className={`BackgroundImage absolute ${className}`} style={style}>
-          {!style.backgroundImage && (
-            <Image
-              src={imageSrc}
-              alt={alt}
-              style={{
-                position: 'absolute',
-                width: 'auto',
-                height: 'auto'
-              }}
-              imgStyle={{
-                objectFit: backgroundSize
-              }}
-            />
-          )}
-        </div>
+        <div
+          className={`BackgroundImage absolute ${className}`}
+          style={style}
+        />
       )
     }
 
     return (
       <img
         className={`Image ${className}`}
-        src={imageSrc}
-        sizes={sizes || '100vw'}
+        src={`${src}/-/resize/${resolutions}/`}
+        srcSet={srcset}
+        sizes={'100vw'}
         onClick={onClick}
         alt={alt}
       />
     )
   }
-}
-
-Image.propTypes = {
-  alt: PropTypes.string.isRequired
 }
 
 export default Image
