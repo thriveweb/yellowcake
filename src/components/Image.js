@@ -61,7 +61,7 @@ class Image extends React.Component {
     return (
       <img
         className={`Image ${className}`}
-        src={`${src}${isLocalImg ? '' : '/-/resize/'.resolutions}/`}
+        src={`${src}${isLocalImg ? '' : '/-/resize/' + resolutions + '/'}`}
         srcSet={srcset}
         sizes={'100vw'}
         onClick={onClick}
