@@ -41,17 +41,17 @@ class Image extends React.Component {
     /* create source set for images */
     if (!isLocalImg) {
       secSet = `
-      ${src}-/resize/320x/320.jpg 320w,
-      ${src}-/resize/450x/450.jpg 450w,
-      ${src}-/resize/640x/640.jpg 640w,
-      ${src}-/resize/750x/750.jpg 750w,
-      ${src}-/resize/800x/800.jpg 800w,
-      ${src}-/resize/900x/900.jpg 900w,
-      ${src}-/resize/1000x/-/quality/lighter/1000.jpg 1000w,
-      ${src}-/resize/1200x/-/quality/lighter/1200.jpg 1200w,
-      ${src}-/resize/1500x/-/quality/lighter/1500.jpg 1500w,
-      ${src}-/resize/1600x/-/quality/lighter/1600.jpg 16000w,
-      ${src}-/resize/2000x/-/quality/lightest/2000.jpg 2000w`
+      ${src}-/progressive/yes/-/format/auto/-/resize/320x/320.jpg 320w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/450x/450.jpg 450w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/640x/640.jpg 640w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/750x/750.jpg 750w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/800x/800.jpg 800w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/900x/900.jpg 900w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/1000x/-/quality/lightest/1000.jpg 1000w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/1200x/-/quality/lightest/1200.jpg 1200w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/1500x/-/quality/lightest/1500.jpg 1500w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/1600x/-/quality/lightest/1600.jpg 16000w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/2000x/-/quality/lightest/2000.jpg 2000w`
     }
 
     /* add resolutions options for inline images */
@@ -63,8 +63,14 @@ class Image extends React.Component {
       resolutions = '2000x'
     }
 
-    fullSrc = `${src}${isLocalImg ? '' : '/-/resize/' + resolutions + '/'}`
-    smallSrc = `${src}${isLocalImg ? '' : '-/resize/10x/'}`
+    fullSrc = `${src}${
+      isLocalImg
+        ? ''
+        : '-/progressive/yes/-/format/auto/-/resize/' + resolutions + '/'
+    }`
+    smallSrc = `${src}${
+      isLocalImg ? '' : '-/progressive/yes/-/format/auto/-/resize/10x/'
+    }`
 
     if (background) {
       let style = {}
