@@ -12,6 +12,7 @@ class Image extends React.Component {
   }
 
   handleIntersection = e => {
+    console.log(e.isIntersecting)
     if (e.isIntersecting) {
       this.setState({ isIntersecting: true })
     }
@@ -63,19 +64,23 @@ class Image extends React.Component {
     }
 
     fullSrc = `${src}${isLocalImg ? '' : '/-/resize/' + resolutions + '/'}`
-    smallSrc = `${src}-/resize/10x/`
+    smallSrc = `${src}${isLocalImg ? '' : '-/resize/10x/'}`
 
     if (background) {
       let style = {}
       style = {
-        backgroundImage: `url(${src}${isLocalImg ? '' : '/-/resize/2000x/'})`,
+        backgroundImage: `url(${
+          this.state.isIntersecting ? fullSrc : smallSrc
+        })`,
         backgroundSize
       }
       return (
-        <div
-          className={`BackgroundImage absolute ${className}`}
-          style={style}
-        />
+        <Observer onChange={this.handleIntersection}>
+          <div
+            className={`BackgroundImage absolute ${className}`}
+            style={style}
+          />
+        </Observer>
       )
     }
 
