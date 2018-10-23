@@ -1,8 +1,22 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
+import 'intersection-observer'
+import Observer from '@researchgate/react-intersection-observer'
 
 import './Image.css'
 
 class Image extends React.Component {
+  state = {
+    isIntersecting: false
+  }
+
+  handleIntersection = e => {
+    if (e.isIntersecting) {
+      this.setState({ isIntersecting: true })
+    }
+  }
+
   checkIfIsLocalSrc(src) {
     if (src.includes('ucarecdn.com')) return false
     return true
@@ -15,14 +29,17 @@ class Image extends React.Component {
       resolutions = '1000x',
       className = '',
       src,
-      srcset = '',
+      secSet = '',
+      fullSrc,
+      smallSrc,
       onClick,
       alt = ''
     } = this.props
+
     const isLocalImg = this.checkIfIsLocalSrc(src)
     /* create source set for images */
     if (!isLocalImg) {
-      srcset = `
+      secSet = `
       ${src}-/resize/320x/320.jpg 320w,
       ${src}-/resize/450x/450.jpg 450w,
       ${src}-/resize/640x/640.jpg 640w,
@@ -35,6 +52,7 @@ class Image extends React.Component {
       ${src}-/resize/1600x/-/quality/lighter/1600.jpg 16000w,
       ${src}-/resize/2000x/-/quality/lightest/2000.jpg 2000w`
     }
+
     /* add resolutions options for inline images */
     if (resolutions === 'small') {
       resolutions = '800x'
@@ -43,6 +61,9 @@ class Image extends React.Component {
     } else if (resolutions === 'large') {
       resolutions = '2000x'
     }
+
+    fullSrc = `${src}${isLocalImg ? '' : '/-/resize/' + resolutions + '/'}`
+    smallSrc = `${src}-/resize/10x/`
 
     if (background) {
       let style = {}
@@ -59,16 +80,24 @@ class Image extends React.Component {
     }
 
     return (
-      <img
-        className={`Image ${className}`}
-        src={`${src}${isLocalImg ? '' : '/-/resize/' + resolutions + '/'}`}
-        srcSet={srcset}
-        sizes={'100vw'}
-        onClick={onClick}
-        alt={alt}
-      />
+      <Observer onChange={this.handleIntersection}>
+        <img
+          className={`LazyImage ${className}`}
+          src={this.state.isIntersecting ? fullSrc : smallSrc}
+          srcSet={this.state.isIntersecting ? secSet : ''}
+          sizes={'100vw'}
+          onClick={onClick}
+          alt={alt}
+          width="100%"
+          height="400px"
+        />
+      </Observer>
     )
   }
+}
+
+Image.propTypes = {
+  alt: PropTypes.string.isRequired
 }
 
 export default Image
