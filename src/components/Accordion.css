@@ -1,0 +1,46 @@
+.Accordion {
+  width: 100%;
+  max-width: 600px;
+}
+
+.Accordion--item {
+  padding: 0.5rem 0;
+  background: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.Accordion--item h2 {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.6rem;
+  display: block;
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 2px solid var(--lightGrey);
+}
+
+.Accordion--item svg {
+  float: right;
+}
+
+.Accordion--item:hover svg,
+.Accordion--item.active svg {
+  color: var(--col1);
+}
+
+.Accordion--item.active .description {
+  animation: sildeDescription 0.4s ease-out;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.01);
+}
+
+@keyframes sildeDescription {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
