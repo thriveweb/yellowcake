@@ -99,8 +99,6 @@ class Image extends React.Component {
           sizes={'100vw'}
           onClick={onClick}
           alt={alt}
-          width="100%"
-          height="400px"
         />
       </Observer>
     )
