@@ -46,7 +46,7 @@ export default ({ children }) => {
               }
             />
 
-            <GithubCorner url="https://github.com/thriveweb/whitesmoke" />
+            <GithubCorner url="https://github.com/thriveweb/yellowcake" />
 
             <Nav />
 
