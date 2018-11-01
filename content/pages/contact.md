@@ -12,6 +12,9 @@ locations:
   - lat: '-27.9654732'
     lng: '153.2432449'
     mapLink: ''
+meta:
+  description: test meta description
+  title: test meta title
 ---
 
 # Example contact form
