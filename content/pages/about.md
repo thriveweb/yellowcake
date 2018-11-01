@@ -29,4 +29,8 @@ section2: |-
   bibendum duis netus a consectetur dui magnis ac aliquet sem posuere tincidunt
   vestibulum.
 testImage: /images/uploads/paint2.jpg
+meta:
+  description: test meta description
+  title: test meta title
 ---
+
