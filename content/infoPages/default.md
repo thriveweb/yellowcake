@@ -2,8 +2,10 @@
 template: DefaultPage
 slug: default
 title: Default
-featuredImage: >-
-  https://ucarecdn.com/46852e29-2b70-426d-8da3-a41a548e5e2e/
+featuredImage: 'https://ucarecdn.com/46852e29-2b70-426d-8da3-a41a548e5e2e/'
+meta:
+  description: test meta description
+  title: test meta title
 ---
 
 ## This is the DefaultPage template
