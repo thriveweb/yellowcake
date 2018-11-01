@@ -10,7 +10,7 @@ import Nav from './Nav'
 import Footer from './Footer'
 import GithubCorner from './GithubCorner'
 
-export default ({ children }) => {
+export default ({ children, meta }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -44,6 +44,7 @@ export default ({ children }) => {
                 socialMediaCard.image &&
                 siteUrl + socialMediaCard.image
               }
+              {...meta}
             />
 
             <GithubCorner url="https://github.com/thriveweb/yellowcake" />

@@ -58,3 +58,16 @@ const Meta = props => {
 }
 
 export default Meta
+
+export const query = graphql`
+  fragment Meta on MarkdownRemark {
+    frontmatter {
+      meta {
+        title
+        description
+        noindex
+        canonicalLink
+      }
+    }
+  }
+`

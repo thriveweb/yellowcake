@@ -105,11 +105,10 @@ export const SinglePostTemplate = ({
 )
 
 // Export Default SinglePost for front-end
-const SinglePost = ({ data, pageContext }) => {
-  const { post, allPosts } = data
+const SinglePost = ({ data: { post, allPosts } }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
-    <Layout>
+    <Layout meta={post.frontmatter.meta || false}>
       <SinglePostTemplate
         {...post}
         {...post.frontmatter}
@@ -130,6 +129,7 @@ export const pageQuery = graphql`
   ## query name must be unique to this file
   query SinglePost($id: String!) {
     post: markdownRemark(id: { eq: $id }) {
+      ...Meta
       html
       id
       frontmatter {

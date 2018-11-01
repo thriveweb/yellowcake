@@ -39,7 +39,7 @@ export const HomePageTemplate = ({
 
 // Export Default HomePage for front-end
 const HomePage = ({ data: { page } }) => (
-  <Layout>
+  <Layout meta={page.frontmatter.meta || false}>
     <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
   </Layout>
 )
@@ -53,6 +53,7 @@ export const pageQuery = graphql`
   ## query name must be unique to this file
   query HomePage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
+      ...Meta
       html
       frontmatter {
         title

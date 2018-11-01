@@ -54,18 +54,18 @@ export const BlogIndexTemplate = ({
 }
 
 // Export Default BlogIndex for front-end
-const BlogIndex = ({ data }) => (
-  <Layout>
+const BlogIndex = ({ data: { page, posts, postCategories } }) => (
+  <Layout meta={page.frontmatter.meta || false}>
     <BlogIndexTemplate
-      {...data.page}
-      {...data.page.fields}
-      {...data.page.frontmatter}
-      posts={data.posts.edges.map(post => ({
+      {...page}
+      {...page.fields}
+      {...page.frontmatter}
+      posts={posts.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
       }))}
-      postCategories={data.postCategories.edges.map(post => ({
+      postCategories={postCategories.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -83,6 +83,7 @@ export const pageQuery = graphql`
   ## query name must be unique to this file
   query BlogIndex($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
+      ...Meta
       fields {
         contentType
       }
