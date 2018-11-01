@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import _get from 'lodash/get'
 import _pickBy from 'lodash/pickBy'
