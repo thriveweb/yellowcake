@@ -13,9 +13,9 @@ categories:
   - category: News
 meta:
   canonicalLink: ''
-  description: ''
+  description: test meta description
   noindex: false
-  title: ''
+  title: test meta title
 ---
 
 Paragraphs are separated by a blank line.
