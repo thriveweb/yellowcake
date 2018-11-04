@@ -19,7 +19,7 @@ class Image extends React.Component {
   // }
 
   checkIfIsLocalSrc(src) {
-    if (typeof src === 'String' && src.includes('ucarecdn.com')) return false
+    if (typeof src === 'string' && src.includes('ucarecdn.com')) return false
     return true
   }
 
