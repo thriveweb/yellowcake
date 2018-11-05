@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { MapPin, Smartphone, Mail } from 'react-feather'
 import { graphql } from 'gatsby'
 
@@ -22,9 +21,6 @@ export const ContactPageTemplate = ({
   locations
 }) => (
   <main className="Contact">
-    <Helmet>
-      <title>{title}</title>
-    </Helmet>
     <PageHeader
       title={title}
       subtitle={subtitle}
@@ -71,7 +67,10 @@ export const ContactPageTemplate = ({
 )
 
 const ContactPage = ({ data: { page } }) => (
-  <Layout meta={page.frontmatter.meta || false}>
+  <Layout
+    meta={page.frontmatter.meta || false}
+    title={page.frontmatter.title || false}
+  >
     <ContactPageTemplate {...page.frontmatter} body={page.html} />
   </Layout>
 )

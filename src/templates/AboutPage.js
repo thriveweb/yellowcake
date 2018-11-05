@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
@@ -17,21 +16,17 @@ export const AboutPageTemplate = ({
   body
 }) => (
   <main className="About">
-    <Helmet>
-      <title>{title}</title>
-    </Helmet>
+    >
     <PageHeader
       title={title}
       subtitle={subtitle}
       backgroundImage={featuredImage}
     />
-
     <section className="section">
       <div className="container">
         <Content source={section1} />
       </div>
     </section>
-
     <section className="section">
       <div className="container">
         <Content source={section2} />
@@ -41,7 +36,10 @@ export const AboutPageTemplate = ({
 )
 
 const AboutPage = ({ data: { page } }) => (
-  <Layout meta={page.frontmatter.meta || false}>
+  <Layout
+    meta={page.frontmatter.meta || false}
+    title={page.frontmatter.title || false}
+  >
     <AboutPageTemplate {...page} {...page.frontmatter} body={page.html} />
   </Layout>
 )

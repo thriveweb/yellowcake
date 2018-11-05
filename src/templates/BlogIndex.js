@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
@@ -24,10 +23,6 @@ export const BlogIndexTemplate = ({
 
   return (
     <main className="Blog">
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
-
       <PageHeader
         title={title}
         subtitle={subtitle}
@@ -55,7 +50,10 @@ export const BlogIndexTemplate = ({
 
 // Export Default BlogIndex for front-end
 const BlogIndex = ({ data: { page, posts, postCategories } }) => (
-  <Layout meta={page.frontmatter.meta || false}>
+  <Layout
+    meta={page.frontmatter.meta || false}
+    title={page.frontmatter.title || false}
+  >
     <BlogIndexTemplate
       {...page}
       {...page.fields}

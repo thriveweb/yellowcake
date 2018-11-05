@@ -10,7 +10,7 @@ import Nav from './Nav'
 import Footer from './Footer'
 import GithubCorner from './GithubCorner'
 
-export default ({ children, meta }) => {
+export default ({ children, meta, title }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -34,6 +34,7 @@ export default ({ children, meta }) => {
               defaultTitle={siteTitle}
               titleTemplate={`%s | ${siteTitle}`}
             >
+              {title}
               {/* Add font link tags here */}
             </Helmet>
 

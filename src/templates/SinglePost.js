@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import Helmet from 'react-helmet'
 import _get from 'lodash/get'
 import _format from 'date-fns/format'
 import { Link, graphql } from 'gatsby'
@@ -25,10 +24,6 @@ export const SinglePostTemplate = ({
       itemScope
       itemType="http://schema.org/BlogPosting"
     >
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
-
       {featuredImage && (
         <Image
           background
@@ -108,7 +103,10 @@ export const SinglePostTemplate = ({
 const SinglePost = ({ data: { post, allPosts } }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
-    <Layout meta={post.frontmatter.meta || false}>
+    <Layout
+      meta={post.frontmatter.meta || false}
+      title={post.frontmatter.title || false}
+    >
       <SinglePostTemplate
         {...post}
         {...post.frontmatter}
