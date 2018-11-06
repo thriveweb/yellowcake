@@ -3,6 +3,10 @@
 Add SVG icon component
 It allows you to change color of the icon in css with background of .SVGIcon--icon
 
+## 2.0.1.1 - 2018-10-28
+
+add accordion
+
 ## 2.0.1 - 2018-10-18
 
 Configure Uploadcare widget  
