@@ -1,6 +1,5 @@
 import React from 'react'
 import ChevronDown from 'react-feather/dist/icons/chevron-down'
-import Image from './Image'
 
 import './Accordion.css'
 
@@ -23,7 +22,6 @@ export default class Accordion extends React.Component {
     const { items, className } = this.props
     return (
       <div className={`Accordion ${className}`}>
-        <Image src="/images/tree.svg" alt="decoration image" />
         {!!items &&
           items.map((item, index) => {
             const active = this.state.activeItem === index
