@@ -11,12 +11,35 @@
   margin-top: 2rem;
 }
 
+.Form--Group {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Form--Group .Form--Label {
+  width: calc(50% - 1rem);
+}
+
 .Form--Label {
   width: 100%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  z-index: 1;
+  background: var(--white);
+}
+
+.Form--Label > span {
+  position: absolute;
+  left: 2rem;
+  top: 1.5rem;
+  transition: 0.3s ease all;
+  opacity: 0.8;
+  z-index: -1;
 }
 
 .Form--Input {
@@ -31,6 +54,31 @@
   line-height: 1.25em;
   transition: border-color 0.2s;
   resize: none;
+  width: 100%;
+  transition: 0.3s ease all;
+  background: transparent;
+}
+
+.Form--InputText:valid,
+.Form--InputText:invalid:not(:empty),
+.Form--InputText:active,
+.Form--InputText:focus {
+  padding-bottom: 0.5rem;
+  padding-top: 2.5rem;
+}
+
+.Form--InputText:valid + span,
+.Form--InputText:not(:empty) + span,
+.Form--InputText:invalid:not(:empty) + span,
+.Form--InputText:active + span,
+.Form--InputText:focus + span {
+  top: 0;
+  left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.Form--Input:required:invalid:not(:empty) {
+  border-color: var(--danger);
 }
 
 .Form--Select {
@@ -73,7 +121,7 @@
 }
 
 .Form--Input::placeholder {
-  text-transform: none;
+  color: transparent;
 }
 
 .Form--Alert {
@@ -85,4 +133,99 @@
 
 .Form--Input-honey {
   display: none;
+}
+
+.Form fieldset {
+  width: 100%;
+  border: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  height: 3.1rem;
+}
+
+.Form--Radio {
+  display: inline-block;
+  width: auto;
+}
+
+.Form--Radio:not(:first-of-type) {
+  margin-left: 1rem;
+}
+
+.Form--Radio {
+  border: 1px solid var(--midGrey);
+  overflow: hidden;
+  border-radius: var(--borderRadius);
+}
+
+.Form--Radio span,
+.Form-Checkbox span {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: inline-block;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.2rem 1rem;
+  border-left: 2.5rem solid transparent;
+  border-radius: var(--borderRadius);
+}
+
+.Form--RadioInput,
+.Form--CheckboxInput {
+  display: none;
+}
+
+/* .Form--Radio .Form--RadioInput:checked + span,
+.Form-Checkbox .Form--CheckboxInput:checked + span {
+  border-left: 2.9rem solid var(--primary);
+} */
+
+.Form--Radio .Form--RadioInput + span::before,
+.Form-Checkbox .Form--CheckboxInput + span::before {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--midGrey);
+  border-radius: var(--borderRadius);
+}
+
+.Form--Radio .Form--RadioInput:checked + span::before,
+.Form-Checkbox .Form--CheckboxInput:checked + span::before {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+}
+
+.Form--RadioInput + span::after,
+.Form--CheckboxInput + span::after {
+  transform: scale(0.5);
+  transition: 0.3s ease all;
+  content: '\2713';
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: -17px;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+}
+
+.Form--RadioInput:checked + span::after,
+.Form--CheckboxInput:checked + span::after {
+  opacity: 1;
+  transform: scale(1);
 }

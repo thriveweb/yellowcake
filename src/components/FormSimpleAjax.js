@@ -68,23 +68,58 @@ class Form extends React.Component {
         {this.state.alert && (
           <div className="Form--Alert">{this.state.alert}</div>
         )}
+        <div className="Form--Group">
+          <label className="Form--Label">
+            <input
+              className="Form--Input Form--InputText"
+              type="text"
+              placeholder="Firstname"
+              name="firstname"
+              required
+            />
+            <span>Firstname</span>
+          </label>
+          <label className="Form--Label">
+            <input
+              className="Form--Input Form--InputText"
+              type="text"
+              placeholder="Lastname"
+              name="lastname"
+              required
+            />
+            <span>Lastname</span>
+          </label>
+        </div>
+        <fieldset>
+          <label className="Form--Label Form--Radio">
+            <input
+              className="Form--RadioInput"
+              type="radio"
+              name="gender"
+              value="male"
+              defaultChecked
+            />
+            <span>Male</span>
+          </label>
+          <label className="Form--Label Form--Radio">
+            <input
+              className="Form--RadioInput"
+              type="radio"
+              name="gender"
+              value="female"
+            />
+            <span>Female</span>
+          </label>
+        </fieldset>
         <label className="Form--Label">
           <input
-            className="Form--Input"
-            type="text"
-            placeholder="Name"
-            name="name"
-            required
-          />
-        </label>
-        <label className="Form--Label">
-          <input
-            className="Form--Input"
+            className="Form--Input Form--InputText"
             type="email"
             placeholder="Email"
             name="emailAddress"
             required
           />
+          <span>Email address</span>
         </label>
         <label className="Form--Label has-arrow">
           <select
@@ -103,12 +138,21 @@ class Form extends React.Component {
         </label>
         <label className="Form--Label">
           <textarea
-            className="Form--Input Form--Textarea"
+            className="Form--Input Form--Textarea Form--InputText"
             placeholder="Message"
             name="message"
             rows="10"
             required
           />
+          <span>Message</span>
+        </label>
+        <label className="Form--Label Form-Checkbox">
+          <input
+            className="Form--Input Form--Textarea Form--CheckboxInput"
+            name="newsletter"
+            type="checkbox"
+          />
+          <span>Get news updates</span>
         </label>
         <input
           type="text"
