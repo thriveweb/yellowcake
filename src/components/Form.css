@@ -178,11 +178,6 @@
   display: none;
 }
 
-/* .Form--Radio .Form--RadioInput:checked + span,
-.Form-Checkbox .Form--CheckboxInput:checked + span {
-  border-left: 2.9rem solid var(--primary);
-} */
-
 .Form--Radio .Form--RadioInput + span::before,
 .Form-Checkbox .Form--CheckboxInput + span::before {
   content: '';
