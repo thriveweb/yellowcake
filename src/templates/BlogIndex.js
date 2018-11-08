@@ -6,6 +6,32 @@ import PostSection from '../components/PostSection'
 import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 
+/**
+ * Filter posts by date. Feature dates will be fitered
+ * When used, make sure you run a cronejob each day to show schaduled content. See docs
+ *
+ * @param {posts} object
+ */
+export const byDate = posts => {
+  const now = Date.now()
+  return posts.filter(post => Date.parse(post.date) <= now)
+}
+
+/**
+ * ilter posts by category.
+ *
+ * @param {posts} object
+ * @param {title} string
+ * @param {contentType} string
+ */
+export const byCategory = (posts, title, contentType) => {
+  const isCategory = contentType === 'postCategories'
+  const byCategory = post =>
+    post.categories &&
+    post.categories.filter(cat => cat.category === title).length
+  return isCategory ? posts.filter(byCategory) : posts
+}
+
 // Export Template for use in CMS preview
 export const BlogIndexTemplate = ({
   title,
@@ -15,11 +41,9 @@ export const BlogIndexTemplate = ({
   postCategories = [],
   contentType
 }) => {
-  const isCategory = contentType === 'postCategories'
-  const byCategory = post =>
-    post.categories &&
-    post.categories.filter(cat => cat.category === title).length
-  const filteredPosts = isCategory ? posts.filter(byCategory) : posts
+  let filteredPosts = {}
+  filteredPosts = byDate(posts)
+  filteredPosts = byCategory(filteredPosts, title, contentType)
 
   return (
     <main className="Blog">
@@ -106,6 +130,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            date
             categories {
               category
             }
