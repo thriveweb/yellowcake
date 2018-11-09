@@ -16,7 +16,6 @@ export const AboutPageTemplate = ({
   body
 }) => (
   <main className="About">
-    >
     <PageHeader
       title={title}
       subtitle={subtitle}
