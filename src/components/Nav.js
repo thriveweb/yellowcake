@@ -23,18 +23,21 @@ export class Navigation extends Component {
 
   render() {
     const { active } = this.state
-    const NavLink = ({ to, className, children, ...props }) => (
-      <Link
-        {...props}
-        to={to}
-        className={`NavLink ${className || ''} ${
-          to === this.state.currentPath ? 'active' : ''
-        }`}
-        onClick={this.handleLinkClick}
-      >
-        {children}
-      </Link>
-    )
+
+    const NavLink = ({ to, className, children, ...props }) => {
+      const isActive = to === this.state.currentPath ? 'active' : ''
+
+      return (
+        <Link
+          to={to}
+          className={`NavLink ${isActive} ${className}`}
+          onClick={this.handleLinkClick}
+          {...props}
+        >
+          {children}
+        </Link>
+      )
+    }
 
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
@@ -43,21 +46,11 @@ export class Navigation extends Component {
             <Logo />
           </Link>
           <div className="Nav--Links">
-            <NavLink to="/" exact="true">
-              Home
-            </NavLink>
-            <NavLink to="/about/" exact="true">
-              About
-            </NavLink>
-            <NavLink to="/blog/" exact="true">
-              Blog
-            </NavLink>
-            <NavLink to="/default/" exact="true">
-              Default
-            </NavLink>
-            <NavLink to="/contact/" exact="true">
-              Contact
-            </NavLink>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/about/">About</NavLink>
+            <NavLink to="/blog/">Blog</NavLink>
+            <NavLink to="/default/">Default</NavLink>
+            <NavLink to="/contact/">Contact</NavLink>
           </div>
           <button
             className="Button-blank Nav--MenuButton"
