@@ -52,10 +52,42 @@ If you are adding or editing content locally in the CMS, a couple of things to n
 
 1.  Changes will be pushed to the remote repo.
 
-1.  You will be prompted to enter your site's url, this is necessary for Netlify Identity to manage user login. This is stored in `localStorage`, so you might have to empty your browser cache if you are switching projects but remaining on `localhost:3000`.
+1.  You will be prompted to enter your site's url, this is necessary for Netlify Identity to manage user login. This is stored in `localStorage`, so you might have to empty your browser cache if you are switching projects but remaining on `localhost:8000`.
 
 ## Editing CMS fields
 
 The Netlify CMS configuration is located in `public/admin/config.yml`. This is where you will configure the pages, fields, posts and settings that are editable by the CMS.
 
 Find out more in the [Netlify CMS Docs](https://www.netlifycms.org/docs/#configuration).
+
+## Scheduled content
+
+Scheduled content allows you to schedule posts. Set the date / order field in a post to the feature.
+For the scheduled content to appear on the website we need to deploy our website daily.
+
+1. Setup a Netlify build hook
+
+- Go to https://app.netlify.com/sites/_YOUR_SITE_NAME/setings/deploys/#build-hooks
+- Hit at build hook button in the build hooks section
+- Give it name for example: "Automatic deploy Zapier"
+- Select branch, in most cases master will do.
+- Hit save and copy the generated url
+
+2. Zapier Setup
+
+- Go to [Zapier.com](https://zapier.com/) and login
+- Hit make a zap button in the right top corner
+- Search for Schedule in the search bar and select "Schedule by Zapier"
+- Check every day and hit continue
+- Select a time and make sure trigger on weekends is turned on
+- Double check your settings and hit continue
+- On the left hit add a step - and search for webhook by Zapier
+- Select post as action and continue
+- Past in the url of our recently generated webhook in the url field
+- Make sure "Payload Type" is set to form and hit continue
+- check settings and hit the test button
+- Check your Netlify site if there has been triggered a new deploy
+- If that worked hit finish
+- Give your zap a name, example: "Automatic deploy Yellowcake" and make sure your zap is turned on
+
+That's it, you'r now ready to use scheduled content!!
