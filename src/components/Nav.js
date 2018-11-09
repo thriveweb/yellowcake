@@ -9,6 +9,7 @@ import './Nav.css'
 export class Navigation extends Component {
   state = {
     active: false,
+    activeSubNav: false,
     currentPath: false
   }
 
@@ -20,6 +21,14 @@ export class Navigation extends Component {
 
   // Only close nav if it is open
   handleLinkClick = () => this.state.active && this.handleMenuToggle()
+
+  toggleSubNav = subNav => {
+    if (this.state.activeSubNav === subNav) {
+      this.setState({ activeSubNav: false })
+    } else {
+      this.setState({ activeSubNav: subNav })
+    }
+  }
 
   render() {
     const { active } = this.state
@@ -39,11 +48,7 @@ export class Navigation extends Component {
         </Link>
       )
     }
-
-    const NavGroup = ({ to, className, children, noLink, ...props }) => {
-      return <div className="Nav--Group">{children}</div>
-    }
-
+    console.log(this.props.location.pathname.includes('posts'))
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
@@ -54,16 +59,33 @@ export class Navigation extends Component {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about/">About</NavLink>
             <NavLink to="/blog/">Blog</NavLink>
-            <NavGroup to="/Posts/" noLink>
-              <span className="NavLink">Posts</span>
-              {subNav.posts.map((link, index) => {
-                return (
-                  <NavLink to={link.slug} key={'posts-subnav-link-' + index}>
-                    {link.title}
-                  </NavLink>
-                )
-              })}
-            </NavGroup>
+            <div
+              className={`Nav--Group ${
+                this.state.activeSubNav === 'posts' ? 'active' : ''
+              }`}
+            >
+              <span
+                className={`NavLink Nav--GroupParent ${
+                  this.props.location.pathname.includes('posts') ? 'active' : ''
+                }`}
+                onClick={() => this.toggleSubNav('posts')}
+              >
+                Posts
+              </span>
+              <div className="Nav--GroupLinks">
+                {subNav.posts.map((link, index) => {
+                  return (
+                    <NavLink
+                      to={link.slug}
+                      key={'posts-subnav-link-' + index}
+                      className="Nav--GroupLink"
+                    >
+                      {link.title}
+                    </NavLink>
+                  )
+                })}
+              </div>
+            </div>
             <NavLink to="/default/">Default</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </div>

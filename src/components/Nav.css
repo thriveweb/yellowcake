@@ -51,6 +51,58 @@
   border-bottom-color: currentColor;
 }
 
+.Nav--Group {
+  position: relative;
+  cursor: pointer;
+}
+
+.Nav--GroupParent {
+  padding-right: 3rem;
+}
+
+.Nav--GroupParent::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 0.2rem);
+  right: 1rem;
+  border-bottom: 2px solid var(--darkGrey);
+  border-right: 2px solid var(--darkGrey);
+  display: block;
+  height: 0.8rem;
+  width: 0.8rem;
+  transition: 0.3s ease all;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.Nav--GroupLinks {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: auto;
+  background: white;
+  /* opacity: 0; */
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease all;
+}
+
+.Nav--Group.active .Nav--GroupLinks {
+  max-height: 100vh;
+  opacity: 1;
+  transition: 0.6s ease all;
+}
+
+.Nav--Group.active .Nav--GroupParent::after {
+  top: calc(50% + 0.2rem);
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.Nav--GroupLink {
+  display: block;
+  position: relative;
+  width: 15rem;
+}
+
 @media (max-width: 600px) {
   .Nav--Container {
     display: flex;
