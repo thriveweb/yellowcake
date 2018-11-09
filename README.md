@@ -108,3 +108,31 @@ For the scheduled content to appear on the website we need to deploy our website
 - Give your zap a name, example: "Automatic deploy Yellowcake" and make sure your zap is turned on
 
 That's it, you'r now ready to use scheduled content!!
+
+## Mailchimp integration
+
+https://hooks.zapier.com/hooks/catch/2881617/ea5exg/
+
+- Go to [Zapier.com](https://zapier.com/) and login
+- Hit make a zap button in the right top corner
+- Search for webhook by Zapier and select catch hook and continue to next step
+- In most cases leave this field empty and continue
+- Copy the generated url
+- Now go to the [form settings](https://app.netlify.com/sites/yellowcake/settings/forms#outgoing-notifications) in you Netlify project
+- Find the form notifications section click the add notification button
+- Select the option `outgoing webhook`
+- Set the event to listen for
+- Paste in our recent generated url in the URL to notify field
+- Select your form and save settings
+- Open your website navigate to your form, fill it out and send the data
+- Go back to Zaper and see if your form data has come trough.
+- Hit continue and add a new step on the left side of the screen
+- Search for MailChimp and select add/update subscriber
+- Select MailChimp account or add one and hit the test button
+- if succeeded hit continue button
+- Select your MailChimp list and select the subscriber email address
+- Fill in other settings for your needs and continue
+- Hit send test to MailChimp button and hit finish if succeeded
+- Give your Zap a name and make sure your zap is turned on
+- Submit your form one last time and see if all data is coming trough to MailChimp
+- Thats is!
