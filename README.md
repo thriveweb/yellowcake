@@ -60,6 +60,23 @@ The Netlify CMS configuration is located in `public/admin/config.yml`. This is w
 
 Find out more in the [Netlify CMS Docs](https://www.netlifycms.org/docs/#configuration).
 
+## Uploadcare setup
+
+Uploadcare is our file upload system. It hosts the files for us and delivers them trough their CDN network.
+Each site you'll create need its own Uploadcare API key's. See below how to set this up
+
+1. Create new project in Uploadcare and save API keys in project
+
+- Go to [Uploadcare.com](https://uploadcare.com/accounts/login/) and login
+- Once on the dashboard create a new project
+- Set the name and hit create
+- In the left menu click in API Keys and copy the public key
+- Now open your project and open the CMS congif.yml file
+- find the `media_library` settings and paste in the public key after `publicKey:`
+- Done!!
+
+For more details see the [Netlify CMS Docs](https://www.netlifycms.org/docs/uploadcare/)
+
 ## Scheduled content
 
 Scheduled content allows you to schedule posts. Set the date / order field in a post to the feature.
