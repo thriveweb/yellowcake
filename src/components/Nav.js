@@ -23,6 +23,7 @@ export class Navigation extends Component {
 
   render() {
     const { active } = this.state
+    const { subNav } = this.props
 
     const NavLink = ({ to, className, children, ...props }) => {
       const isActive = to === this.state.currentPath ? 'active' : ''
@@ -39,6 +40,10 @@ export class Navigation extends Component {
       )
     }
 
+    const NavGroup = ({ to, className, children, noLink, ...props }) => {
+      return <div className="Nav--Group">{children}</div>
+    }
+
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
@@ -49,6 +54,16 @@ export class Navigation extends Component {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about/">About</NavLink>
             <NavLink to="/blog/">Blog</NavLink>
+            <NavGroup to="/Posts/" noLink>
+              <span className="NavLink">Posts</span>
+              {subNav.posts.map((link, index) => {
+                return (
+                  <NavLink to={link.slug} key={'posts-subnav-link-' + index}>
+                    {link.title}
+                  </NavLink>
+                )
+              })}
+            </NavGroup>
             <NavLink to="/default/">Default</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </div>
@@ -64,4 +79,8 @@ export class Navigation extends Component {
   }
 }
 
-export default () => <Location>{route => <Navigation {...route} />}</Location>
+export default ({ subNav }) => {
+  return (
+    <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
+  )
+}
