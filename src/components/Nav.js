@@ -2,12 +2,19 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
 
+import { Location } from '@reach/router'
+
 import Logo from './Logo'
 import './Nav.css'
 
-export default class Nav extends Component {
+export class Navigation extends Component {
+  currentPath = '/'
   state = {
     active: false
+  }
+
+  componentWillMount() {
+    this.currentPath = this.props.location.pathname
   }
 
   handleMenuToggle = () => this.setState({ active: !this.state.active })
@@ -18,10 +25,13 @@ export default class Nav extends Component {
   render() {
     const { active } = this.state
 
-    const NavLink = ({ className, children, ...props }) => (
+    const NavLink = ({ to, className, children, ...props }) => (
       <Link
         {...props}
-        className={`NavLink ${className || ''}`}
+        to={to}
+        className={`NavLink ${className || ''} ${
+          to === this.currentPath ? 'active' : ''
+        }`}
         onClick={this.handleLinkClick}
       >
         {children}
@@ -62,3 +72,9 @@ export default class Nav extends Component {
     )
   }
 }
+
+export default () => (
+  <Location>
+    {({ navigate, location }) => <Navigation location={location} />}
+  </Location>
+)
