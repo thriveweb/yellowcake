@@ -1,10 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import _get from 'lodash/get'
-import _pickBy from 'lodash/pickBy'
-
-const onlyTruthyValues = obj => _pickBy(obj, item => item)
 
 const Meta = props => {
   const {
@@ -16,12 +12,13 @@ const Meta = props => {
     twitterCreatorAccount,
     headerScripts,
     noindex,
-    canonicalLink
+    canonicalLink,
+    siteTitle,
+    siteUrl,
+    siteDescription
     // overwrite { title, description } if in fields or fields.meta
   } = {
-    ...props,
-    ...onlyTruthyValues(_get(props, 'fields')),
-    ...onlyTruthyValues(_get(props, 'fields.meta'))
+    ...props
   }
 
   // write headerScripts
@@ -54,6 +51,16 @@ const Meta = props => {
       )}
       {noindex && <meta name="robots" content="noindex" />}
       {canonicalLink && <link rel="canonical" href={canonicalLink} />}
+
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:site_name" content={siteTitle} />
+      <meta property="og:image:secure_url" content={siteUrl} />
+      <meta name="twitter:description" content={siteDescription} />
+      <meta name="twitter:title" content={siteTitle} />
+
+      {absoluteImageUrl && (
+        <meta name="twitter:image" content={absoluteImageUrl} />
+      )}
     </Helmet>
   )
 }

@@ -69,6 +69,7 @@ export default ({ children, meta, title }) => {
                 socialMediaCard.image
               }
               {...meta}
+              {...data.settingsYaml}
             />
 
             <GithubCorner url="https://github.com/thriveweb/yellowcake" />
