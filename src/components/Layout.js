@@ -1,14 +1,13 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
-import 'modern-normalize/modern-normalize.css'
-
-import './globalStyles.css'
 import Meta from './Meta'
 import Nav from './Nav'
 import Footer from './Footer'
 import GithubCorner from './GithubCorner'
+
+import 'modern-normalize/modern-normalize.css'
+import './globalStyles.css'
 
 export default ({ children, meta, title }) => {
   return (
@@ -41,7 +40,7 @@ export default ({ children, meta, title }) => {
         }
       `}
       render={data => {
-        const { siteTitle, siteUrl, socialMediaCard, headerScripts } =
+        const { siteTitle, socialMediaCard, headerScripts } =
           data.settingsYaml || {}
 
         const subNav = {
@@ -67,7 +66,7 @@ export default ({ children, meta, title }) => {
               absoluteImageUrl={
                 socialMediaCard &&
                 socialMediaCard.image &&
-                siteUrl + socialMediaCard.image
+                socialMediaCard.image
               }
               {...meta}
             />
