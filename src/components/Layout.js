@@ -50,7 +50,6 @@ export default ({ children, meta, title }) => {
               })
             : false
         }
-        console.log(subNav)
         return (
           <Fragment>
             <Helmet

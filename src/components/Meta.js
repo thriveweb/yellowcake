@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
@@ -7,14 +7,13 @@ const Meta = props => {
     title,
     url,
     description,
-    absoluteImageUrl,
+    absoluteImageUrl = '',
     twitterSiteAccount,
     twitterCreatorAccount,
     headerScripts,
     noindex,
     canonicalLink,
     siteTitle,
-    siteUrl,
     siteDescription
     // overwrite { title, description } if in fields or fields.meta
   } = {
@@ -51,14 +50,10 @@ const Meta = props => {
       <meta name="twitter:description" content={siteDescription} />
       <meta name="twitter:title" content={siteTitle} />
 
-      {absoluteImageUrl && (
-        <Fragment>
-          <meta name="twitter:image" content={absoluteImageUrl} />
-          <meta property="og:image:secure_url" content={absoluteImageUrl} />
-          <meta property="og:image" content={absoluteImageUrl} />
-          <meta name="twitter:card" content={absoluteImageUrl} />
-        </Fragment>
-      )}
+      <meta name="twitter:image" content={absoluteImageUrl} />
+      <meta property="og:image:secure_url" content={absoluteImageUrl} />
+      <meta property="og:image" content={absoluteImageUrl} />
+      <meta name="twitter:card" content={absoluteImageUrl} />
     </Helmet>
   )
 }

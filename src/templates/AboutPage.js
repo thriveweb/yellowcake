@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content.js'
 import Layout from '../components/Layout.js'
+import Accordion from '../components/Accordion'
 import './AboutPage.css'
 
 // Export Template for use in CMS preview
@@ -13,6 +14,7 @@ export const AboutPageTemplate = ({
   featuredImage,
   section1,
   section2,
+  accordion,
   body
 }) => (
   <main className="About">
@@ -29,6 +31,12 @@ export const AboutPageTemplate = ({
     <section className="section">
       <div className="container">
         <Content source={section2} />
+      </div>
+    </section>
+    <section className="section">
+      <div className="container">
+        <h2 className="taCenter">Accordion</h2>
+        <Accordion items={accordion} />
       </div>
     </section>
   </main>
@@ -57,6 +65,10 @@ export const pageQuery = graphql`
         featuredImage
         section1
         section2
+        accordion {
+          title
+          content
+        }
       }
     }
   }

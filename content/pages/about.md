@@ -29,8 +29,29 @@ section2: |-
   bibendum duis netus a consectetur dui magnis ac aliquet sem posuere tincidunt
   vestibulum.
 testImage: /images/uploads/paint2.jpg
+accordion:
+  - content: >-
+      Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et
+      lectus ac purus mollis dictum. Nulla sed mauris eros. Phasellus ipsum
+      purus, accumsan in rhoncus eget, facilisis vel libero. Nam quis accumsan
+      velit. Etiam in nisl ornare, placerat enim ut, feugiat elit. Maecenas sed
+      auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula eros.
+    title: Title for excesive info goes here
+  - content: >-
+      Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et
+      lectus ac purus mollis dictum. Nulla sed mauris eros. Phasellus ipsum
+      purus, accumsan in rhoncus eget, facilisis vel libero. Nam quis accumsan
+      velit. Etiam in nisl ornare, placerat enim ut, feugiat elit. Maecenas sed
+      auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula eros.
+    title: Title for excesive info goes here
+  - content: >-
+      Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et
+      lectus ac purus mollis dictum. Nulla sed mauris eros. Phasellus ipsum
+      purus, accumsan in rhoncus eget, facilisis vel libero. Nam quis accumsan
+      velit. Etiam in nisl ornare, placerat enim ut, feugiat elit. Maecenas sed
+      auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula eros.
+    title: Title for excesive info goes here
 meta:
   description: test meta description
   title: test meta title
 ---
-

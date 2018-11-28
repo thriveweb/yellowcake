@@ -5,31 +5,9 @@ title: Hello World!
 featuredImage: >-
   https://ucarecdn.com/50142094-b92a-4747-b11b-a28cc8477aee/-/preview/-/enhance/81/
 subtitle: This is the home page subtitle test
-accordion:
-  - content: >-
-      Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et
-      lectus ac purus mollis dictum. Nulla sed mauris eros. Phasellus ipsum
-      purus, accumsan in rhoncus eget, facilisis vel libero. Nam quis accumsan
-      velit. Etiam in nisl ornare, placerat enim ut, feugiat elit. Maecenas sed
-      auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula eros.
-    title: Title for excesive info goes here
-  - content: >-
-      Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et
-      lectus ac purus mollis dictum. Nulla sed mauris eros. Phasellus ipsum
-      purus, accumsan in rhoncus eget, facilisis vel libero. Nam quis accumsan
-      velit. Etiam in nisl ornare, placerat enim ut, feugiat elit. Maecenas sed
-      auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula eros.
-    title: Title for excesive info goes here
-  - content: >-
-      Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et
-      lectus ac purus mollis dictum. Nulla sed mauris eros. Phasellus ipsum
-      purus, accumsan in rhoncus eget, facilisis vel libero. Nam quis accumsan
-      velit. Etiam in nisl ornare, placerat enim ut, feugiat elit. Maecenas sed
-      auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula eros.
-    title: Title for excesive info goes here
 meta:
-  description: test meta description
-  title: test meta title
+  description: This is a test meta decsription.
+  title: The Ultimate Gatsby Starter
 ---
 
 # Yellowcake

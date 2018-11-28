@@ -19,7 +19,7 @@
     "gatsby-plugin-postcss": "^2.0.1",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.3",
-    "gatsby-plugin-sharp": "^2.0.7",
+    "gatsby-plugin-sharp": "^2.0.13",
     "gatsby-plugin-sitemap": "^2.0.1",
     "gatsby-remark-images": "^2.0.4",
     "gatsby-remark-relative-images": "^0.2.0",
