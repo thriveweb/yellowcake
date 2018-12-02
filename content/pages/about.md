@@ -2,7 +2,7 @@
 template: AboutPage
 slug: about
 title: About page title
-featuredImage: 'https://ucarecdn.com/29605cea-f23c-493e-b792-3ba1ad2703ee~1/nth/0/'
+featuredImage: https://ucarecdn.com/df0dc650-6938-412f-aefb-2019d2349e13/
 subtitle: Test subtitle
 section1: >-
   ## Lorem Ipsum

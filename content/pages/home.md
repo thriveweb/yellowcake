@@ -2,8 +2,7 @@
 template: HomePage
 slug: ''
 title: Hello World!
-featuredImage: >-
-  https://ucarecdn.com/50142094-b92a-4747-b11b-a28cc8477aee/-/preview/-/enhance/81/
+featuredImage: https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/
 subtitle: This is the home page subtitle test
 meta:
   description: This is a test meta decsription.
