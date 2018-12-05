@@ -35,7 +35,6 @@ export const AboutPageTemplate = ({
     </section>
     <section className="section">
       <div className="container">
-        <h2 className="taCenter">Accordion</h2>
         <Accordion items={accordion} />
       </div>
     </section>
