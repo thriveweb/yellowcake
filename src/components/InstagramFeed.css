@@ -1,0 +1,39 @@
+.InstagramFeed {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+}
+
+.InstagramFeed--EmptyPost {
+  width: calc(100% / 8);
+  padding: calc(50% / 8) 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease all;
+}
+
+.InstagramFeed--EmptyPost:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1120px) {
+  .InstagramFeed--EmptyPost {
+    width: calc(100% / 4);
+    padding: calc(50% / 4) 0;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .InstagramFeed--EmptyPost {
+    width: calc(100% / 2);
+    padding: calc(50% / 2) 0;
+  }
+
+  .InstagramFeed--EmptyPost:nth-child(n + 5) {
+    display: none;
+  }
+}
