@@ -1,25 +1,31 @@
 ---
 template: HomePage
 slug: ''
-title: Hello World!
+title: Yellowcake
 featuredImage: 'https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/'
-subtitle: This is the home page subtitle test
+subtitle: Welcome to the ultimate Gatsby and Netlify starter project.
 meta:
-  description: This is a test meta decsription.
+  description: This is a test meta description.
   title: The Ultimate Gatsby Starter
 ---
-# Yellowcake
 
-An opinionated starter project for creating lightning-fast websites with [Gatsby](https://gatsbyjs.org) and [Netlify CMS](https://netlifycms.org). View the [home page for this project](https://thriveweb.com.au/the-lab/yellowcake-gatsby-react-js-starter-project/) and [docs](https://github.com/thriveweb/yellowcake/blob/master/README.md).
+Yellowcake is an opinionated starter project created by Thrive Digital to help you create lightening fast websites with [Gatsby](https://gatsbyjs.org) and [Netlify CMS](https://netlifycms.org).
 
-* **[Gatsby](https://gatsbyjs.org)** static site generator
-* **[Netlify CMS](https://github.com/netlify/netlify-cms)** for content management
+View the [project overview](https://thriveweb.com.au/the-lab/yellowcake-gatsby-react-js-starter-project/) and the [docs](https://github.com/thriveweb/yellowcake/blob/master/README.md).
 
-## See also
+# Features
 
-[Netlify CMS Docs](https://www.netlifycms.org/docs/)\
-[Netlify CMS Repo](https://github.com/netlify/netlify-cms)
+- **[Gatsby](https://gatsbyjs.org)** static site generator
+- **[Netlify CMS](https://github.com/netlify/netlify-cms)** for content management
+- Dynamic menus and forms
+- **[Mailchimp](http://mailchimp.com)** and **[Uploadcare](https://uploadcare.com)** integrations
+- Fully responsive layout for mobile and widescreen browsing
+- Blog searching and paging functionality
+- Seamless image and content sliders
+- Instagram feed integration
 
-## Get going
+## Get started
+
+View the [Netlify CMS Docs](https://www.netlifycms.org/docs/) and the [Netlify CMS Repo](https://github.com/netlify/netlify-cms).
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thriveweb/yellowcake&stack=cms)
