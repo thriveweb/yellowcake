@@ -5,7 +5,7 @@ import InstagramFeed from './InstagramFeed'
 
 export default ({ globalSettings, socialSettings, navLinks }) => (
   <div>
-    <h2 class="taCenter">
+    <h2 className="taCenter">
       Follow us{' '}
       <a href="https://instagram.com/thrivegoldcoast/">@thrivegoldcoast</a>
     </h2>

@@ -1,5 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Location } from '@reach/router'
+import qs from 'qs'
+
+import _cloneDeep from 'lodash/cloneDeep'
 
 import PageHeader from '../components/PageHeader'
 import PostSection from '../components/PostSection'
@@ -39,38 +43,51 @@ export const BlogIndexTemplate = ({
   featuredImage,
   posts = [],
   postCategories = [],
+  enableSearch = true,
   contentType
-}) => {
-  let filteredPosts = {}
-  filteredPosts = byDate(posts)
-  filteredPosts = byCategory(filteredPosts, title, contentType)
+}) => (
+  <Location>
+    {({ location }) => {
+      let filteredPosts = posts && !!posts.length ? _cloneDeep(posts) : []
 
-  return (
-    <main className="Blog">
-      <PageHeader
-        title={title}
-        subtitle={subtitle}
-        backgroundImage={featuredImage}
-      />
+      let queryObj = location.search.replace('?', '')
+      queryObj = qs.parse(queryObj)
 
-      {!!postCategories.length && (
-        <section className="section thin">
-          <div className="container">
-            <PostCategoriesNav categories={postCategories} />
-          </div>
-        </section>
-      )}
+      if (enableSearch && queryObj.s) {
+        const searchTerm = queryObj.s.toLowerCase()
+        filteredPosts = filteredPosts.filter(({ node: post }) =>
+          post.frontmatter.title.toLowerCase().includes(searchTerm)
+        )
+      }
 
-      {!!posts.length && (
-        <section className="section">
-          <div className="container">
-            <PostSection posts={filteredPosts} />
-          </div>
-        </section>
-      )}
-    </main>
-  )
-}
+      return (
+        <main className="Blog">
+          <PageHeader
+            title={title}
+            subtitle={subtitle}
+            backgroundImage={featuredImage}
+          />
+
+          {!!postCategories.length && (
+            <section className="section thin">
+              <div className="container">
+                <PostCategoriesNav categories={postCategories} />
+              </div>
+            </section>
+          )}
+
+          {!!posts.length && (
+            <section className="section">
+              <div className="container">
+                <PostSection posts={filteredPosts} />
+              </div>
+            </section>
+          )}
+        </main>
+      )
+    }}
+  </Location>
+)
 
 // Export Default BlogIndex for front-end
 const BlogIndex = ({ data: { page, posts, postCategories } }) => (
