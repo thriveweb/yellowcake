@@ -342,15 +342,26 @@ collections: # A list of collections the CMS should be able to edit
           widget: image,
           required: false,
         }
-      # - label: "Meta"
-      #   required: false
-      #   name: "meta"
-      #   widget: "object"
-      #   fields:
-      #     - {label: Title, name: title, widget: string, required: false}
-      #     - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-      #     - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-      #     - {label: Noindex, name: noindex, widget: boolean, required: false}
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+              pattern: ['.{,300}', 'Must not exceed 300 characters'],
+            }
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: 'settings'
     label: 'Settings'
