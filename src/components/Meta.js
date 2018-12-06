@@ -14,7 +14,6 @@ const Meta = props => {
     noindex,
     canonicalLink,
     siteTitle,
-    siteUrl,
     siteDescription
     // overwrite { title, description } if in fields or fields.meta
   } = {

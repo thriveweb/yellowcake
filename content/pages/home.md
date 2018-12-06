@@ -1,49 +1,31 @@
 ---
 template: HomePage
 slug: ''
-title: Hello World!
-featuredImage: >-
-  https://ucarecdn.com/50142094-b92a-4747-b11b-a28cc8477aee/-/preview/-/enhance/81/
-subtitle: This is the home page subtitle test
-accordion:
-  - content: >-
-      Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et
-      lectus ac purus mollis dictum. Nulla sed mauris eros. Phasellus ipsum
-      purus, accumsan in rhoncus eget, facilisis vel libero. Nam quis accumsan
-      velit. Etiam in nisl ornare, placerat enim ut, feugiat elit. Maecenas sed
-      auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula eros.
-    title: Title for excesive info goes here
-  - content: >-
-      Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et
-      lectus ac purus mollis dictum. Nulla sed mauris eros. Phasellus ipsum
-      purus, accumsan in rhoncus eget, facilisis vel libero. Nam quis accumsan
-      velit. Etiam in nisl ornare, placerat enim ut, feugiat elit. Maecenas sed
-      auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula eros.
-    title: Title for excesive info goes here
-  - content: >-
-      Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et
-      lectus ac purus mollis dictum. Nulla sed mauris eros. Phasellus ipsum
-      purus, accumsan in rhoncus eget, facilisis vel libero. Nam quis accumsan
-      velit. Etiam in nisl ornare, placerat enim ut, feugiat elit. Maecenas sed
-      auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula eros.
-    title: Title for excesive info goes here
+title: Yellowcake
+featuredImage: 'https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/'
+subtitle: Welcome to the ultimate Gatsby and Netlify starter project.
 meta:
-  description: test meta description
-  title: test meta title
+  description: This is a meta description.
+  title: The Ultimate Gatsby Starter
 ---
 
-# Yellowcake
+Yellowcake is an opinionated starter project created by Thrive Digital to help you create lightening fast websites with [Gatsby](https://gatsbyjs.org) and [Netlify CMS](https://netlifycms.org).
 
-An opinionated starter project for creating lightning-fast websites with [Gatsby](https://gatsbyjs.org) and [Netlify CMS](https://netlifycms.org).
+View the [project overview](https://thriveweb.com.au/the-lab/yellowcake-gatsby-react-js-starter-project/) and the [docs](https://github.com/thriveweb/yellowcake/blob/master/README.md).
+
+# Features
 
 - **[Gatsby](https://gatsbyjs.org)** static site generator
 - **[Netlify CMS](https://github.com/netlify/netlify-cms)** for content management
+- Dynamic menus and forms
+- **[Mailchimp](http://mailchimp.com)** and **[Uploadcare](https://uploadcare.com)** integrations
+- Fully responsive layout for mobile and widescreen browsing
+- Blog searching and paging functionality
+- Seamless image and content sliders
+- Instagram feed integration
 
-## See also
+## Get started
 
-[Netlify CMS Docs](https://www.netlifycms.org/docs/)  
-[Netlify CMS Repo](https://github.com/netlify/netlify-cms)
-
-## Get going
+View the [Netlify CMS Docs](https://www.netlifycms.org/docs/) and the [Netlify CMS Repo](https://github.com/netlify/netlify-cms).
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thriveweb/yellowcake&stack=cms)

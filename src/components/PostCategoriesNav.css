@@ -3,8 +3,28 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .PostCategoriesNav > * + * {
   margin-left: 1rem;
+}
+
+.PostCategoriesNav input[type='text'] {
+  right: 0;
+  position: absolute;
+  border: 0;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  color: black;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.PostCategoriesNav input[type='text']:focus {
+  outline: none;
+}
+
+.PostCategoriesNav input[type='text']::placeholder {
+  color: black;
 }

@@ -1,7 +1,7 @@
 .Accordion {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -30,7 +30,6 @@
   text-transform: uppercase;
   letter-spacing: 0.02rem;
   font-weight: bold;
-  line-height: 1.6rem;
 }
 
 .Accordion--item svg {

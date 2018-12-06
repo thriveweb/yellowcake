@@ -30,7 +30,7 @@
 }
 
 .Nav--MenuButton {
-  display: none;
+  display: none !important;
 }
 
 .NavLink {
@@ -109,7 +109,7 @@
   }
 
   .Nav--MenuButton {
-    display: block;
+    display: block !important;
     margin-left: auto;
     z-index: 1;
   }
