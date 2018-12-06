@@ -55,7 +55,7 @@ export const BlogIndexTemplate = ({
 
       if (enableSearch && queryObj.s) {
         const searchTerm = queryObj.s.toLowerCase()
-        filteredPosts = filteredPosts.filter(({ node: post }) =>
+        filteredPosts = filteredPosts.filter(post =>
           post.frontmatter.title.toLowerCase().includes(searchTerm)
         )
       }
@@ -71,7 +71,7 @@ export const BlogIndexTemplate = ({
           {!!postCategories.length && (
             <section className="section thin">
               <div className="container">
-                <PostCategoriesNav categories={postCategories} />
+                <PostCategoriesNav enableSearch categories={postCategories} />
               </div>
             </section>
           )}
