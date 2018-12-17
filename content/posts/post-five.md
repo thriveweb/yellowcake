@@ -1,9 +1,10 @@
 ---
 template: SinglePost
-title: Post Three
+title: Swiming
 status: Published
 date: '2018-05-25'
-featuredImage: 'https://ucarecdn.com/a7f36998-7a41-4a63-b0b1-91ef46cd638b/'
+featuredImage: >-
+  https://ucarecdn.com/6a00645e-a07d-4c6c-8386-7e0f86bcff84/-/crop/1632x1853/0,596/-/preview/
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
