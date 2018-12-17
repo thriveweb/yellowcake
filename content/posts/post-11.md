@@ -1,6 +1,6 @@
 ---
 template: SinglePost
-title: Post Three
+title: Yellow Van
 status: Published
 date: '2018-05-25'
 featuredImage: 'https://ucarecdn.com/a7f36998-7a41-4a63-b0b1-91ef46cd638b/'
