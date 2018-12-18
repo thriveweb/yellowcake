@@ -8,6 +8,21 @@
   align-items: stretch;
 }
 
+.PostSection button {
+  margin-top: 1rem;
+  margin-top: 5rem;
+  background: white;
+  border: 2px solid black;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.PostSection button:hover {
+  background: black;
+  border: 2px solid white;
+  color: white;
+}
+
 .PostSection--Grid > * {
   width: calc(33.33% - 2rem);
   margin-bottom: 4rem;
