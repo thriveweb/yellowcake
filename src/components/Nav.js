@@ -48,6 +48,7 @@ export class Navigation extends Component {
         </Link>
       )
     }
+    console.log(this.props.location.pathname)
 
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
@@ -65,7 +66,11 @@ export class Navigation extends Component {
             >
               <span
                 className={`NavLink Nav--GroupParent ${
-                  this.props.location.pathname.includes('posts') ? 'active' : ''
+                  this.props.location.pathname.includes('posts') ||
+                  this.props.location.pathname.includes('blog') ||
+                  this.props.location.pathname.includes('post-categories')
+                    ? 'active'
+                    : ''
                 }`}
                 onClick={() => this.toggleSubNav('posts')}
               >
