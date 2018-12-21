@@ -20,6 +20,7 @@
   margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.2);
+  cursor: pointer;
 }
 
 .Accordion--item h2 {

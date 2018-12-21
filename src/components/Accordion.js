@@ -29,16 +29,17 @@ export default class Accordion extends React.Component {
               <div
                 className={`Accordion--item ${active ? 'active' : ''}`}
                 key={`accordion-item-${item.title + index}`}
+                onClick={() => this.handleClick(index)}
               >
-                <h2 className="flex" onClick={() => this.handleClick(index)}>
+                <h2 className="flex">
                   <span>{item.title}</span> <ChevronDown />
                 </h2>
                 <div className={'description'}>
                   {item.content} <br />
                   {item.link && (
-                    <a href={item.link} className="button">
+                    <div href={item.link} className="button">
                       {item.linkTitle}
-                    </a>
+                    </div>
                   )}
                 </div>
               </div>
