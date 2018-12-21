@@ -23,7 +23,7 @@ export default ({ children, meta, title }) => {
             }
           }
           allPosts: allMarkdownRemark(
-            filter: { fields: { contentType: { eq: "posts" } } }
+            filter: { fields: { contentType: { eq: "postCategories" } } }
             sort: { order: DESC, fields: [frontmatter___date] }
           ) {
             edges {
