@@ -48,7 +48,6 @@ export class Navigation extends Component {
         </Link>
       )
     }
-    console.log(this.props.location.pathname)
 
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
