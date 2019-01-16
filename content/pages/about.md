@@ -23,6 +23,8 @@ section2: |-
   <iframe width="560" height="315"
   src="https://www.youtube.com/embed/Js00yn142ic" frameborder="0"
   allow="autoplay; encrypted-media" allowfullscreen></iframe>
+videoPoster: https://ucarecdn.com/df0dc650-6938-412f-aefb-2019d2349e13/
+video: https://ucarecdn.com/df0dc650-6938-412f-aefb-2019d2349e13/
 accordion:
   - content: >-
       Vestibulum semper egestas feugiat. Curabitur nec sagittis leo. Maecenas et

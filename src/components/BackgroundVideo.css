@@ -1,0 +1,24 @@
+.BackgroundVideo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.BackgroundVideo video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.BackgroundVideo--video {
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+.BackgroundVideo--video.playing {
+  opacity: 1;
+}
