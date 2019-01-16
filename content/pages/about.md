@@ -23,6 +23,9 @@ section2: |-
   <iframe width="560" height="315"
   src="https://www.youtube.com/embed/Js00yn142ic" frameborder="0"
   allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  
+  ## Also background videos, with poster image support.
+  
 video: 'https://ucarecdn.com/e6979298-66d6-4245-b496-6e5a5d507135/'
 videoPoster: 'https://ucarecdn.com/69ba14a8-6481-4671-abb6-0e6f0d9c3e46/'
 testImage: 'https://ucarecdn.com/f7d891e6-59fb-4a1e-a784-674e7cdc804e/'
