@@ -77,7 +77,7 @@ export const pageQuery = graphql`
         video
         accordion {
           title
-          content
+          description
         }
       }
     }

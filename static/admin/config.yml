@@ -157,6 +157,12 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Section 2, name: section2, widget: markdown }
           - { name: video, label: video, widget: file }
           - { name: videoPoster, label: videoPoster, widget: image }
+          - label: 'accordion'
+            name: 'accordion'
+            widget: 'list'
+            fields:
+              - { name: title, label: title, widget: string, default: '' }
+              - { name: description, label: description, widget: string }
           - { label: Test Image, name: testImage, widget: image }
           - label: 'Meta'
             required: false
