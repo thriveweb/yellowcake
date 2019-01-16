@@ -42,6 +42,7 @@ class BackgroundVideo extends Component {
           autoPlay
           muted
           preload="auto"
+          loop
         >
           {children}
         </video>
