@@ -1,3 +1,8 @@
+## 2.0.3 - 2019-01-16
+
+Add background video component with fade in over poster image by default.
+Inline images through markdown editor now use Image component.
+
 ## 2.0.2 - 2018-11-06
 
 Add SVG icon component
