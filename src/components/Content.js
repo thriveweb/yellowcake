@@ -1,6 +1,8 @@
 import React from 'react'
+import ReactDOMServer from 'react-dom/server'
 import Marked from 'react-markdown'
 import PropTypes from 'prop-types'
+import Image from './Image'
 
 import './Content.css'
 
@@ -13,10 +15,40 @@ const encodeMarkdownURIs = (source = '') => {
   })
 }
 
-const Image = ({ nodeKey, src, alt, ...props }) => {
+const withContentImages = source => {
+  const images = source.match(/<img(.*?)\\?>/gim)
+
+  for (let i in images) {
+    const src = /src="(.*?)"/g.exec(images[i]),
+      alt = /src="(.*?)"/g.exec(images[i]),
+      title = /src="(.*?)"/g.exec(images[i])
+    source = source.replace(
+      images[i],
+      ReactDOMServer.renderToStaticMarkup(
+        <Image
+          resolutions="medium"
+          className="Content--Image"
+          src={src ? src[1] : null}
+          alt={alt ? alt[1] : null}
+          title={title ? title[1] : null}
+        />
+      )
+    )
+  }
+
+  return source
+}
+
+const MyImage = ({ nodeKey, src, alt, ...props }) => {
   const decodedSrc = decodeURI(src)
   return (
-    <img className="Content--Image" {...props} src={decodedSrc} alt={alt} />
+    <Image
+      className="Content--Image"
+      resolutions="medium"
+      {...props}
+      src={decodedSrc}
+      alt={alt}
+    />
   )
 }
 
@@ -36,7 +68,8 @@ const Content = ({ source, src, className = '' }) => {
   // accepts either html or markdown
   source = source || src || ''
   if (source.match(/^</)) {
-    // If source is html (starts with '<')
+    source = withContentImages(source)
+
     return (
       <div
         className={`Content ${className}`}
@@ -50,7 +83,7 @@ const Content = ({ source, src, className = '' }) => {
       className={`Content ${className}`}
       source={encodeMarkdownURIs(source)}
       renderers={{
-        image: Image,
+        image: MyImage,
         html: HtmlBlock
       }}
     />
