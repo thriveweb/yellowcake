@@ -1,3 +1,8 @@
+.BackgroundVideo-section {
+  position: relative;
+  overflow: hidden;
+  height: 20rem;
+}
 .BackgroundVideo {
   display: block;
   position: absolute;
