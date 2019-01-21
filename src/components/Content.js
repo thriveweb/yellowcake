@@ -20,14 +20,15 @@ const withContentImages = source => {
 
   for (let i in images) {
     const src = /src="(.*?)"/g.exec(images[i]),
-      alt = /src="(.*?)"/g.exec(images[i]),
-      title = /src="(.*?)"/g.exec(images[i])
+      alt = /alt="(.*?)"/g.exec(images[i]),
+      title = /title="(.*?)"/g.exec(images[i])
     source = source.replace(
       images[i],
       ReactDOMServer.renderToStaticMarkup(
         <Image
           resolutions="medium"
           className="Content--Image"
+          lazy={false}
           src={src ? src[1] : null}
           alt={alt ? alt[1] : null}
           title={title ? title[1] : null}
@@ -45,6 +46,7 @@ const MyImage = ({ nodeKey, src, alt, ...props }) => {
     <Image
       className="Content--Image"
       resolutions="medium"
+      lazy={false}
       {...props}
       src={decodedSrc}
       alt={alt}

@@ -12,17 +12,22 @@ export default class InstagramFeed extends Component {
   }
 
   state = {
+    mounted: false,
     posts: [],
     instagramUsername: ''
   }
 
-  UNSAFE_componentWillMount() {
+  componentDidMount() {
     const parsed = this.parseInstagramUrl(this.props.instagramUrl)
     const instagramUsername = parsed ? parsed[1] : ''
-    if (instagramUsername) this.fetchInstagram(instagramUsername)
-    this.setState({
-      instagramUsername
-    })
+
+    if (!this.state.mounted && instagramUsername) {
+      this.fetchInstagram(instagramUsername)
+      this.setState({
+        mounted: true,
+        instagramUsername
+      })
+    }
   }
 
   parseInstagramUrl = string =>

@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-
-// import 'intersection-observer'
-// import Observer from '@researchgate/react-intersection-observer'
+import Observer from './Observer'
 
 import './Image.css'
 
 class Image extends React.Component {
+  constructor(props) {
+    super(props)
+    this.ref = React.createRef()
+  }
+
   imageSizes = [
     '320',
     '450',
@@ -21,20 +24,18 @@ class Image extends React.Component {
     '2000'
   ] // image siezes used for image source sets
 
-  // state = {
-  //   isIntersecting: false
-  // }
-  //
-  // handleIntersection = e => {
-  //   console.log(e.isIntersecting)
-  //   if (e.isIntersecting) {
-  //     this.setState({ isIntersecting: true })
-  //   }
-  // }
+  state = {
+    isIntersecting: false
+  }
 
-  checkIfIsLocalSrc(src) {
-    if (typeof src === 'string' && src.includes('ucarecdn.com')) return false
-    return true
+  handleIntersection = e => {
+    if (e.isIntersecting) {
+      this.setState({ isIntersecting: true })
+    }
+  }
+
+  checkIsUploadcare(src) {
+    return typeof src === 'string' && src.includes('ucarecdn.com')
   }
 
   render() {
@@ -46,14 +47,15 @@ class Image extends React.Component {
       src,
       secSet = '',
       fullSrc,
-      // smallSrc,
+      smallSrc,
       onClick,
-      alt = ''
+      alt = '',
+      lazy = true
     } = this.props
 
-    const isLocalImg = this.checkIfIsLocalSrc(src)
+    const isUploadcare = this.checkIsUploadcare(src)
     /* create source set for images */
-    if (!isLocalImg) {
+    if (isUploadcare) {
       secSet = this.imageSizes.map(size => {
         return `${src}-/progressive/yes/-/format/auto/-/preview/${size}x${size}/-/quality/lightest/${size}.jpg ${size}w`
       })
@@ -69,46 +71,72 @@ class Image extends React.Component {
     }
 
     fullSrc = `${src}${
-      isLocalImg
-        ? ''
-        : '-/progressive/yes/-/format/auto/-/resize/' + resolutions + '/'
+      isUploadcare
+        ? '-/progressive/yes/-/format/auto/-/resize/' + resolutions + '/'
+        : ''
     }`
-    // smallSrc = `${src}${
-    //   isLocalImg ? '' : '-/progressive/yes/-/format/auto/-/resize/10x/'
-    // }`
+    smallSrc = `${src}${
+      isUploadcare ? '-/progressive/yes/-/format/auto/-/resize/10x/' : ''
+    }`
 
+    let style = {}
     if (background) {
-      let style = {}
       style = {
-        // backgroundImage: `url(${
-        //   this.state.isIntersecting ? fullSrc : smallSrc
-        // })`,
-        backgroundImage: `url(${fullSrc})`,
+        backgroundImage: `url(${
+          this.state.isIntersecting ? fullSrc : smallSrc
+        })`,
         backgroundSize
       }
-      return (
-        // <Observer onChange={this.handleIntersection}>
-        <div
-          className={`BackgroundImage absolute ${className}`}
-          style={style}
-        />
-        // </Observer>
-      )
     }
 
+    const fullImage = !isUploadcare || !lazy
+
     return (
-      // <Observer onChange={this.handleIntersection}>
-      <img
-        className={`LazyImage ${className}`}
-        src={fullSrc}
-        srcSet={secSet}
-        // src={this.state.isIntersecting ? fullSrc : smallSrc}
-        // srcSet={this.state.isIntersecting ? secSet : ''}
-        sizes={'100vw'}
-        onClick={onClick}
-        alt={alt}
-      />
-      // </Observer>
+      <Fragment>
+        {isUploadcare &&
+          lazy && (
+            <Observer onChange={this.handleIntersection}>
+              <span ref={this.ref}>
+                {!background && (
+                  <img
+                    className={`LazyImage ${className}`}
+                    src={this.state.isIntersecting ? fullSrc : smallSrc}
+                    srcSet={this.state.isIntersecting ? secSet : ''}
+                    sizes={'100vw'}
+                    onClick={onClick}
+                    alt={alt}
+                  />
+                )}
+                {background && (
+                  <div
+                    className={`BackgroundImage absolute ${className}`}
+                    style={style}
+                  />
+                )}
+              </span>
+            </Observer>
+          )}
+        {fullImage && (
+          <Fragment>
+            {background && (
+              <div
+                className={`BackgroundImage absolute ${className}`}
+                style={style}
+              />
+            )}
+            {!background && (
+              <img
+                className={`LazyImage ${className}`}
+                src={fullSrc}
+                srcSet={secSet}
+                sizes={'100vw'}
+                onClick={onClick}
+                alt={alt}
+              />
+            )}
+          </Fragment>
+        )}
+      </Fragment>
     )
   }
 }
