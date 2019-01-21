@@ -96,11 +96,18 @@ class Image extends React.Component {
         {isUploadcare &&
           lazy && (
             <Observer onChange={this.handleIntersection}>
-              <span ref={this.ref}>
+              <div
+                className="BackgroundImage"
+                ref={this.ref}
+                style={{
+                  backgroundImage: `url(${smallSrc})`,
+                  backgroundSize: 'cover'
+                }}
+              >
                 {!background && (
                   <img
                     className={`LazyImage ${className}`}
-                    src={this.state.isIntersecting ? fullSrc : smallSrc}
+                    src={this.state.isIntersecting ? fullSrc : ''}
                     srcSet={this.state.isIntersecting ? secSet : ''}
                     sizes={'100vw'}
                     onClick={onClick}
@@ -113,7 +120,7 @@ class Image extends React.Component {
                     style={style}
                   />
                 )}
-              </span>
+              </div>
             </Observer>
           )}
         {fullImage && (
