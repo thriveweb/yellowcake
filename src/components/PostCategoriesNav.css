@@ -28,3 +28,10 @@
 .PostCategoriesNav input[type='text']::placeholder {
   color: black;
 }
+
+@media (max-width: 600px) {
+  .PostCategoriesNav input[type='text'] {
+    position: relative;
+    width: 100%;
+  }
+}
