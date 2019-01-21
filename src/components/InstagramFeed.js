@@ -6,18 +6,6 @@ import Image from '../components/Image'
 import './InstagramFeed.css'
 
 export default class InstagramFeed extends Component {
-  constructor(props) {
-    super(props)
-    const lastclear = localStorage.getItem('lastclear'),
-      time_now = new Date().getTime()
-
-    // .getTime() returns milliseconds so 1000 * 60 * 60 * 24 = 1 days
-    if (time_now - lastclear > 1000 * 60 * 60 * 1) {
-      localStorage.clear()
-      localStorage.setItem('lastclear', time_now)
-    }
-  }
-
   static defaultProps = {
     instagramUrl: 'https://instagram.com/instagram',
     count: 7
@@ -29,7 +17,19 @@ export default class InstagramFeed extends Component {
     instagramUsername: ''
   }
 
+  clearStorage() {
+    const lastclear = localStorage.getItem('lastclear'),
+      time_now = new Date().getTime()
+
+    // .getTime() returns milliseconds so 1000 * 60 * 60 * 24 = 1 days
+    if (time_now - lastclear > 1000 * 60 * 60 * 1) {
+      localStorage.clear()
+      localStorage.setItem('lastclear', time_now)
+    }
+  }
+
   componentDidMount() {
+    this.clearStorage()
     const parsed = this.parseInstagramUrl(this.props.instagramUrl)
     const instagramUsername = parsed ? parsed[1] : ''
 
