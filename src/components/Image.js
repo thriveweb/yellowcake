@@ -106,7 +106,9 @@ class Image extends React.Component {
               >
                 {!background && (
                   <img
-                    className={`LazyImage ${className}`}
+                    className={`LazyImage ${
+                      className + this.state.isIntersecting ? ' faded' : ''
+                    }`}
                     src={this.state.isIntersecting ? fullSrc : ''}
                     srcSet={this.state.isIntersecting ? secSet : ''}
                     sizes={'100vw'}
@@ -116,7 +118,9 @@ class Image extends React.Component {
                 )}
                 {background && (
                   <div
-                    className={`BackgroundImage absolute ${className}`}
+                    className={`LazyImage BackgroundImage absolute ${
+                      className + this.state.isIntersecting ? ' faded' : ''
+                    }`}
                     style={style}
                   />
                 )}
@@ -133,7 +137,7 @@ class Image extends React.Component {
             )}
             {!background && (
               <img
-                className={`LazyImage ${className}`}
+                className={`${className}`}
                 src={fullSrc}
                 srcSet={secSet}
                 sizes={'100vw'}

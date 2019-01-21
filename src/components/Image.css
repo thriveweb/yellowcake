@@ -20,3 +20,12 @@
   right: 0;
   bottom: 0;
 }
+
+.LazyImage {
+  opacity: 0;
+  transition: ease all 0.3s;
+}
+
+.LazyImage.faded {
+  opacity: 1;
+}
