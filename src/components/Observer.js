@@ -18,6 +18,7 @@ export default class Observer extends Component {
     let threshold = this.getCurrentScrollPos() + window.innerHeight
     if (
       !this.isIntersecting &&
+      this.ref.current !== null &&
       ReactDOM.findDOMNode(this.ref.current).getBoundingClientRect().top <=
         threshold
     ) {
