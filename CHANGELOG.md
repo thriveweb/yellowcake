@@ -1,3 +1,11 @@
+## 2.0.4 - 2019-01-21
+
+New lazy image component and a bunch of errors.
+
+- instagram load + cache items
+- video bg z-index
+- post search bar responsiveness
+
 ## 2.0.3 - 2019-01-16
 
 Add background video component with fade in over poster image by default.
