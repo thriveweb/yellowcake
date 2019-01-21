@@ -27,6 +27,7 @@ export const SinglePostTemplate = ({
       {featuredImage && (
         <Image
           background
+          resolutions="large"
           className="SinglePost--BackgroundImage"
           src={featuredImage}
           alt={title}
