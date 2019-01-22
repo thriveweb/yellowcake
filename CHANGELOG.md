@@ -1,3 +1,9 @@
+## 2.0.5 - 2019-01-22
+
+Offline support with prefetch 10px images from Uploadcare.
+Single post layout update to remove background image.
+
+
 ## 2.0.4 - 2019-01-21
 
 New lazy image component and a bunch of errors.
