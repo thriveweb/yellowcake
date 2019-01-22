@@ -1,8 +1,5 @@
 .SinglePost {
-}
-
-.SinglePost--BackgroundImage {
-  height: 50rem;
+  background: var(--lightGrey);
 }
 
 .SinglePost--BackButton {
@@ -28,7 +25,6 @@
 
 .SinglePost--Content {
   background: white;
-  margin-top: 30rem;
   padding: 8rem 8rem 4rem 8rem;
 }
 
