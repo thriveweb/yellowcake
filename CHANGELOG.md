@@ -1,8 +1,11 @@
+## 2.0.6 - 2019-01-22
+
+BackgroundVideo Component set poster for mobile width window.
+
 ## 2.0.5 - 2019-01-22
 
 Offline support with prefetch 10px images from Uploadcare.
 Single post layout update to remove background image.
-
 
 ## 2.0.4 - 2019-01-21
 
