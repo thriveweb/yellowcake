@@ -1,8 +1,7 @@
 import React from 'react'
-
 import './Logo.css'
 
-export default ({ inverted }) => (
+export default () => (
   <div
     className="Logo"
     style={{
