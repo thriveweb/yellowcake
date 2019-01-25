@@ -5,7 +5,6 @@ import { Link, graphql } from 'gatsby'
 import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
-import Image from '../components/Image'
 import Layout from '../components/Layout'
 import './SinglePost.css'
 
