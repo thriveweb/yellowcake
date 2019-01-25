@@ -13,41 +13,34 @@ export class Navigation extends Component {
     currentPath: false
   }
 
-  componentDidMount() {
+  componentDidMount = () =>
     this.setState({ currentPath: this.props.location.pathname })
-  }
 
   handleMenuToggle = () => this.setState({ active: !this.state.active })
 
   // Only close nav if it is open
   handleLinkClick = () => this.state.active && this.handleMenuToggle()
 
-  toggleSubNav = subNav => {
-    if (this.state.activeSubNav === subNav) {
-      this.setState({ activeSubNav: false })
-    } else {
-      this.setState({ activeSubNav: subNav })
-    }
-  }
+  toggleSubNav = subNav =>
+    this.setState({
+      activeSubNav: this.state.activeSubNav === subNav ? false : subNav
+    })
 
   render() {
-    const { active } = this.state
-    const { subNav } = this.props
-
-    const NavLink = ({ to, className, children, ...props }) => {
-      const isActive = to === this.state.currentPath ? 'active' : ''
-
-      return (
+    const { active } = this.state,
+      { subNav } = this.props,
+      NavLink = ({ to, className, children, ...props }) => (
         <Link
           to={to}
-          className={`NavLink ${isActive} ${className}`}
+          className={`NavLink ${
+            to === this.state.currentPath ? 'active' : ''
+          } ${className}`}
           onClick={this.handleLinkClick}
           {...props}
         >
           {children}
         </Link>
       )
-    }
 
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
@@ -79,17 +72,15 @@ export class Navigation extends Component {
                 <NavLink to="/blog/" className="Nav--GroupLink">
                   All Posts
                 </NavLink>
-                {subNav.posts.map((link, index) => {
-                  return (
-                    <NavLink
-                      to={link.slug}
-                      key={'posts-subnav-link-' + index}
-                      className="Nav--GroupLink"
-                    >
-                      {link.title}
-                    </NavLink>
-                  )
-                })}
+                {subNav.posts.map((link, index) => (
+                  <NavLink
+                    to={link.slug}
+                    key={'posts-subnav-link-' + index}
+                    className="Nav--GroupLink"
+                  >
+                    {link.title}
+                  </NavLink>
+                ))}
               </div>
             </div>
             <NavLink to="/default/">Default</NavLink>
@@ -107,8 +98,6 @@ export class Navigation extends Component {
   }
 }
 
-export default ({ subNav }) => {
-  return (
-    <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
-  )
-}
+export default ({ subNav }) => (
+  <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
+)

@@ -41,15 +41,14 @@ export default ({ children, meta, title }) => {
       `}
       render={data => {
         const { siteTitle, socialMediaCard, googleTrackingId } =
-          data.settingsYaml || {}
-
-        const subNav = {
-          posts: data.allPosts.hasOwnProperty('edges')
-            ? data.allPosts.edges.map(post => {
-                return { ...post.node.fields, ...post.node.frontmatter }
-              })
-            : false
-        }
+            data.settingsYaml || {},
+          subNav = {
+            posts: data.allPosts.hasOwnProperty('edges')
+              ? data.allPosts.edges.map(post => {
+                  return { ...post.node.fields, ...post.node.frontmatter }
+                })
+              : false
+          }
 
         return (
           <Fragment>
