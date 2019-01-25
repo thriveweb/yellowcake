@@ -31,9 +31,7 @@ export default class Meta extends Component {
       googleTrackingId
       // overwrite { title, description } if in fields or fields.meta
     } = this.props
-    console.log(
-      'https://www.googletagmanager.com/gtag/js?id=' + googleTrackingId
-    )
+
     return (
       <Helmet>
         {title && <title>{title}</title>}
