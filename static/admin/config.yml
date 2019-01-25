@@ -401,8 +401,8 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: Image, name: image, widget: image, required: false }
           - {
-              label: Header Meta / Scripts,
-              name: headerScripts,
+              label: Google Analytics Tracking Id,
+              name: googleTrackingId,
               widget: text,
               required: false,
             }
