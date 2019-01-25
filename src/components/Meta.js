@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
@@ -16,25 +16,6 @@ export const query = graphql`
 `
 
 export default class Meta extends Component {
-  componentDidMount() {
-    // write headerScripts
-    const { headerScripts } = this.props
-
-    if (typeof window !== 'undefined') {
-      let intval = setInterval(() => {
-        try {
-          const headerScriptsElement = document.getElementById('headerScripts')
-          if (headerScripts && headerScriptsElement) {
-            headerScriptsElement.outerHTML = headerScripts
-            clearInterval(intval)
-          }
-        } catch (err) {
-          console.log(err)
-        }
-      }, 100)
-    }
-  }
-
   render() {
     const {
       title,
@@ -50,7 +31,9 @@ export default class Meta extends Component {
       googleTrackingId
       // overwrite { title, description } if in fields or fields.meta
     } = this.props
-
+    console.log(
+      'https://www.googletagmanager.com/gtag/js?id=' + googleTrackingId
+    )
     return (
       <Helmet>
         {title && <title>{title}</title>}
@@ -77,26 +60,26 @@ export default class Meta extends Component {
         <meta name="twitter:image" content={absoluteImageUrl} />
         <meta property="og:image:secure_url" content={absoluteImageUrl} />
         <meta property="og:image" content={absoluteImageUrl} />
-
         <meta name="twitter:card" content={absoluteImageUrl} />
+
+        {googleTrackingId && (
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${googleTrackingId}`}
+          />
+        )}
+
+        {googleTrackingId && (
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${googleTrackingId}');
+            `}
+          </script>
+        )}
       </Helmet>
     )
   }
 }
-
-// {googleTrackingId && (
-//   <Fragment>
-//     <script
-//       async
-//       src={`https://www.googletagmanager.com/gtag/js?id=${googleTrackingId}`}
-//     />
-//
-//     <script>{`
-//       console.log('load');
-//       window.dataLayer = window.dataLayer || [];
-//       function gtag(){dataLayer.push(arguments);}
-//       gtag('js', new Date());
-//       gtag('config', '${googleTrackingId}');
-//     `}</script>
-//   </Fragment>
-// )}
