@@ -7,10 +7,10 @@ import Layout from '../components/Layout.js'
 import Accordion from '../components/Accordion'
 import BackgroundVideo from '../components/BackgroundVideo'
 import Gallery from '../components/Gallery'
-import './AboutPage.css'
+import './ComponentsPage.css'
 
 // Export Template for use in CMS preview
-export const AboutPageTemplate = ({
+export const ComponentsPageTemplate = ({
   title,
   subtitle,
   featuredImage,
@@ -22,7 +22,7 @@ export const AboutPageTemplate = ({
   body,
   gallery
 }) => (
-  <main className="About">
+  <main>
     <PageHeader
       title={title}
       subtitle={subtitle}
@@ -61,19 +61,19 @@ export const AboutPageTemplate = ({
   </main>
 )
 
-const AboutPage = ({ data: { page } }) => (
+const ComponentsPage = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <AboutPageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <ComponentsPageTemplate {...page} {...page.frontmatter} body={page.html} />
   </Layout>
 )
 
-export default AboutPage
+export default ComponentsPage
 
 export const pageQuery = graphql`
-  query AboutPage($id: String!) {
+  query ComponentsPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       ...Gallery

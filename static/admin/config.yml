@@ -139,17 +139,17 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/about.md'
-        label: 'About Page'
-        name: 'about-page'
+      - file: 'content/pages/componets.md'
+        label: 'Componets Page'
+        name: 'componets-page'
         fields:
           - {
               label: Template,
               name: template,
               widget: hidden,
-              default: AboutPage,
+              default: ComponetsPage,
             }
-          - { label: Slug, name: slug, widget: hidden, default: 'about' }
+          - { label: Slug, name: slug, widget: hidden, default: 'componets' }
           - { label: Title, name: title, widget: string }
           - { label: Featured Images, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
