@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-// import 'isomorphic-fetch'
-// import 'whatwg-fetch'
-
 import Image from '../components/Image'
+
 import './InstagramFeed.css'
 
 export default class InstagramFeed extends Component {
@@ -34,7 +32,7 @@ export default class InstagramFeed extends Component {
     const instagramUsername = parsed ? parsed[1] : ''
 
     if (!this.state.mounted && instagramUsername) {
-      this.fetchInstagram(instagramUsername)
+      this.fetchInstagram()
       this.setState({
         mounted: true,
         instagramUsername
@@ -45,15 +43,14 @@ export default class InstagramFeed extends Component {
   parseInstagramUrl = string =>
     string.match(/(?:https?:\/\/)(?:www.)?instagram.com\/([\w\d_-]+)\/?/i)
 
-  fetchInstagram = instagramUsername => {
+  fetchInstagram = () => {
     let insaFeed = localStorage.getItem('insaFeed')
       ? localStorage.getItem('insaFeed')
       : false
 
     if (!insaFeed) {
       typeof window !== 'undefined' &&
-        window
-          .fetch(`https://instagram.thrivex.io/?ref=thrivegoldcoast`)
+        fetch(`https://instagram.thrivex.io/?ref=thrivegoldcoast`)
           .then(res => res.json())
           .then(data => {
             insaFeed = data && data.items ? data.items : []
@@ -100,7 +97,7 @@ export default class InstagramFeed extends Component {
   }
 }
 
-const Post = ({ src, code, caption }) => (
+const Post = ({ src, code }) => (
   <a
     className="InstagramFeed--EmptyPost InstagramFeed--EmptyPost-loaded"
     href={`https://instagram.com/p/${code}`}
