@@ -23,10 +23,9 @@ class PostSection extends React.Component {
     }))
 
   render() {
-    const { posts, title, showLoadMore, loadMoreTitle } = this.props
-    const { limit } = this.state
-
-    const visiblePosts = posts.slice(0, limit || posts.length)
+    const { posts, title, showLoadMore, loadMoreTitle } = this.props,
+      { limit } = this.state,
+      visiblePosts = posts.slice(0, limit || posts.length)
 
     return (
       <div className="PostSection">
@@ -38,14 +37,13 @@ class PostSection extends React.Component {
             ))}
           </div>
         )}
-        {showLoadMore &&
-          visiblePosts.length < posts.length && (
-            <div className="taCenter">
-              <button className="button" onClick={this.increaseLimit}>
-                {loadMoreTitle}
-              </button>
-            </div>
-          )}
+        {showLoadMore && visiblePosts.length < posts.length && (
+          <div className="taCenter">
+            <button className="button" onClick={this.increaseLimit}>
+              {loadMoreTitle}
+            </button>
+          </div>
+        )}
       </div>
     )
   }
