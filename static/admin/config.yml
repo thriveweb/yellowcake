@@ -403,6 +403,6 @@ collections: # A list of collections the CMS should be able to edit
           - {
               label: Google Analytics Tracking Id,
               name: googleTrackingId,
-              widget: text,
+              widget: string,
               required: false,
             }

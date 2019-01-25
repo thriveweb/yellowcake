@@ -17,7 +17,7 @@ export default ({ children, meta, title }) => {
           settingsYaml {
             siteTitle
             siteDescription
-            headerScripts
+            googleTrackingId
             socialMediaCard {
               image
             }
@@ -40,7 +40,7 @@ export default ({ children, meta, title }) => {
         }
       `}
       render={data => {
-        const { siteTitle, socialMediaCard, headerScripts } =
+        const { siteTitle, socialMediaCard, googleTrackingId } =
           data.settingsYaml || {}
 
         const subNav = {
@@ -58,17 +58,13 @@ export default ({ children, meta, title }) => {
               titleTemplate={`%s | ${siteTitle}`}
             >
               {title}
-                <link
-                  href="https://ucarecdn.com"
-                  rel="preconnect"
-                  crossorigin
-                />
-                <link rel="dns-prefetch" href="https://ucarecdn.com" />
+              <link href="https://ucarecdn.com" rel="preconnect" crossorigin />
+              <link rel="dns-prefetch" href="https://ucarecdn.com" />
               {/* Add font link tags here */}
             </Helmet>
 
             <Meta
-              headerScripts={headerScripts}
+              googleTrackingId={googleTrackingId}
               absoluteImageUrl={
                 socialMediaCard &&
                 socialMediaCard.image &&

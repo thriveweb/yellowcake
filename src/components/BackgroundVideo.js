@@ -18,10 +18,8 @@ class BackgroundVideo extends Component {
     this.setState({ mobileWidth: window.innerWidth <= 900 })
   }
 
-  handelPlay(e) {
-    this.setState({
-      playing: true
-    })
+  handelPlay() {
+    this.setState({ playing: true })
     ReactDOM.findDOMNode(this.ref.current).removeEventListener(
       'playing',
       this.handelPlay

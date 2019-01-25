@@ -5,16 +5,4 @@ siteDescription: >-
   CMS v2 and Uploadcare media library.
 socialMediaCard:
   image: 'https://ucarecdn.com/fcc8d148-a9a8-42ee-a793-0f12b1437f61/'
-headerScripts: >-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-
-  <script async
-  src="https://www.googletagmanager.com/gtag/js?id=UA-133175780-1"></script>
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-133175780-1');
-  </script>
+googleTrackingId: 'UA-133175780-1'
