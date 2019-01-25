@@ -1,9 +1,8 @@
 import React from 'react'
-
-import './Footer.css'
 import InstagramFeed from './InstagramFeed'
+import './Footer.css'
 
-export default ({ globalSettings, socialSettings, navLinks }) => (
+export default () => (
   <div>
     <h2 className="taCenter">
       Follow us{' '}
