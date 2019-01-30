@@ -22,7 +22,7 @@ export const byDate = posts => {
 }
 
 /**
- * ilter posts by category.
+ * filter posts by category.
  *
  * @param {posts} object
  * @param {title} string
@@ -48,7 +48,10 @@ export const BlogIndexTemplate = ({
 }) => (
   <Location>
     {({ location }) => {
-      let filteredPosts = posts && !!posts.length ? _cloneDeep(posts) : []
+      let filteredPosts =
+        posts && !!posts.length
+          ? byCategory(byDate(posts), title, contentType)
+          : []
 
       let queryObj = location.search.replace('?', '')
       queryObj = qs.parse(queryObj)
