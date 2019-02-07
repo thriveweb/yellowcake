@@ -17,6 +17,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
 
     <section className="section">
       <div className="container">
+        test
         <Content source={body} />
       </div>
     </section>
