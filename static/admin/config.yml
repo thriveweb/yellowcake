@@ -84,7 +84,6 @@ collections: # A list of collections the CMS should be able to edit
                   name: description,
                   widget: text,
                   required: false,
-                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
               - {
                   label: Canonical Link,
@@ -124,7 +123,6 @@ collections: # A list of collections the CMS should be able to edit
                   name: description,
                   widget: text,
                   required: false,
-                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
               - {
                   label: Canonical Link,
@@ -181,7 +179,6 @@ collections: # A list of collections the CMS should be able to edit
                   name: description,
                   widget: text,
                   required: false,
-                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
               - {
                   label: Canonical Link,
@@ -229,7 +226,6 @@ collections: # A list of collections the CMS should be able to edit
                   name: description,
                   widget: text,
                   required: false,
-                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
               - {
                   label: Canonical Link,
@@ -273,7 +269,6 @@ collections: # A list of collections the CMS should be able to edit
               name: description,
               widget: text,
               required: false,
-              pattern: ['.{,300}', 'Must not exceed 300 characters'],
             }
           - {
               label: Canonical Link,
@@ -329,7 +324,6 @@ collections: # A list of collections the CMS should be able to edit
               name: description,
               widget: text,
               required: false,
-              pattern: ['.{,300}', 'Must not exceed 300 characters'],
             }
           - {
               label: Canonical Link,
@@ -367,7 +361,6 @@ collections: # A list of collections the CMS should be able to edit
               name: description,
               widget: text,
               required: false,
-              pattern: ['.{,300}', 'Must not exceed 300 characters'],
             }
           - {
               label: Canonical Link,
