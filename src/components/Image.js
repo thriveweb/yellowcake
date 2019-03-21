@@ -22,7 +22,7 @@ class Image extends React.Component {
     '1500',
     '1600',
     '2000'
-  ] // image siezes used for image source sets
+  ] // image sizes used for image source sets
 
   state = {
     isIntersecting: false
