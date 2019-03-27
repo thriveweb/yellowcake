@@ -1,3 +1,8 @@
+## 2.0.6 - 2019-03-27
+
+Upgrade CMS version.
+Fix broken image in preview when title is filled in.
+
 ## 2.0.6 - 2019-01-22
 
 BackgroundVideo Component set poster for mobile width window.
