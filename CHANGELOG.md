@@ -1,4 +1,4 @@
-## 2.0.6 - 2019-03-27
+## 2.0.7 - 2019-03-27
 
 Upgrade CMS version.
 Fix broken image in preview when title is filled in.
