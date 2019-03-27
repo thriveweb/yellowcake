@@ -7,7 +7,8 @@ import Image from './Image'
 import './Content.css'
 
 const encodeMarkdownURIs = (source = '') => {
-  const markdownLinkRegex = /\[(?:\[[^\]]*\]|[^[\]])*\]\([ \t]*<?((?:\([^)]*\)|[^()])*?)>?[ \t]*(['"].*?\6[ \t]*)?\)/g
+  const markdownLinkRegex = /\[(.+)\]\((.+)(".+)\)/g
+  console.log(source)
   return source.replace(markdownLinkRegex, (match, linkURI) => {
     if (!linkURI) return match
     const replaced = match.replace(linkURI, encodeURI(linkURI))
@@ -40,15 +41,15 @@ const withContentImages = source => {
   return source
 }
 
-const MyImage = ({ nodeKey, src, alt, ...props }) => {
+const MyImage = ({ nodeKey, src, title, alt }) => {
   const decodedSrc = decodeURI(src)
   return (
     <Image
-      className="Content--Image"
+      className="Content--Image markdown-preview"
       resolutions="medium"
       lazy={false}
-      {...props}
       src={decodedSrc}
+      title={title}
       alt={alt}
     />
   )

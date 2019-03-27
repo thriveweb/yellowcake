@@ -61,6 +61,7 @@ class Image extends React.Component {
       fullSrc,
       smallSrc,
       onClick,
+      title = '',
       alt = '',
       lazy = true
     } = this.props
@@ -117,6 +118,7 @@ class Image extends React.Component {
                   srcSet={this.state.isIntersecting ? secSet : ''}
                   sizes={'100vw'}
                   onClick={onClick}
+                  title={title}
                   alt={alt}
                 />
               )}
@@ -146,6 +148,7 @@ class Image extends React.Component {
                 srcSet={secSet}
                 sizes={'100vw'}
                 onClick={onClick}
+                title={title}
                 alt={alt}
               />
             )}
