@@ -26,3 +26,16 @@
 .BackgroundVideo--video.playing {
   opacity: 1;
 }
+
+.BackgroundVideo--videoTitle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  font-size: 4rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px grey;
+}
