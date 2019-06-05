@@ -39,3 +39,16 @@
   color: white;
   text-shadow: 1px 1px 1px grey;
 }
+
+.Poster--videoTitle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px grey;
+}

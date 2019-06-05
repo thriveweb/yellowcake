@@ -64,11 +64,10 @@ class BackgroundVideo extends Component {
           </div>
         )}
         {this.state.mobileWidth && (
-          <Image background src={poster} alt="Background poster">
-            {videoTitle && (
-              <div className="BackgroundVideo--videoTitle">{videoTitle}</div>
-            )}
-          </Image>
+          <Fragment>
+            <Image background src={poster} alt="Background poster" />
+            {videoTitle && <h3 className="Poster--videoTitle">{videoTitle}</h3>}
+          </Fragment>
         )}
       </Fragment>
     )
