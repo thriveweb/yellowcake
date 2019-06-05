@@ -1,3 +1,8 @@
+## 2.0.8 - 2019-05-06
+
+Background Video with title
+Submit to showcase
+
 ## 2.0.7 - 2019-03-27
 
 Upgrade CMS version.
