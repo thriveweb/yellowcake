@@ -155,6 +155,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Section 2, name: section2, widget: markdown }
           - { name: video, label: video, widget: file }
           - { name: videoPoster, label: videoPoster, widget: image }
+          - { label: videoTitle, name: videoTitle, widget: string }
           - label: 'accordion'
             name: 'accordion'
             widget: 'list'
