@@ -1,3 +1,9 @@
+## 2.0.9 - 2019-05-17
+
+Add google tag manager to track routes
+add you tag GMT_add_your_tag_here gatsby-config.js
+Update all packages :)
+
 ## 2.0.8 - 2019-05-06
 
 Background Video with title
