@@ -2,7 +2,7 @@
 
 Add google tag manager to track routes
 add you tag GMT_add_your_tag_here gatsby-config.js
-Update all packages :)
+Update all packages :) `yarn upgrade --latest`
 
 ## 2.0.8 - 2019-05-06
 
