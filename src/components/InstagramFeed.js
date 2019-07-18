@@ -44,25 +44,25 @@ export default class InstagramFeed extends Component {
     string.match(/(?:https?:\/\/)(?:www.)?instagram.com\/([\w\d_-]+)\/?/i)
 
   fetchInstagram = () => {
-    let insaFeed = localStorage.getItem('insaFeed')
-      ? localStorage.getItem('insaFeed')
+    let instaFeed = localStorage.getItem('instaFeed')
+      ? localStorage.getItem('instaFeed')
       : false
 
-    if (!insaFeed) {
+    if (!instaFeed) {
       typeof window !== 'undefined' &&
         fetch(`https://instagram.thrivex.io/?ref=thrivegoldcoast`)
           .then(res => res.json())
           .then(data => {
-            insaFeed = data && data.items ? data.items : []
-            localStorage.setItem('insaFeed', JSON.stringify(insaFeed))
+            instaFeed = data && data.items ? data.items : []
+            localStorage.setItem('instaFeed', JSON.stringify(instaFeed))
             this.setState({
-              posts: insaFeed
+              posts: instaFeed
             })
           })
           .catch(err => console.error(err))
     }
     this.setState({
-      posts: JSON.parse(insaFeed)
+      posts: JSON.parse(instaFeed)
     })
   }
 
