@@ -1,3 +1,7 @@
+## 2.0.9 - 2019-07-26
+
+Add new Popup component - Accepts children :)
+
 ## 2.0.9 - 2019-05-17
 
 Add google tag manager to track routes
