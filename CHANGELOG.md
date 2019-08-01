@@ -1,3 +1,7 @@
+## 2.0.10 - 2019-08-01
+
+Change Accordion click event to toggle individual item.
+
 ## 2.0.9 - 2019-07-26
 
 Add new Popup component - Accepts children :)
