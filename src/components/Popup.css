@@ -1,0 +1,43 @@
+.Popup-Overlay {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  z-index: 9999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Popup-Background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+  overflow: hidden;
+}
+
+.Popup-Inner {
+  background: white;
+  width: 80%;
+  max-height: 80%;
+  position: relative;
+  z-index: 99999999;
+  padding: 8rem;
+  overflow: hidden;
+}
+
+.Popup-Close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}

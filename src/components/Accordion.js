@@ -9,15 +9,18 @@ export default class Accordion extends React.Component {
     className: ''
   }
 
-  state = {
-    activeItem: null
-  }
+  // use state to auto close but has issues mobile view. onClick={() => this.handleClick(index)}
+  // state = {
+  //   activeItem: null
+  // }
+  //
+  // handleClick = index => {
+  //   this.setState({
+  //     activeItem: this.state.activeItem === index ? null : index
+  //   })
+  // }
 
-  handleClick = index => {
-    this.setState({
-      activeItem: this.state.activeItem === index ? null : index
-    })
-  }
+  handleClick = event => event.target.classList.toggle('active')
 
   render() {
     const { items, className } = this.props
@@ -26,11 +29,9 @@ export default class Accordion extends React.Component {
         {!!items &&
           items.map((item, index) => (
             <div
-              className={`Accordion--item ${
-                this.state.activeItem === index ? 'active' : ''
-              }`}
+              className={`Accordion--item `}
               key={`accordion-item-${_kebabCase(item.title) + '-' + index}`}
-              onClick={() => this.handleClick(index)}
+              onClick={this.handleClick}
             >
               <h2 className="flex">
                 <span>{item.title}</span>
