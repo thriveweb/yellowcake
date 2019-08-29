@@ -3,22 +3,23 @@ import Image from '../components/Image'
 
 import './InstagramFeed.css'
 
+// A quick way to get your access token
+// https://instagram.pixelunion.net/
+
 export default class InstagramFeed extends Component {
   static defaultProps = {
-    instagramUrl: 'https://instagram.com/instagram',
-    count: 7
+    accessToken: '1353697840.1677ed0.5a1cbfbc18f84915aa0d9a0bd02bff5a',
+    count: 20
   }
 
   state = {
     mounted: false,
-    posts: [],
-    instagramUsername: ''
+    posts: []
   }
 
   clearStorage() {
     const lastclear = localStorage.getItem('lastclear'),
       time_now = new Date().getTime()
-
     // .getTime() returns milliseconds so 1000 * 60 * 60 * 24 = 1 days
     if (time_now - lastclear > 1000 * 60 * 60 * 1) {
       localStorage.clear()
@@ -28,20 +29,13 @@ export default class InstagramFeed extends Component {
 
   componentDidMount() {
     this.clearStorage()
-    const parsed = this.parseInstagramUrl(this.props.instagramUrl)
-    const instagramUsername = parsed ? parsed[1] : ''
-
-    if (!this.state.mounted && instagramUsername) {
+    if (!this.state.mounted) {
       this.fetchInstagram()
       this.setState({
-        mounted: true,
-        instagramUsername
+        mounted: true
       })
     }
   }
-
-  parseInstagramUrl = string =>
-    string.match(/(?:https?:\/\/)(?:www.)?instagram.com\/([\w\d_-]+)\/?/i)
 
   fetchInstagram = () => {
     let insaFeed = localStorage.getItem('insaFeed')
@@ -50,7 +44,7 @@ export default class InstagramFeed extends Component {
 
     if (!insaFeed) {
       typeof window !== 'undefined' &&
-        fetch(`https://instagram.thrivex.io/?ref=thrivegoldcoast`)
+        fetch(`https://instagramapi.thrivex.io/?ref=${this.props.accessToken}`)
           .then(res => res.json())
           .then(data => {
             insaFeed = data && data.items ? data.items : []

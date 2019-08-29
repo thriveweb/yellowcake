@@ -1,3 +1,7 @@
+## 2.0.11 - 2019-08-29
+
+Add API key to resolve instagram issue.
+
 ## 2.0.10 - 2019-08-01
 
 Change Accordion click event to toggle individual item.
