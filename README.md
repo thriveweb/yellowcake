@@ -139,5 +139,4 @@ https://hooks.zapier.com/hooks/catch/2881617/ea5exg/
 
 ## Instagram Feed
 
-Get Your Instagram Access Token [here](https://instagram.pixelunion.net/). In order to display your Instagram photos on your own website, you are required to provide an Instagram Access Token. You can do this by clicking the generator button on this site you will first need to login to your account.
-[Love your work pixelunion!](https://instagram.pixelunion.net/)
+Get Your Instagram Access Token [here]https://generator.thrivex.io/). In order to display your Instagram photos on your own website, you are required to provide an Instagram Access Token. You can do this by clicking the generator button on this site you will first need to login to your account.
