@@ -1,4 +1,4 @@
-## 2.0.12 - 2019-08-29
+## 2.0.12 - 2019-11-01
 
 Removed date-fns and replaced with moment.js  
 Thanks @doakheggeness
