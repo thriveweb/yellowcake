@@ -1,3 +1,8 @@
+## 2.0.12 - 2019-08-29
+
+Removed date-fns and replaced with moment.js  
+Thanks @doakheggeness
+
 ## 2.0.11 - 2019-08-29
 
 Add API key to resolve instagram issue.
