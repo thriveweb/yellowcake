@@ -135,7 +135,7 @@ https://hooks.zapier.com/hooks/catch/2881617/ea5exg/
 - Hit send test to MailChimp button and hit finish if succeeded
 - Give your Zap a name and make sure your zap is turned on
 - Submit your form one last time and see if all data is coming trough to MailChimp
-- Thats is!
+- That's it!
 
 ## Instagram Feed
 
