@@ -14,7 +14,7 @@
     "gatsby": "^2.19.32",
     "gatsby-image": "^2.2.42",
     "gatsby-plugin-google-tagmanager": "^2.1.26",
-    "gatsby-plugin-manifest": "^2.2.42",
+    "gatsby-plugin-manifest": "^2.2.44",
     "gatsby-plugin-netlify": "^2.1.33",
     "gatsby-plugin-netlify-cms": "^4.1.41",
     "gatsby-plugin-nprogress": "^2.1.20",
