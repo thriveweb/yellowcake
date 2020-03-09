@@ -16,7 +16,7 @@
     "gatsby-plugin-google-tagmanager": "^2.1.25",
     "gatsby-plugin-manifest": "^2.2.42",
     "gatsby-plugin-netlify": "^2.1.33",
-    "gatsby-plugin-netlify-cms": "^4.1.40",
+    "gatsby-plugin-netlify-cms": "^4.1.41",
     "gatsby-plugin-nprogress": "^2.1.19",
     "gatsby-plugin-offline": "^3.0.35",
     "gatsby-plugin-postcss": "^2.1.20",
