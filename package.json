@@ -10,7 +10,8 @@
   "dependencies": {
     "@reach/router": "^1.3.3",
     "dom-form-serializer": "^1.0.7",
-    "gatsby": "^2.19.25",
+    "ejs": "^3.0.1",
+    "gatsby": "^2.19.32",
     "gatsby-image": "^2.2.42",
     "gatsby-plugin-google-tagmanager": "^2.1.25",
     "gatsby-plugin-manifest": "^2.2.42",
