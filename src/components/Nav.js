@@ -67,21 +67,21 @@ export class Navigation extends Component {
                 onClick={() => this.toggleSubNav('posts')}
               >
                 Blog
-              </span>
-              <div className="Nav--GroupLinks">
-                <NavLink to="/blog/" className="Nav--GroupLink">
-                  All Posts
-                </NavLink>
-                {subNav.posts.map((link, index) => (
-                  <NavLink
-                    to={link.slug}
-                    key={'posts-subnav-link-' + index}
-                    className="Nav--GroupLink"
-                  >
-                    {link.title}
+                <div className="Nav--GroupLinks">
+                  <NavLink to="/blog/" className="Nav--GroupLink">
+                    All Posts
                   </NavLink>
-                ))}
-              </div>
+                  {subNav.posts.map((link, index) => (
+                    <NavLink
+                      to={link.slug}
+                      key={'posts-subnav-link-' + index}
+                      className="Nav--GroupLink"
+                    >
+                      {link.title}
+                    </NavLink>
+                  ))}
+                </div>
+              </span>
             </div>
             <NavLink to="/default/">Default</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
