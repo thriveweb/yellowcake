@@ -35,6 +35,7 @@
     "lodash.clonedeep": "^4.5.0",
     "modern-normalize": "^0.5.0",
     "netlify-cms-app": "^2.9.7",
+    "netlify-cms-media-library-uploadcare": "^0.5.5",
     "node-sass": "^4.13.0",
     "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
