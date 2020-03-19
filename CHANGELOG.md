@@ -1,3 +1,10 @@
+## 2.0.13 - 2020-03-11
+
+Update node .nvmrc for build step.
+Successful Upgrade to latest packages.
+Thanks @flamebeard
+Thanks @krosenk729
+
 ## 2.0.12 - 2019-11-01
 
 Removed date-fns and replaced with moment.js  
