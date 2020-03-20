@@ -32,7 +32,7 @@ html {
   min-height: 100%;
   background: var(--lightGrey);
 }
-
+html, body {  overflow-x: hidden; }
 body {
   font-family: var(--font-system);
   min-height: 100%;
