@@ -9,7 +9,7 @@ const Schema = ({
   url,
   logoUrl: logo,
   type,
-  openingHours
+  openingHours,
 }) => {
   // see http://schema.org/docs/schemas.html
   // test https://search.google.com/structured-data/testing-tool
@@ -19,19 +19,19 @@ const Schema = ({
     '@type': type,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: address
+      streetAddress: address,
     },
     name,
     email,
     telephone,
     url,
     openingHours,
-    logo
+    logo,
   }
 
   return (
     <script
-      type='application/ld+json'
+      type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   )
@@ -44,7 +44,7 @@ Schema.propTypes = {
   address: PropTypes.string,
   email: PropTypes.string,
   phone: PropTypes.string,
-  logoUrl: PropTypes.string
+  logoUrl: PropTypes.string,
 }
 
 export default Schema

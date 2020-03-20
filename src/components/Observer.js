@@ -10,8 +10,8 @@ export default class Observer extends Component {
     return supportPageOffset
       ? window.pageYOffset
       : isCSS1Compat
-        ? document.documentElement.scrollTop
-        : document.body.scrollTop
+      ? document.documentElement.scrollTop
+      : document.body.scrollTop
   }
 
   handleScroll() {

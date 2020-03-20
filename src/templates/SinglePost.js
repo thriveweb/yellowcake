@@ -13,7 +13,7 @@ export const SinglePostTemplate = ({
   body,
   nextPostURL,
   prevPostURL,
-  categories = []
+  categories = [],
 }) => (
   <main>
     <article

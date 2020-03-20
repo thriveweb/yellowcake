@@ -9,12 +9,12 @@ import './InstagramFeed.css'
 export default class InstagramFeed extends Component {
   static defaultProps = {
     accessToken: '1353697840.1677ed0.5a1cbfbc18f84915aa0d9a0bd02bff5a',
-    count: 20
+    count: 20,
   }
 
   state = {
     mounted: false,
-    posts: []
+    posts: [],
   }
 
   clearStorage() {
@@ -32,7 +32,7 @@ export default class InstagramFeed extends Component {
     if (!this.state.mounted) {
       this.fetchInstagram()
       this.setState({
-        mounted: true
+        mounted: true,
       })
     }
   }
@@ -50,13 +50,13 @@ export default class InstagramFeed extends Component {
             instaFeed = data && data.items ? data.items : []
             localStorage.setItem('instaFeed', JSON.stringify(instaFeed))
             this.setState({
-              posts: instaFeed
+              posts: instaFeed,
             })
           })
           .catch(err => console.error(err))
     }
     this.setState({
-      posts: JSON.parse(instaFeed)
+      posts: JSON.parse(instaFeed),
     })
   }
 

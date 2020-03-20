@@ -51,13 +51,6 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {
-                  name: mapLink,
-                  label: mapLink,
-                  widget: string,
-                  required: false,
-                  default: '',
-                }
-              - {
                   name: lat,
                   label: latitude,
                   widget: string,
@@ -73,6 +66,30 @@ collections: # A list of collections the CMS should be able to edit
                   delete: false,
                   default: '',
                 }
+              - {
+                name: zoom,
+                label: zoom,
+                widget: string,
+                required: false,
+                delete: false,
+                default: '12',
+                }
+              - {
+                name: height,
+                label: height,
+                widget: string,
+                required: false,
+                delete: false,
+                default: '50vh',
+                }
+              - {
+                name: width,
+                label: width,
+                widget: string,
+                required: false,
+                delete: false,
+                default: '100%',
+              }
           - label: 'Meta'
             required: false
             name: 'meta'

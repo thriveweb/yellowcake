@@ -12,12 +12,12 @@ class Form extends React.Component {
     action: '',
     successMessage: 'Thanks for your enquiry, we will get back to you soon',
     errorMessage:
-      'There is a problem, your message has not been sent, please try contacting us via email'
+      'There is a problem, your message has not been sent, please try contacting us via email',
   }
 
   state = {
     alert: '',
-    disabled: false
+    disabled: false,
   }
 
   handleSubmit = e => {
@@ -28,7 +28,7 @@ class Form extends React.Component {
     const data = serialize(form)
     this.setState({ disabled: true })
     fetch(form.action + '?' + stringify(data), {
-      method: 'POST'
+      method: 'POST',
     })
       .then(res => {
         if (res.ok) {
@@ -41,14 +41,14 @@ class Form extends React.Component {
         form.reset()
         this.setState({
           alert: this.props.successMessage,
-          disabled: false
+          disabled: false,
         })
       })
       .catch(err => {
         console.error(err)
         this.setState({
           disabled: false,
-          alert: this.props.errorMessage
+          alert: this.props.errorMessage,
         })
       })
   }

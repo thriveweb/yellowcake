@@ -11,7 +11,7 @@ export const DefaultPageTemplate = ({
   title,
   subtitle,
   featuredImage,
-  body
+  body,
 }) => (
   <main className="DefaultPage">
     <PageHeader

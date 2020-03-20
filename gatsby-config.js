@@ -3,7 +3,7 @@ const postcssPresetEnv = require('postcss-preset-env')
 module.exports = {
   siteMetadata: {
     title: 'Yellowcake',
-    siteUrl: 'https://yellowcake.netlify.com'
+    siteUrl: 'https://yellowcake.netlify.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -13,8 +13,8 @@ module.exports = {
       options: {
         /*id: 'GTM-add_your_tag_here',*/
         id: 'GTM-P4RNF8D',
-        includeInDevelopment: false
-      }
+        includeInDevelopment: false,
+      },
     },
     {
       resolve: 'gatsby-plugin-offline',
@@ -24,22 +24,22 @@ module.exports = {
             // Use cacheFirst since these don't need to be revalidated (same RegExp
             // and same reason as above)
             urlPattern: /(\.js$|\.css$|static\/)/,
-            handler: `cacheFirst`
+            handler: `cacheFirst`,
           },
           {
             // Add runtime caching of various other page resources
             urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-            handler: `staleWhileRevalidate`
+            handler: `staleWhileRevalidate`,
           },
           {
             // uploadcare
             urlPattern: /^https:\/\/ucarecdn.com\/[-a-zA-Z0-9@:%_\+.~#?&//=]*?\/10x\//,
-            handler: `staleWhileRevalidate`
-          }
+            handler: `staleWhileRevalidate`,
+          },
         ],
         skipWaiting: true,
-        clientsClaim: true
-      }
+        clientsClaim: true,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -52,8 +52,8 @@ module.exports = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',
-        icon: `${__dirname}/static/images/logo.svg` // This path is relative to the root of the site.
-      }
+        icon: `${__dirname}/static/images/logo.svg`, // This path is relative to the root of the site.
+      },
     },
 
     // Add static assets before markdown files
@@ -61,15 +61,15 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/images`,
-        name: 'images'
-      }
+        name: 'images',
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content`,
-        name: 'pages'
-      }
+        name: 'pages',
+      },
     },
 
     // images
@@ -87,12 +87,12 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
-          `gatsby-remark-responsive-iframe`
-        ]
-      }
+          `gatsby-remark-responsive-iframe`,
+        ],
+      },
     },
 
     // css (replace with gatsby-plugin-sass for v2)
@@ -101,20 +101,20 @@ module.exports = {
       options: {
         postCssPlugins: [
           postcssPresetEnv({
-            browsers: '> 0.5%, last 2 versions, ie 11'
-          })
-        ]
-      }
+            browsers: '> 0.5%, last 2 versions, ie 11',
+          }),
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
           require(`postcss-preset-env`)({
-            browsers: '> 0.5%, last 2 versions, ie 11'
-          })
-        ]
-      }
+            browsers: '> 0.5%, last 2 versions, ie 11',
+          }),
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-nprogress',
@@ -122,8 +122,8 @@ module.exports = {
         // Setting a color is optional.
         color: 'white',
         // Disable the loading spinner.
-        showSpinner: false
-      }
+        showSpinner: false,
+      },
     },
     'gatsby-plugin-sitemap',
     {
@@ -131,9 +131,15 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
         stylesPath: `${__dirname}/src/cms/admin.css`,
-        enableIdentityWidget: true
-      }
+        enableIdentityWidget: true,
+      },
     },
-    'gatsby-plugin-netlify' // make sure to keep it last in the array
-  ]
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
+  ],
 }

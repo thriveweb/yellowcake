@@ -10,16 +10,16 @@ class PostSection extends React.Component {
     limit: 12,
     showLoadMore: true,
     loadMoreTitle: 'Load More',
-    perPageLimit: 12
+    perPageLimit: 12,
   }
 
   state = {
-    limit: this.props.limit
+    limit: this.props.limit,
   }
 
   increaseLimit = () =>
     this.setState(prevState => ({
-      limit: prevState.limit + this.props.perPageLimit
+      limit: prevState.limit + this.props.perPageLimit,
     }))
 
   render() {

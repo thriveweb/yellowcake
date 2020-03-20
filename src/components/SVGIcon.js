@@ -5,7 +5,7 @@ import './SVGIcon.css'
 export default ({ src }) => {
   const icon = {
     maskImage: `url(${src})`,
-    WebkitMaskImage: `url(${src})`
+    WebkitMaskImage: `url(${src})`,
   }
   return (
     <div className="SVGIcon">

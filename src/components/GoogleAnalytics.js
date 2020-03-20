@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 export default () => (
   <Route
-    path='/'
+    path="/"
     render={({ location }) => {
       // Assumes google analytics code already added to index.html
       if (typeof window.ga === 'function') {

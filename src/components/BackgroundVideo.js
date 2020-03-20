@@ -11,7 +11,7 @@ class BackgroundVideo extends Component {
   }
   state = {
     playing: false,
-    mobileWidth: false
+    mobileWidth: false,
   }
 
   updateDimensions() {

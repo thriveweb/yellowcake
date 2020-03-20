@@ -47,7 +47,7 @@ export default ({ children, meta, title }) => {
               ? data.allPosts.edges.map(post => {
                   return { ...post.node.fields, ...post.node.frontmatter }
                 })
-              : false
+              : false,
           }
 
         return (

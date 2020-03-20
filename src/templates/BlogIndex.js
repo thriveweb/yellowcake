@@ -42,7 +42,7 @@ export const BlogIndexTemplate = ({
   posts = [],
   postCategories = [],
   enableSearch = true,
-  contentType
+  contentType,
 }) => (
   <Location>
     {({ location }) => {
@@ -103,12 +103,12 @@ const BlogIndex = ({ data: { page, posts, postCategories } }) => (
       posts={posts.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
-        ...post.node.fields
+        ...post.node.fields,
       }))}
       postCategories={postCategories.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
-        ...post.node.fields
+        ...post.node.fields,
       }))}
     />
   </Layout>

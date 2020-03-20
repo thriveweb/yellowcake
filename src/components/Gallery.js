@@ -26,7 +26,7 @@ export default class Gallery extends Component {
     loaded: false,
     isOpen: false,
     sliderImages: [],
-    index: 0
+    index: 0,
   }
 
   isOpen(isOpen, index) {
@@ -44,10 +44,10 @@ export default class Gallery extends Component {
             src: img.image,
             title: img.title,
             w: result.width,
-            h: result.height
+            h: result.height,
           }
           this.setState({
-            sliderImages: newImagesArr
+            sliderImages: newImagesArr,
           })
           return true
         },
@@ -74,44 +74,42 @@ export default class Gallery extends Component {
     const { images } = this.props
     return (
       <Fragment>
-        {images &&
-          images.length > 0 && (
-            <div className="Gallery">
-              {images.map((image, index) => (
-                <figure
-                  className="Gallery--Item"
-                  key={_kebabCase(image.alt) + '-' + index}
-                  onClick={() => this.isOpen(true, index)}
-                >
-                  <div>
-                    <Image
-                      resolutions="small"
-                      src={image.image}
-                      alt={image.alt}
-                    />
-                  </div>
-                  {image.title && <figcaption>{image.title}</figcaption>}
-                </figure>
-              ))}
-            </div>
-          )}
-        {this.state.loaded &&
-          this.state.sliderImages.length > 0 && (
-            <PhotoSwipe
-              isOpen={this.state.isOpen}
-              items={this.state.sliderImages}
-              options={{
-                index: this.state.index,
-                history: false
-              }}
-              onClose={() => this.isOpen(false)}
-            />
-          )}
+        {images && images.length > 0 && (
+          <div className="Gallery">
+            {images.map((image, index) => (
+              <figure
+                className="Gallery--Item"
+                key={_kebabCase(image.alt) + '-' + index}
+                onClick={() => this.isOpen(true, index)}
+              >
+                <div>
+                  <Image
+                    resolutions="small"
+                    src={image.image}
+                    alt={image.alt}
+                  />
+                </div>
+                {image.title && <figcaption>{image.title}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        )}
+        {this.state.loaded && this.state.sliderImages.length > 0 && (
+          <PhotoSwipe
+            isOpen={this.state.isOpen}
+            items={this.state.sliderImages}
+            options={{
+              index: this.state.index,
+              history: false,
+            }}
+            onClose={() => this.isOpen(false)}
+          />
+        )}
       </Fragment>
     )
   }
 }
 
 Gallery.propTypes = {
-  images: PropTypes.array.isRequired
+  images: PropTypes.array.isRequired,
 }
