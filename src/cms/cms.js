@@ -29,9 +29,12 @@ CMS.registerPreviewTemplate('home-page', ({ entry }) => (
 CMS.registerPreviewTemplate('components-page', ({ entry }) => (
   <ComponentsPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
-  <ContactPageTemplate {...entry.toJS().data} />
-))
+CMS.registerPreviewTemplate('contact-page', ({ entry }) => {
+  CMS.registerPreviewStyle("https://unpkg.com/leaflet@1.5.1/dist/leaflet.css")
+  return (
+    <ContactPageTemplate {...entry.toJS().data} />
+  )
+})
 CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
   <DefaultPageTemplate {...entry.toJS().data} />
 ))
