@@ -67,29 +67,29 @@ collections: # A list of collections the CMS should be able to edit
                   default: '',
                 }
               - {
-                name: zoom,
-                label: zoom,
-                widget: string,
-                required: false,
-                delete: false,
-                default: '12',
+                  name: zoom,
+                  label: zoom,
+                  widget: string,
+                  required: false,
+                  delete: false,
+                  default: '12',
                 }
               - {
-                name: height,
-                label: height,
-                widget: string,
-                required: false,
-                delete: false,
-                default: '50vh',
+                  name: height,
+                  label: height,
+                  widget: string,
+                  required: false,
+                  delete: false,
+                  default: '50vh',
                 }
               - {
-                name: width,
-                label: width,
-                widget: string,
-                required: false,
-                delete: false,
-                default: '100%',
-              }
+                  name: width,
+                  label: width,
+                  widget: string,
+                  required: false,
+                  delete: false,
+                  default: '100%',
+                }
           - label: 'Meta'
             required: false
             name: 'meta'
