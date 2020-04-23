@@ -1,3 +1,8 @@
+## 2.0.14 - 2020-04-24
+
+Update image.js to resolve lazy load issue.
+Thanks @joebram
+
 ## 2.0.13 - 2020-03-11
 
 Update node .nvmrc for build step.
