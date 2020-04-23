@@ -88,11 +88,16 @@ class Image extends React.Component {
     }`
 
     let style = {}
-    if (background) {
+    if (background && lazy) {
       style = {
         backgroundImage: `url(${
           this.state.isIntersecting ? fullSrc : smallSrc
         })`,
+        backgroundSize
+      }
+    } else {
+      style = {
+        backgroundImage: `url(${fullSrc})`,
         backgroundSize
       }
     }
@@ -124,7 +129,7 @@ class Image extends React.Component {
               )}
               {background && (
                 <div
-                  className={`LazyImage BackgroundImage absolute ${
+                  className={`${lazy} LazyImage BackgroundImage absolute ${
                     className + this.state.isIntersecting ? ' faded' : ''
                   }`}
                   style={style}
