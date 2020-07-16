@@ -1,3 +1,7 @@
+## 2.0.14 - 2020-07-16
+
+Remove instagram feed component
+
 ## 2.0.14 - 2020-04-24
 
 Update image.js to resolve lazy load issue.
