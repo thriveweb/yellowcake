@@ -1,5 +1,4 @@
 import React from 'react'
-import InstagramFeed from './InstagramFeed'
 import './Footer.css'
 
 export default () => (
@@ -9,7 +8,6 @@ export default () => (
       <a href="https://instagram.com/thrivegoldcoast/">@thrivegoldcoast</a>
     </h2>
     <br />
-    <InstagramFeed count="8" />
     <footer className="footer">
       <div className="container taCenter">
         <span>
