@@ -3,18 +3,12 @@ import InstagramFeed from './InstagramFeed'
 import './Footer.css'
 
 export default () => (
-  <div>
-    <h2 className="taCenter">
-      Follow ususss65545454s{' '}
-      <a href="https://instagram.com/thrivegoldcoast/">@thrivegoldcoast</a>
-    </h2>
-    <br />
-    <InstagramFeed count="8" />
+  <div>    
     <footer className="footer">
       <div className="container taCenter">
         <span>
           © Copyright {new Date().getFullYear()} All rights reserved. Crafted by{' '}
-          <a href="https://thriveweb.com.au/">Thrive</a>.
+          <a href="https://www.massweb.fr/">MassWeb</a>.
         </span>
       </div>
     </footer>
