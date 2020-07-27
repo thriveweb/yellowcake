@@ -7,7 +7,7 @@ export default () => (
     <footer className="footer">
       <div className="container taCenter">
         <span>
-          © Copyright {new Date().getFullYear()} All rights reserved. Crafted by{' '}
+          © Copyright {new Date().getFullYear()} Tous droits réservés. Crée par{' '}
           <a href="https://www.massweb.fr/">MassWeb</a>.
         </span>
       </div>
