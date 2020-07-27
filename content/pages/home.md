@@ -2,8 +2,8 @@
 template: HomePage
 slug: ''
 title: MassWeb
-featuredImage: 'https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/'
-subtitle: Pour vos projets web personnalisés
+featuredImage: 'https://ucarecdn.com/0e4b4c5b-cf5f-47c2-8636-0bffacc1b14b/'
+subtitle: '## Pour vos projets web personnalisés'
 meta:
   description: This is a meta description.
   title: The Ultimate Gatsby Starter
