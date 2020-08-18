@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: MassWeb
-featuredImage: 'https://ucarecdn.com/ffc2ee7a-f0a2-4a31-92ca-e7f6f4a6b0b5/'
+featuredImage: 'https://ucarecdn.com/4814256c-8cf2-4b0b-b233-1851dcd4f507/'
 subtitle: '## Pour vos projets web personnalisés'
 meta:
   description: ''
