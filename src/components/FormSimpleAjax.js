@@ -77,21 +77,21 @@ class Form extends React.Component {
               <input
                 className="Form--Input Form--InputText"
                 type="text"
-                placeholder="Nom"
+                placeholder="Prénom"
                 name="firstname"
                 required
               />
-              <span>Nom</span>
+              <span>Prénom</span>
             </label>
             <label className="Form--Label">
               <input
                 className="Form--Input Form--InputText"
                 type="text"
-                placeholder="Prénom"
+                placeholder="Nom"
                 name="lastname"
                 required
               />
-              <span>Prénom</span>
+              <span>Nom</span>
             </label>
           </div>
           <fieldset>
