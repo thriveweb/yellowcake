@@ -12,7 +12,7 @@ class Form extends React.Component {
     action: '',
     successMessage: 'Merci pour votre message, nous vous répondrons rapidement',
     errorMessage:
-      "Suite à un problème technique, votre message n'a pa pu être envoyé, merci de nous adresser un mail à l'adresse email indiqué"
+      'Suite à un problème technique, votre message n\'a pa pu être envoyé, merci de nous adresser un mail à l\'adresse email indiqué'
   }
 
   state = {
