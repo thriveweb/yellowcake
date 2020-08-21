@@ -12,7 +12,7 @@ class Form extends React.Component {
     action: '',
     successMessage: 'Merci pour votre message, nous vous répondrons rapidement',
     errorMessage:
-      'Suite à un problème technique, votre message n\'a pa pu être envoyé, merci de nous adresser un mail à l\'adresse email indiqué'
+      "Suite à un problème technique, votre message n'a pa pu être envoyé, merci de nous adresser un mail à l'adresse email indiqué"
   }
 
   state = {
@@ -77,24 +77,24 @@ class Form extends React.Component {
               <input
                 className="Form--Input Form--InputText"
                 type="text"
-                placeholder="Prénom"
-                name="prenom"
+                placeholder="Nom"
+                name="firstname"
                 required
               />
-              <span>Prénom</span>
+              <span>Nom</span>
             </label>
             <label className="Form--Label">
               <input
                 className="Form--Input Form--InputText"
                 type="text"
-                placeholder="Nom"
-                name="nom"
+                placeholder="Prénom"
+                name="lastname"
                 required
               />
-              <span>Nom</span>
+              <span>Prénom</span>
             </label>
           </div>
-          {/*<fieldset>
+          <fieldset>
             <label className="Form--Label Form--Radio">
               <input
                 className="Form--RadioInput"
@@ -114,7 +114,7 @@ class Form extends React.Component {
               />
               <span>Female</span>
             </label>
-          </fieldset>*/}
+          </fieldset>
           <label className="Form--Label">
             <input
               className="Form--Input Form--InputText"
@@ -157,7 +157,7 @@ class Form extends React.Component {
               name="newsletter"
               type="checkbox"
             />
-            <span>Pour recevoir les actualités ou les nouveautés sur nos projets, abonnez-vous à notre newsletter</span>
+            <span>Pour recevoir des actualités, abonnez-vous à notre newsletter</span>
           </label>
           <div
             className="g-recaptcha"
