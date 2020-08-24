@@ -49,6 +49,7 @@ collections: # A list of collections the CMS should be able to edit
           - name: locations
             label: locations
             widget: list
+            required: false
             fields:
               - {
                   name: mapLink,
