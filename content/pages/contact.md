@@ -7,7 +7,10 @@ subtitle: '#'
 address: Nevers (58000)
 phone: ''
 email: massweb@outlook.fr
-locations: []
+locations:
+  - lat: '57575'
+    lng: '57575'
+    mapLink: ''
 meta:
   description: This is a meta description.
   noindex: false
