@@ -3,7 +3,7 @@ template: ContactPage
 slug: contact
 title: Contactez-nous
 featuredImage: 'https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/'
-subtitle: '# Laissez-nous un message, pour plus d''informations.'
+subtitle: '#'
 address: Nevers (58000)
 phone: 0666228910
 email: massweb@outlook.fr
@@ -16,4 +16,4 @@ meta:
   noindex: false
   title: Contactez-nous
 ---
-#
+# Laissez-nous un message, pour plus d'informations sur les services que l'on propose
