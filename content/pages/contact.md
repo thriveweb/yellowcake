@@ -7,10 +7,7 @@ subtitle: '#'
 address: Nevers (58000)
 phone: 0666228910
 email: massweb@outlook.fr
-locations:
-  - lat: '46.982843'
-    lng: '3.143564'
-    mapLink: ''
+locations: []
 meta:
   description: This is a meta description.
   noindex: false
