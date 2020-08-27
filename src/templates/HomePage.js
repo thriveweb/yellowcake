@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import AlertTriangle from 'react-feather/dist/icons/alert-triangle'
 
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
