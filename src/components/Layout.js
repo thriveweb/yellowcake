@@ -76,19 +76,9 @@ export default ({ children, meta, title }) => {
 
             {/*<GithubCorner url="https://github.com/massweb58/yellowcake" />*/}
 
-            {/*<Nav subNav={subNav} />
-            <Fragment>{children}</Fragment>*/}
-            <section className="section thick">
-              <div className="container skinny taCenter">
-                <p>
-                  <AlertTriangle size="5rem" />
-                </p>
-                <h1>Site en cous de développement</h1>
-                <p>
-                  Site en cous de développement !
-                </p>
-              </div>
-            </section>
+            <Nav subNav={subNav} />
+            <Fragment>{children}</Fragment>
+            
 
             <Footer />
           </Fragment>
