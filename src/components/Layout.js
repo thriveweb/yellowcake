@@ -85,7 +85,7 @@ export default ({ children, meta, title }) => {
                 </p>
                 <h1>Site en cous de développement</h1>
                 <p>
-                  Site en cous de développement
+                  Site en cous de développement !
                 </p>
               </div>
             </section>
