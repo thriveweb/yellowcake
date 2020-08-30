@@ -7,9 +7,10 @@ import './Form.css'
 
 class Form extends React.Component {
   static defaultProps = {
-    name: 'Simple Form Ajax',
+    name: 'massWebForm',
     subject: '', // optional subject of the notification email
-    action: '',
+    action: 'https://getform.io/f/c908a0d2-2312-4c32-9c5f-798e60a0dd6b',
+    method: 'POST',
     successMessage: 'Merci pour votre message, nous vous répondrons rapidement',
     errorMessage:
       "Suite à un problème technique, votre message n'a pa pu être envoyé, merci de nous adresser un mail à l'adresse email indiqué"
@@ -68,6 +69,8 @@ class Form extends React.Component {
           onSubmit={this.handleSubmit}
           data-netlify=""
           netlify-recaptcha=""
+          method={method}
+
         >
           {this.state.alert && (
             <div className="Form--Alert">{this.state.alert}</div>
