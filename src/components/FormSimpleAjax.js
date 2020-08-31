@@ -11,6 +11,7 @@ class Form extends React.Component {
     subject: '', // optional subject of the notification email
     action: 'https://getform.io/f/c908a0d2-2312-4c32-9c5f-798e60a0dd6b',
     method: 'POST',
+    enctype: 'multipart/form-data',
     successMessage: 'Merci pour votre message, nous vous répondrons rapidement',
     errorMessage:
       "Suite à un problème technique, votre message n'a pa pu être envoyé, merci de nous adresser un mail à l'adresse email indiqué"
@@ -55,7 +56,7 @@ class Form extends React.Component {
   }
 
   render() {
-    const { name, subject, action, method } = this.props
+    const { name, subject, action, method, enctype } = this.props
 
     return (
       <Fragment>
@@ -70,6 +71,7 @@ class Form extends React.Component {
           data-netlify=""
           netlify-recaptcha=""
           method={method}
+          enctype={enctype}
 
         >
           {this.state.alert && (
