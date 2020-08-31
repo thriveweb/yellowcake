@@ -146,6 +146,27 @@ class Form extends React.Component {
               <option>Autres</option>
             </select>
           </label>
+
+          <label className="Form--Label">
+            <input type="file" name="resume"></input>
+          </label>
+          <label className="Form--Label">
+            <input type="file" name="photo"></input>
+          </label>
+          <label className="Form--Label">
+            <input type="file" name="document"></input>
+          </label>
+          
+          <label className="Form--Label">
+            <input
+              className="Form--Input Form--InputText"
+              type="file"
+              placeholder="Ajouter Documents"
+              name="file[]"              
+            />
+            <span>addresse Email</span>
+          </label>
+
           <label className="Form--Label">
             <textarea
               className="Form--Input Form--Textarea Form--InputText"
