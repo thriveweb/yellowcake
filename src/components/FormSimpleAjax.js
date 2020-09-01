@@ -77,9 +77,9 @@ class Form extends React.Component {
           data-netlify-honeypot="bot-field"
 
         >
-          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="massWebForm" />
-          
+          {this.state.alert && (
+            <div className="Form--Alert">{this.state.alert}</div>
+          )}
           <div className="Form--Group">
             <label className="Form--Label">
               <input
@@ -194,9 +194,6 @@ class Form extends React.Component {
             disabled={this.state.disabled}
           />
         </form>
-        {this.state.alert && (
-          <div className="Form--Alert">{this.state.alert}</div>
-        )}
       </Fragment>
     )
   }
