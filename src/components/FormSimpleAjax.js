@@ -158,7 +158,7 @@ class Form extends React.Component {
                 name="Document"
                 required
               />
-              <span>Joindre Document</span>
+              <span>Joindre Document </span>
             </label>
 
           
