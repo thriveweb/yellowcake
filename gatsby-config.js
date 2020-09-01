@@ -134,6 +134,17 @@ module.exports = {
         enableIdentityWidget: true
       }
     },
-    'gatsby-plugin-netlify' // make sure to keep it last in the array
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
+    {
+      resolve: 'gatsby-plugin-tinacms',
+      options: {
+        // The CMS will be disabled on your production site
+        enabled: process.env.NODE_ENV !== 'production',
+        sidebar: true,
+        plugins: [
+          // We'll add some gatsby-tinacms plugins later
+        ],
+      },
+    }
   ]
 }
