@@ -9,7 +9,8 @@ class Form extends React.Component {
   static defaultProps = {
     name: 'massWebForm',
     subject: '', // optional subject of the notification email
-    action: 'https://getform.io/f/c908a0d2-2312-4c32-9c5f-798e60a0dd6b',
+    //action: 'https://getform.io/f/c908a0d2-2312-4c32-9c5f-798e60a0dd6b',
+    action: '',
     method: 'POST',
     enctype: 'multipart/form-data',
     successMessage: 'Merci pour votre message, nous vous répondrons rapidement',
@@ -72,6 +73,8 @@ class Form extends React.Component {
           netlify-recaptcha=""
           method={method}
           enctype={enctype}
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
 
         >
           {this.state.alert && (
@@ -146,6 +149,17 @@ class Form extends React.Component {
               <option>Autres</option>
             </select>
           </label>
+
+          <label className="Form--Label">
+              <input
+                className="Form--Input Form--InputText"
+                type="file"
+                placeholder="Document"
+                name="Document"
+                required
+              />
+              <span>Joindre Document</span>
+            </label>
 
           
 
