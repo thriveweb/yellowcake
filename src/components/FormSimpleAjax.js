@@ -7,9 +7,12 @@ import './Form.css'
 
 class Form extends React.Component {
   static defaultProps = {
-    name: 'Simple Form Ajax',
+    name: 'massWebForm',
     subject: '', // optional subject of the notification email
+    //action: 'https://getform.io/f/c908a0d2-2312-4c32-9c5f-798e60a0dd6b',
     action: '',
+    method: 'POST',
+    enctype: 'multipart/form-data',
     successMessage: 'Merci pour votre message, nous vous répondrons rapidement',
     errorMessage:
       "Suite à un problème technique, votre message n'a pa pu être envoyé, merci de nous adresser un mail à l'adresse email indiqué"
@@ -54,7 +57,7 @@ class Form extends React.Component {
   }
 
   render() {
-    const { name, subject, action } = this.props
+    const { name, subject, action, method, enctype } = this.props
 
     return (
       <Fragment>
@@ -68,6 +71,11 @@ class Form extends React.Component {
           onSubmit={this.handleSubmit}
           data-netlify=""
           netlify-recaptcha=""
+          method={method}
+          enctype={enctype}
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+
         >
           {this.state.alert && (
             <div className="Form--Alert">{this.state.alert}</div>
@@ -141,6 +149,20 @@ class Form extends React.Component {
               <option>Autres</option>
             </select>
           </label>
+
+          <label className="Form--Label">
+              <input
+                className="Form--Input Form--InputText"
+                type="file"
+                placeholder="Document"
+                name="Document"
+                required
+              />
+              <span>Joindre Document</span>
+            </label>
+
+          
+
           <label className="Form--Label">
             <textarea
               className="Form--Input Form--Textarea Form--InputText"
