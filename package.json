@@ -36,7 +36,7 @@
     "modern-normalize": "^0.5.0",
     "netlify-cms-app": "^2.9.7",
     "netlify-cms-media-library-uploadcare": "^0.5.5",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
