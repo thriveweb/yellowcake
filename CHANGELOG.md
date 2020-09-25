@@ -1,3 +1,9 @@
+## 3.0.0 - 2020-09-25
+
+Remove es lint from some components
+Update node .nvmrc to 14 for build step.
+Successful Upgrade to latest packages.
+
 ## 2.0.14 - 2020-07-16
 
 Remove instagram feed component
