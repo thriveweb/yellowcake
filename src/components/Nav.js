@@ -6,6 +6,8 @@ import Logo from './Logo'
 
 import './Nav.css'
 
+/* eslint-disable */
+
 export class Navigation extends Component {
   state = {
     active: false,

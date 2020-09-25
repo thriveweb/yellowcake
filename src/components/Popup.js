@@ -3,6 +3,8 @@ import { X } from 'react-feather'
 
 import './Popup.css'
 
+/* eslint-disable */
+
 class Popup extends Component {
   constructor(props) {
     super(props)
