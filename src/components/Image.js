@@ -4,6 +4,8 @@ import Observer from './Observer'
 
 import './Image.css'
 
+/* eslint-disable */
+
 class Image extends React.Component {
   constructor(props) {
     super(props)
