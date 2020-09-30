@@ -16,8 +16,11 @@ class Popup extends Component {
   }
 
   handleKeyDown = ev => {
-    // check enter if you want
-    if (ev.keyCode === 13) {
+    if (ev.keyCode === 13 && !this.state.showPopup) {
+      // enter to open
+      this.togglePopup()
+    } else if (ev.keyCode === 27) {
+      // escape to close
       this.togglePopup()
     }
   }
