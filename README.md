@@ -40,7 +40,7 @@ The CMS lives at [\_\_YOUR_SITE_NAME\_\_.netlify.com/admin](https://__YOUR_SITE_
 
 1.  Clone your repo to your local machine
 
-1.  Install dependencies
+1.  Install dependencies which is given below:
 
 `yarn` or `npm install`
 
