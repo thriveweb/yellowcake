@@ -1,3 +1,7 @@
+## 3.0.1 - 2020-09-30
+
+Fix es lint from Popup component.
+
 ## 3.0.0 - 2020-09-25
 
 Remove es lint from some components
