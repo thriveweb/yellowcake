@@ -19,7 +19,7 @@ class Popup extends Component {
     if (ev.keyCode === 13 && !this.state.showPopup) {
       // enter to open
       this.togglePopup()
-    } else if (ev.keyCode === 27) {
+    } else if (ev.keyCode === 27 && this.state.showPopup) {
       // escape to close
       this.togglePopup()
     }
@@ -32,7 +32,7 @@ class Popup extends Component {
         <div className="taCenter">
           <h3> Simple Popup Example</h3>
           <div
-            class="Button"
+            className="Button"
             onClick={this.togglePopup.bind(this)}
             onKeyDown={this.handleKeyDown}
             tabIndex={0}
@@ -54,7 +54,7 @@ class Popup extends Component {
             ></div>
             <div className="Popup-Inner">
               <X
-                class="Popup-Close"
+                className="Popup-Close"
                 onClick={this.togglePopup.bind(this)}
                 onKeyDown={this.handleKeyDown}
                 tabIndex={0}
