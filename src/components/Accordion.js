@@ -22,7 +22,19 @@ export default class Accordion extends React.Component {
   //   })
   // }
 
-  handleClick = event => event.target.classList.toggle('active')
+  toggleAccordion(e) {
+    e.target.classList.toggle('active')
+  }
+
+  handleKeyDown = ev => {
+    if (ev.keyCode === 13 && !ev.target.classList.contains('active')) {
+      // enter to open
+      this.toggleAccordion(ev)
+    } else if (ev.keyCode === 27 && ev.target.classList.contains('active')) {
+      // escape to close
+      this.toggleAccordion(ev)
+    }
+  }
 
   render() {
     const { items, className } = this.props
@@ -33,7 +45,11 @@ export default class Accordion extends React.Component {
             <div
               className={`Accordion--item `}
               key={`accordion-item-${_kebabCase(item.title) + '-' + index}`}
-              onClick={this.handleClick}
+              onClick={this.toggleAccordion.bind(this)}
+              onKeyDown={this.handleKeyDown}
+              tabIndex={0}
+              aria-label="Toggle Accordion"
+              role="button"
             >
               <h2 className="flex">
                 <span>{item.title}</span>
