@@ -19,8 +19,8 @@ An opinionated starter project for creating lightning-fast websites with [Gatsby
 
 1.  Hit the **Deploy to Netlify** button. This will:
 
-- Clone the repo into your Github account
-- Create you a new project on Netlify, build & deploy
+- Clone the repo into your Github account.
+- Create you a new project on Netlify, build & deploy.
 
 1.  Once your Netlify project has been created, check a couple of settings:
 
@@ -28,7 +28,7 @@ An opinionated starter project for creating lightning-fast websites with [Gatsby
 - Change **Registration Preferences** to **Invite Only**
 - Enable **Git Gateway**
 
-1.  Invite users (probably yourself) to enable admin access
+1.  Invite users (probably yourself) to enable admin access.
 
 - Open the **Identity** tab and hit **Invite Users**
 
@@ -38,13 +38,13 @@ The CMS lives at [\_\_YOUR_SITE_NAME\_\_.netlify.com/admin](https://__YOUR_SITE_
 
 ## Developing
 
-1.  Clone your repo to your local machine
+1.  Clone your repo to your local machine.
 
-1.  Install dependencies
+1.  Install dependencies.
 
 `yarn` or `npm install`
 
-1.  Run the development server
+1.  Run the development server.
 
 `yarn start` or `npm run start`
 
