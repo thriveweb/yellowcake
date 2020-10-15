@@ -3,8 +3,6 @@ import ChevronDown from 'react-feather/dist/icons/chevron-down'
 import _kebabCase from 'lodash/kebabCase'
 import './Accordion.css'
 
-/* eslint-disable */
-
 export default class Accordion extends React.Component {
   static defaultProps = {
     items: [],
