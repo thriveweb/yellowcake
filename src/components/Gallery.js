@@ -36,10 +36,7 @@ export default class Gallery extends Component {
   handleKeyDown = ev => {
     if (ev.keyCode === 13 && !this.state.isOpen) {
       // enter to open
-      this.isOpen(true, 0)
-    } else if (ev.keyCode === 27 && this.state.isOpen) {
-      // escape to close
-      this.isOpen(false, 0)
+      this.isOpen(true, this.state.index)
     }
   }
 
