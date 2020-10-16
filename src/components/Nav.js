@@ -32,7 +32,8 @@ export class Navigation extends Component {
       activeSubNav: this.state.activeSubNav === subNav ? false : subNav
     })
   keyToggleSubNav = (e, subNav) => {
-    if (e.keyCode === 13 || e.keyCode === 27) {
+    // key o is for open so you can enter key to open
+    if (e.keyCode === 79 || e.keyCode === 27) {
       this.toggleSubNav(subNav)
     }
   }
