@@ -1,6 +1,10 @@
-## 3.0.1 - 2020-09-30
+## 3.0.3 - 2020-10-16
 
-Fix es lint from Popup component.
+Fix es lint from Nav component.
+
+## 3.0.2 - 2020-10-15
+
+Fix es lint from Image and Gallery component.
 
 ## 3.0.0 - 2020-09-25
 
