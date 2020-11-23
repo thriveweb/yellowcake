@@ -94,7 +94,7 @@ class Form extends React.Component {
               <span>Lastname</span>
             </label>
           </div>
-          <fieldset>
+          {/* <fieldset>
             <label className="Form--Label Form--Radio">
               <input
                 className="Form--RadioInput"
@@ -114,7 +114,7 @@ class Form extends React.Component {
               />
               <span>Female</span>
             </label>
-          </fieldset>
+          </fieldset> */}
           <label className="Form--Label">
             <input
               className="Form--Input Form--InputText"
@@ -129,14 +129,14 @@ class Form extends React.Component {
             <select
               className="Form--Input Form--Select"
               name="type"
-              defaultValue="Type of Enquiry"
+              defaultValue="Subject"
               required
             >
               <option disabled hidden>
-                Type of Enquiry
+                Subject
               </option>
               <option>Need to know more</option>
-              <option>Found a bug</option>
+              <option>Error on the site</option>
               <option>Want to say hello</option>
             </select>
           </label>
@@ -150,14 +150,14 @@ class Form extends React.Component {
             />
             <span>Message</span>
           </label>
-          <label className="Form--Label Form-Checkbox">
+          {/* <label className="Form--Label Form-Checkbox">
             <input
               className="Form--Input Form--Textarea Form--CheckboxInput"
               name="newsletter"
               type="checkbox"
             />
             <span>Get news updates</span>
-          </label>
+          </label> */}
           <div
             className="g-recaptcha"
             data-sitekey="6LfKN3kUAAAAAGIM1CbXmaRZx3LIh_W2twn1tzkA"
@@ -167,7 +167,7 @@ class Form extends React.Component {
           <input
             className="Button Form--SubmitButton"
             type="submit"
-            value="Enquire"
+            value="Send Message"
             disabled={this.state.disabled}
           />
         </form>

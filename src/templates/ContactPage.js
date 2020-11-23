@@ -15,10 +15,10 @@ export const ContactPageTemplate = ({
   title,
   subtitle,
   featuredImage,
-  address,
-  phone,
-  email,
-  locations
+  // address,
+  // phone,
+  // email,
+  // locations
 }) => (
   <main className="Contact">
     <PageHeader
@@ -31,7 +31,7 @@ export const ContactPageTemplate = ({
         <div>
           <Content source={body} />
           <div className="Contact--Details">
-            {address && (
+            {/* {address && (
               <a
                 className="Contact--Details--Item"
                 href={`https://www.google.com.au/maps/search/${encodeURI(
@@ -47,12 +47,12 @@ export const ContactPageTemplate = ({
               <a className="Contact--Details--Item" href={`tel:${phone}`}>
                 <Smartphone /> {phone}
               </a>
-            )}
-            {email && (
+            )} */}
+            {/* {email && (
               <a className="Contact--Details--Item" href={`mailto:${email}`}>
                 <Mail /> {email}
               </a>
-            )}
+            )} */}
           </div>
         </div>
 
@@ -62,7 +62,6 @@ export const ContactPageTemplate = ({
       </div>
     </section>
 
-    <GoogleMap locations={locations} />
   </main>
 )
 
@@ -87,14 +86,6 @@ export const pageQuery = graphql`
         template
         subtitle
         featuredImage
-        address
-        phone
-        email
-        locations {
-          mapLink
-          lat
-          lng
-        }
       }
     }
   }
