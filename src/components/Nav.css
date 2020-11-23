@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin-left: auto;
 }
 
 .Nav--Links > * + * {
