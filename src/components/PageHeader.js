@@ -15,7 +15,7 @@ const PageHeader = ({
   if (large) className += ' PageHeader-large'
   return (
     <div className={`PageHeader relative ${className}`}>
-      {backgroundImage && (
+      {/* {backgroundImage && (
         <Image
           background
           resolutions="large"
@@ -23,7 +23,7 @@ const PageHeader = ({
           alt={title}
           size="cover"
         />
-      )}
+      )} */}
       <div className="container relative">
         <h1 className="PageHeader--Title">{title}</h1>
         {subtitle && (
