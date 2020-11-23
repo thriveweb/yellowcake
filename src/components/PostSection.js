@@ -26,6 +26,7 @@ class PostSection extends React.Component {
     const { posts, title, showLoadMore, loadMoreTitle } = this.props,
       { limit } = this.state,
       visiblePosts = posts.slice(0, limit || posts.length)
+    console.log("TITLE::", this.props)
 
     return (
       <div className="PostSection">

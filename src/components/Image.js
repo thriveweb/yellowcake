@@ -96,7 +96,8 @@ class Image extends React.Component {
       }
     } else {
       style = {
-        backgroundImage: `url(${fullSrc})`,
+        // backgroundImage: `url(${fullSrc})`,
+        backgroundImage: `require(${fullSrc})`,
         backgroundSize
       }
     }
