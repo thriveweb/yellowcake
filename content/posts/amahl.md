@@ -4,11 +4,6 @@ title: Amahl and the Night Visitors
 status: Featured / Published
 date: '2018-12-27'
 featuredImage: 'https://ucarecdn.com/157877ea-a2cb-49b6-8130-768fbe1a60a7/'
-excerpt: >-
-  Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam
-  interdum arcu vitae augue pulvinar sodales. Sed non dui diam. Quisque lectus
-  est, lobortis ac efficitur vitae, posuere a mauris. Phasellus ac dui
-  pellentesque, lacinia risus ut, imperdiet eros.
 categories:
   - category: '2018'
 meta:
@@ -17,41 +12,26 @@ meta:
   noindex: false
   title: test meta title
 ---
-Paragraphs are separated by a blank line.
-
-![Test Image](https://ucarecdn.com/ac9898a0-413a-467b-95fa-0a9959c30710/)
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Id64silK_7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The second paragraph. This is placeholder text that our web designers put here to make sure words appear properly on your website. _Italic_, **bold**, and `monospace`.
+#
 
-### Unordered lists:
+![Amahl](/static/images/18-amahl/amahl1.jpg)
 
-* this one
-* that one
-* the other one
+![Amahl](/static/images/18-amahl/amahl2.jpg)
 
-### Ordered lists:
+![Amahl](/static/images/18-amahl/amahl5.jpg)
 
-1. first item
-2. second item
-3. third item
+![Amahl](/static/images/18-amahl/amahl32.jpg)
 
-> Block quotes are written like so.
->
-> They can span multiple paragraphs,
-> if you like.
+![Amahl](/static/images/18-amahl/amahl22.jpg)
 
-## Heading 2
+![Amahl](/static/images/18-amahl/amahl24.jpg)
 
-# Heading 1
+![Amahl](/static/images/18-amahl/amahl29.jpg)
 
-## Heading 2
+![Amahl](/static/images/18-amahl/amahl10.jpg)
 
-### Heading 3
+![Amahl](/static/images/18-amahl/amahl8.jpg)
 
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
+![Amahl](/static/images/18-amahl/amahl28.jpg)

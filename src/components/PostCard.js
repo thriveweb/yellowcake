@@ -9,7 +9,7 @@ import cosiImg from '../../static/images/17-cosi-fan-tutte/cosi-fan-tutte01.jpg'
 import turandotImg from '../../static/images/18-turandot/turandot1.jpg'
 import hangelImg from '../../static/images/18-hangel-gretel/2.jpg'
 import mozartImg from '../../static/images/18-mozart-salieri/moz3.jpg'
-import amahlImg from '../../static/images/18-amahl/amahl1.jpg'
+import amahlImg from '../../static/images/18-amahl/amahl32.jpg'
 
 const PostCard = ({
   featuredImage,
@@ -37,7 +37,7 @@ const PostCard = ({
       <Image background src={mozartImg} alt={title} />
     </div>)
       :
-      title === "Amahl and the night visitors" ? (<div className="PostCard--Image relative">
+      title === "Amahl and the Night Visitors" ? (<div className="PostCard--Image relative">
       <Image background src={amahlImg} alt={title} />
     </div>)
       :
