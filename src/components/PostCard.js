@@ -10,6 +10,12 @@ import turandotImg from '../../static/images/18-turandot/turandot1.jpg'
 import hangelImg from '../../static/images/18-hangel-gretel/2.jpg'
 import mozartImg from '../../static/images/18-mozart-salieri/moz3.jpg'
 import amahlImg from '../../static/images/18-amahl/amahl32.jpg'
+import maidImg from '../../static/images/18-old-maid/maid1.jpg'
+import wertherImg from '../../static/images/19-werther/werther1.jpg'
+import gardenImg from '../../static/images/19-garden/garden1.jpg'
+import magicImg from '../../static/images/19-magic-flute/magic1.jpg'
+import giovanniImg from '../../static/images/19-giovanni/giovanni1.jpg'
+import toscaImg from '../../static/images/20-tosca/tosca1.jpg'
 
 const PostCard = ({
   featuredImage,
@@ -43,6 +49,30 @@ const PostCard = ({
       :
       title === "Turandot" ? (<div className="PostCard--Image relative">
       <Image background src={turandotImg} alt={title} />
+    </div>)
+      :
+      title === "The Old Maid and the Theif" ? (<div className="PostCard--Image relative">
+      <Image background src={maidImg} alt={title} />
+    </div>)
+      :
+      title === "Werther" ? (<div className="PostCard--Image relative">
+      <Image background src={wertherImg} alt={title} />
+    </div>)
+      :
+      title === "Garden Killer" ? (<div className="PostCard--Image relative">
+      <Image background src={gardenImg} alt={title} />
+    </div>)
+      :
+      title === "Die Zauberflote (Magic flute)" ? (<div className="PostCard--Image relative">
+      <Image background src={magicImg} alt={title} />
+    </div>)
+      :
+      title === "Don Giovanni" ? (<div className="PostCard--Image relative">
+      <Image background src={giovanniImg} alt={title} />
+    </div>)
+      :
+      title === "Tosca" ? (<div className="PostCard--Image relative">
+      <Image background src={toscaImg} alt={title} />
     </div>)
       :
       featuredImage && (
