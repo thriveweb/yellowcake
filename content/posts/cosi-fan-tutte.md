@@ -3,7 +3,8 @@ template: SinglePost
 title: Cosi Fan Tutte
 status: Featured / Published
 date: '2017-11-21'
-featuredImage: 'https://ucarecdn.com/94633346-778b-4474-8039-b18280ec73a3/'
+featuredImage: /static/images/17-cosi-fan-tutte/cosi-fan-tutte01.jpg
+# 'https://ucarecdn.com/94633346-778b-4474-8039-b18280ec73a3/'
 # excerpt: >-
 #   Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam
 #   interdum arcu vitae augue pulvinar sodales. Sed non dui diam. Quisque lectus
