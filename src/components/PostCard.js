@@ -8,7 +8,7 @@ import matineeImg from '../../public/images/17-matinee/2014.jpg'
 import cosiImg from '../../static/images/17-cosi-fan-tutte/cosi-fan-tutte01.jpg'
 import turandotImg from '../../static/images/18-turandot/turandot1.jpg'
 import hangelImg from '../../static/images/18-hangel-gretel/2.jpg'
-import mozartImg from '../../static/images/18-mozart-salieri/3.jpg'
+import mozartImg from '../../static/images/18-mozart-salieri/moz3.jpg'
 import amahlImg from '../../static/images/18-amahl/amahl1.jpg'
 
 const PostCard = ({

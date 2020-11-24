@@ -2,7 +2,7 @@
 template: ContactPage
 slug: contact
 title: Contact Page
-featuredImage: https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/
+# featuredImage: https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/
 subtitle: 
 # address: '404 James St, Burleigh Heads QLD 4220'
 # phone: 0987 123 456
@@ -15,7 +15,7 @@ meta:
   description: This is a meta description.
   title: Contact Page
 ---
-Hi there! Thank you so much for your interest in working together. Please fill the contact form below or send us an email at [example@example.com](example@example.com).
+Hi there! Thank you so much for your interest in working together. Please fill the contact form below or send us an email at [yooyeonkimofficial@gmail.com](yooyeonkimofficial@gmail.com).
 
 <!-- 
 This form is setup to use Netlify's form handling:

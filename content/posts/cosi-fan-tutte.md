@@ -36,9 +36,6 @@ meta:
 
 #
 
-
-#
-
 ![Cosi fan Tutte](/static/images/17-cosi-fan-tutte/cosi-fan-tutte01.jpg)
 
 ![Cosi fan Tutte](static/images/17-cosi-fan-tutte/cosi-fan-tutte02.jpg)
