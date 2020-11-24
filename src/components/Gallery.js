@@ -47,7 +47,7 @@ export default class Gallery extends Component {
         result => {
           const newImagesArr = [...this.state.sliderImages]
           newImagesArr[index] = {
-            src: require(img.image),
+            src: img.image,
             title: img.title,
             w: result.width,
             h: result.height

@@ -9,6 +9,8 @@ excerpt: >-
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
+categories:
+- category: '2019'
 meta:
   description: test meta description
   title: test meta title

@@ -6,7 +6,7 @@ date: '2020-11-28'
 featuredImage: 'https://ucarecdn.com/57002902-e8b3-4315-9995-beb637b29128/'
 excerpt: This is an excerpt of Post Two
 categories:
-  - category: Updates
+  - category: '2020'
 meta:
   description: test meta description
   title: test meta title
