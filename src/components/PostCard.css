@@ -16,9 +16,9 @@
 }
 
 .PostCard--Image {
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
   width: 100%;
-  height: 15rem;
+  height: 18rem;
 }
 
 .PostCard--Title {
@@ -26,7 +26,7 @@
 }
 
 .PostCard--Content {
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 2.5rem 1rem 2.5rem;
 }
 
 .PostCard--Category {
