@@ -5,6 +5,7 @@ import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
+import Gallery from '../components/Gallery'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
@@ -13,7 +14,8 @@ export const SinglePostTemplate = ({
   body,
   nextPostURL,
   prevPostURL,
-  categories = []
+  categories = [],
+  gallery
 }) => (
   <main>
     <article
@@ -36,7 +38,7 @@ export const SinglePostTemplate = ({
                 {date}
               </time>
             )}
-            {categories && (
+            {/* {categories && (
               <Fragment>
                 <span>|</span>
                 {categories.map((cat, index) => (
@@ -45,12 +47,12 @@ export const SinglePostTemplate = ({
                     className="SinglePost--Meta--Category"
                   >
                     {cat.category}
-                    {/* Add a comma on all but last category */}
+                    Add a comma on all but last category
                     {index !== categories.length - 1 ? ',' : ''}
                   </span>
                 ))}
               </Fragment>
-            )}
+            )} */}
           </div>
 
           {title && (
@@ -58,6 +60,13 @@ export const SinglePostTemplate = ({
               {title}
             </h1>
           )}
+          
+          {/* <section className="section">
+            <div className="container">
+              <h2>Our gallery component</h2>
+              <Gallery images={gallery} />
+            </div>
+          </section> */}
 
           <div className="SinglePost--InnerContent">
             <Content source={body} />
@@ -116,6 +125,7 @@ export const pageQuery = graphql`
   query SinglePost($id: String!) {
     post: markdownRemark(id: { eq: $id }) {
       ...Meta
+      ...Gallery
       html
       id
       frontmatter {

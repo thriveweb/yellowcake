@@ -47,11 +47,12 @@ export default class Gallery extends Component {
         result => {
           const newImagesArr = [...this.state.sliderImages]
           newImagesArr[index] = {
-            src: img.image,
+            src: require(img.image),
             title: img.title,
             w: result.width,
             h: result.height
           }
+          console.log('NEW IMG ARR: ', newImagesArr)
           this.setState({
             sliderImages: newImagesArr
           })
@@ -78,6 +79,7 @@ export default class Gallery extends Component {
 
   render() {
     const { images } = this.props
+    console.log('IMAGES:::', images)
     return (
       <Fragment>
         {images && images.length > 0 && (
@@ -95,7 +97,8 @@ export default class Gallery extends Component {
                 <div>
                   <Image
                     resolutions="small"
-                    src={image.image}
+                    // src={require('../../static/images/17-cosi-fan-tutte/cosi-fan-tutte01.jpg')}
+                    // src={require(image.image)}
                     alt={image.alt}
                   />
                 </div>

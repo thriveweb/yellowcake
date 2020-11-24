@@ -46,7 +46,7 @@ const MyImage = ({ nodeKey, src, title, alt }) => {
   return (
     <Image
       className="Content--Image markdown-preview"
-      resolutions="medium"
+      resolutions="small"
       lazy={false}
       src={decodedSrc}
       title={title}

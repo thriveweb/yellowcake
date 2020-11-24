@@ -25,7 +25,7 @@
 
 .SinglePost--Content {
   background: white;
-  padding: 8rem 8rem 4rem 8rem;
+  padding: 4rem 2rem 4rem 2rem;
 }
 
 @media screen and (max-width: 750px) {
@@ -47,6 +47,7 @@
 .SinglePost--Title {
   text-align: center;
   line-height: 1.2;
+  margin-bottom: 3rem;
 }
 
 .SinglePost--InnerContent {
