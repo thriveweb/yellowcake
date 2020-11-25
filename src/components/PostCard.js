@@ -14,7 +14,7 @@ import maidImg from '../../static/images/18-old-maid/maid1.jpg'
 import wertherImg from '../../static/images/19-werther/werther1.jpg'
 import gardenImg from '../../static/images/19-garden/garden1.jpg'
 import magicImg from '../../static/images/19-magic-flute/magic1.jpg'
-import giovanniImg from '../../static/images/19-giovanni/giovanni1.jpg'
+import giovanniImg from '../../static/images/19-giovanni/giovanni01.jpg'
 import toscaImg from '../../static/images/20-tosca/tosca1.jpg'
 
 const PostCard = ({
@@ -63,7 +63,7 @@ const PostCard = ({
       <Image background src={gardenImg} alt={title} />
     </div>)
       :
-      title === "Die Zauberflote (Magic flute)" ? (<div className="PostCard--Image relative">
+      title === "Die Zauberflote (Magic Flute)" ? (<div className="PostCard--Image relative">
       <Image background src={magicImg} alt={title} />
     </div>)
       :
