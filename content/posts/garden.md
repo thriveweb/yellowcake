@@ -4,14 +4,31 @@ title: Garden Killer
 status: Published
 date: '2019-07-25'
 featuredImage: >-
-  https://ucarecdn.com/6a00645e-a07d-4c6c-8386-7e0f86bcff84/-/crop/1632x1853/0,596/-/preview/
+  # https://ucarecdn.com/6a00645e-a07d-4c6c-8386-7e0f86bcff84/-/crop/1632x1853/0,596/-/preview/
 categories:
   - category: '2019'
-meta:
-  description: test meta description
-  title: test meta title
 ---
 
-This is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Id64silK_7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Be careful not to waste too much time reading placeholder text! This text isn’t going to remain here because it doesn't pertain to the website. This paragraph has been copied from a program that automatically generates paragraphs like this. It is useful for web designers to use placeholder text so they can easily see what different fonts look like on a realistic paragraph.
+#
+
+![Garden Killer](/static/images/19-garden/garden1.jpg)
+
+![Garden Killer](/static/images/19-garden/garden2.jpg)
+
+![Garden Killer](/static/images/19-garden/garden3.jpg)
+
+![Garden Killer](/static/images/19-garden/garden4.jpg)
+
+![Garden Killer](/static/images/19-garden/garden5.jpg)
+
+![Garden Killer](/static/images/19-garden/garden6.jpg)
+
+![Garden Killer](/static/images/19-garden/garden7.jpg)
+
+![Garden Killer](/static/images/19-garden/garden9.jpg)
+
+![Garden Killer](/static/images/19-garden/garden10.jpg)
+
+![Garden Killer](/static/images/19-garden/garden-poster.jpg)
