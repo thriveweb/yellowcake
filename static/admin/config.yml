@@ -166,7 +166,8 @@ collections: # A list of collections the CMS should be able to edit
             name: 'gallery'
             widget: 'list'
             fields:
-              - { name: image, label: image, widget: image }
+              - { name: image, label: image, widget: image, options:
+                { media_library: { config: { imageShrink: 2600x2600 } } }, }
               - { name: alt, label: Alt, widget: string }
               - { name: title, label: Title, widget: string, required: false }
           - label: 'Meta'
@@ -246,7 +247,8 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: true
     folder: content/infoPages
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{year}}-{{month}}-{{slug}}'
+    # slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields:
       - {
@@ -279,11 +281,11 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  - name: posts
-    label: Post
+  - name: productions
+    label: Production
     editor:
       preview: true
-    folder: content/posts
+    folder: content/productions
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
@@ -311,7 +313,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: 'Category'
             name: 'category'
             widget: 'relation'
-            collection: 'postCategories'
+            collection: 'production'
             searchFields: ['title']
             valueField: 'title'
       - label: 'Meta'
@@ -334,11 +336,11 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  - name: postCategories
+  - name: production
     label: Post Category
     editor:
       preview: false
-    folder: content/postCategories
+    folder: content/postCategory
     slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have

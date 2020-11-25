@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Image from './Image'
 import './PostCard.css'
 
-import matineeImg from '../../public/images/17-matinee/2014.jpg'
+import matineeImg from '../../static/images/17-matinee/2014.jpg'
 import cosiImg from '../../static/images/17-cosi-fan-tutte/cosi-fan-tutte01.jpg'
 import turandotImg from '../../static/images/18-turandot/turandot1.jpg'
 import hangelImg from '../../static/images/18-hangel-gretel/2.jpg'

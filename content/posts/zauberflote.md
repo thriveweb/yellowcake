@@ -2,10 +2,11 @@
 template: SinglePost
 title: Die Zauberflote (Magic Flute)
 status: Featured / Published
-date: '2019-09-27'
+date: '2019-09'
 featuredImage:
 categories:
   - category: '2019'
+video: "https://www.youtube.com/embed/Id64silK_7M"
 meta:
   canonicalLink: ''
   description: test meta description

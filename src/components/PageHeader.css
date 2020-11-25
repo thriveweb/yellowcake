@@ -10,11 +10,15 @@
 
 .PageHeader-large {
   padding: 20rem 0;
+  padding-left: 3rem;
 }
 
 .PageHeader--Title {
-  font-size: 6rem;
+  font-size: 4rem;
+  margin-top: 2.5rem;
   margin-bottom: 0;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
 }
 
 .PageHeader--Subtitle {

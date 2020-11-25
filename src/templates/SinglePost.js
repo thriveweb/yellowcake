@@ -6,6 +6,7 @@ import { ChevronLeft } from 'react-feather'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Gallery from '../components/Gallery'
+
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
@@ -15,7 +16,7 @@ export const SinglePostTemplate = ({
   nextPostURL,
   prevPostURL,
   categories = [],
-  gallery
+  gallery,
 }) => (
   <main>
     <article
@@ -29,7 +30,7 @@ export const SinglePostTemplate = ({
         </Link>
         <div className="SinglePost--Content relative">
           <div className="SinglePost--Meta">
-            {date && (
+            {/* {date && (
               <time
                 className="SinglePost--Meta--Date"
                 itemProp="dateCreated pubdate datePublished"
@@ -37,22 +38,22 @@ export const SinglePostTemplate = ({
               >
                 {date}
               </time>
-            )}
-            {/* {categories && (
+            )} */}
+            {categories && (
               <Fragment>
-                <span>|</span>
+                {/* <span>|</span> */}
                 {categories.map((cat, index) => (
                   <span
                     key={cat.category}
                     className="SinglePost--Meta--Category"
                   >
                     {cat.category}
-                    Add a comma on all but last category
+                    {/* Add a comma on all but last category */}
                     {index !== categories.length - 1 ? ',' : ''}
                   </span>
                 ))}
               </Fragment>
-            )} */}
+            )}
           </div>
 
           {title && (
