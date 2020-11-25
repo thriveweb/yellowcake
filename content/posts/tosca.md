@@ -12,6 +12,24 @@ meta:
   title: test meta title
 ---
 
-This is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language. Be careful not to waste too much time reading placeholder text! This text isn’t going to remain here because it doesn't pertain to the website.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Id64silK_7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This paragraph has been copied from a program that automatically generates paragraphs like this. It is useful for web designers to use placeholder text so they can easily see what different fonts look like on a realistic paragraph.
+#
+
+![Tosca](/static/images/20-tosca/tosca1.jpg)
+
+![Tosca](/static/images/20-tosca/tosca2.jpg)
+
+![Tosca](/static/images/20-tosca/tosca3.jpg)
+
+![Tosca](/static/images/20-tosca/tosca4.jpg)
+
+![Tosca](/static/images/20-tosca/tosca5.jpg)
+
+![Tosca](/static/images/20-tosca/tosca6.jpg)
+
+![Tosca](/static/images/20-tosca/tosca7.jpg)
+
+![Tosca](/static/images/20-tosca/tosca8.jpg)
+
+![Tosca](/static/images/20-tosca/tosca-poster.jpg)

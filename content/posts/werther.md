@@ -3,12 +3,7 @@ template: SinglePost
 title: Werther
 status: Published
 date: '2019-05-25'
-featuredImage: 'https://ucarecdn.com/a7f36998-7a41-4a63-b0b1-91ef46cd638b/'
-excerpt: >-
-  This is placeholder text that our web designers put here to make sure words
-  appear properly on your website. This text is going to be replaced once the
-  website is completed. You are currently reading text that is written in
-  English, not any other language.
+featuredImage:
 categories:
 - category: '2019'
 meta:
@@ -16,6 +11,28 @@ meta:
   title: test meta title
 ---
 
-This is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Id64silK_7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Be careful not to waste too much time reading placeholder text! This text isn’t going to remain here because it doesn't pertain to the website. This paragraph has been copied from a program that automatically generates paragraphs like this. It is useful for web designers to use placeholder text so they can easily see what different fonts look like on a realistic paragraph.
+#
+
+![Werther](/static/images/19-werther/werther1.jpg)
+
+![Werther](/static/images/19-werther/werther2.jpg)
+
+![Werther](/static/images/19-werther/werther3.jpg)
+
+![Werther](/static/images/19-werther/werther4.jpg)
+
+![Werther](/static/images/19-werther/werther5.jpg)
+
+![Werther](/static/images/19-werther/werther6.jpg)
+
+![Werther](/static/images/19-werther/werther7.jpg)
+
+![Werther](/static/images/19-werther/werther8.jpg)
+
+![Werther](/static/images/19-werther/werther9.jpg)
+
+![Werther](/static/images/19-werther/werther10.jpg)
+
+![Werther](/static/images/19-werther/werther-poster.jpg)
