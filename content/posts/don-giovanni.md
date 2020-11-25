@@ -4,8 +4,7 @@ title: Don Giovanni
 status: Published
 date: '2019-10-28'
 featuredImage: >-
-  https://ucarecdn.com/b89e588f-5659-47e9-9caa-6be0ad058572/-/crop/1690x1728/0,638/-/preview/
-excerpt: This is an excerpt of Post Two
+  # https://ucarecdn.com/b89e588f-5659-47e9-9caa-6be0ad058572/-/crop/1690x1728/0,638/-/preview/
 categories:
   - category: '2019'
 meta:
@@ -13,6 +12,26 @@ meta:
   title: test meta title
 ---
 
-This is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language. Be careful not to waste too much time reading placeholder text! This text isn’t going to remain here because it doesn't pertain to the website.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Id64silK_7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This paragraph has been copied from a program that automatically generates paragraphs like this. It is useful for web designers to use placeholder text so they can easily see what different fonts look like on a realistic paragraph.
+#
+
+![Don Giovanni](/static/images/19-giovanni/giovanni01.jpg)
+
+![Don Giovanni](/static/images/19-giovanni/giovanni04.jpg)
+
+![Don Giovanni](/static/images/19-giovanni/giovanni06.jpg)
+
+![Don Giovanni](/static/images/19-giovanni/giovanni08.jpg)
+
+![Don Giovanni](/static/images/19-giovanni/giovanni10.jpg)
+
+![Don Giovanni](/static/images/19-giovanni/giovanni13.jpg)
+
+![Don Giovanni](/static/images/19-giovanni/giovanni14.jpg)
+
+![Don Giovanni](/static/images/19-giovanni/giovanni15.jpg)
+
+![Don Giovanni](/static/images/19-giovanni/giovanni16.jpg)
+
+![Don Giovanni](/static/images/19-giovanni/giovanni-poster.jpg)
