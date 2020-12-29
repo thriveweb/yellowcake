@@ -10,6 +10,13 @@ subtitle: >-2
 
 
   Let us see the changes effected.
+
+
+  1. npm install
+
+  2. gatsby build
+
+  3. gatsby develop
 meta:
   description: This is a meta description.
   title: The Ultimate Gatsby Starter
