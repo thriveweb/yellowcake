@@ -9,7 +9,7 @@ subtitle: >-2
   ### *New Gatsby Project with Netlify CMS!!*
 
 
-  ## These changes are made with Netlify CMS on Localhost.
+  Let us see the changes effected.
 meta:
   description: This is a meta description.
   title: The Ultimate Gatsby Starter
