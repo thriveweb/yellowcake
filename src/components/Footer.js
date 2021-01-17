@@ -12,7 +12,7 @@ export default () => (
       <div className="container taCenter">
         <span>
           © Avadhoot Dandekar {new Date().getFullYear()} All rights reserved ✨ Proudly deployed on{' '}
-          <a href="https://thriveweb.com.au/">Netlify</a>.
+          <a href="https://www.netlify.com/">Netlify</a>.
         </span>
       </div>
     </footer>
