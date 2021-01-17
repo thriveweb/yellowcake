@@ -11,7 +11,7 @@ export default () => (
     <footer className="footer">
       <div className="container taCenter">
         <span>
-          © Avadhoot Dandekar {new Date().getFullYear()} All rights reserved ✨ Proudly deployed {' '}
+          © Avadhoot Dandekar {new Date().getFullYear()} All rights reserved ✨ Proudly deployed on{' '}
           <a href="https://thriveweb.com.au/">Netlify</a>.
         </span>
       </div>
