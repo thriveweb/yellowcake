@@ -1,22 +1,24 @@
 ---
 template: HomePage
-slug: ""
+slug: ''
 title: Yellow Lemon
-featuredImage: https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/
-subtitle: >-2
-   Welcome to the ultimate Gatsby and Netlify starter project. This project uses Netlify CMS.
+featuredImage: 'https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/'
+subtitle: >
+  Welcome to the ultimate Gatsby and Netlify starter project. This project uses
+  Netlify CMS.
 
-  ### *New Gatsby Project with Netlify CMS!!*
+
+  ### *New Gatsby Project with Netlify CMS!! **Now impoted this in Stackbit!!***
 
 
   Let us see the changes effected.
 
 
-  1. npm install
+  1.  npm install
 
-  2. gatsby build
+  2.  gatsby build
 
-  3. gatsby develop
+  3.  gatsby develop
 meta:
   description: This is a meta description.
   title: The Ultimate Gatsby Starter
