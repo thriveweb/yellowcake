@@ -1,7 +1,7 @@
-siteTitle: Yellow Lemon
+siteTitle: Avadhoot Dandekar
 siteUrl: https://yellowlemon.netlify.app
-siteDescription: A starter project for creating lightning-fast websites with
-  Gatsby v2 Netlify CMS v2 and Uploadcare media library.
+siteDescription: This is a Gatsby project deployed on Netlify. This project uses
+  Netlify CMS as a Content Manager.
 socialMediaCard:
   image: https://ucarecdn.com/fcc8d148-a9a8-42ee-a793-0f12b1437f61/
-googleTrackingId: UA-133175780-1
+googleTrackingId: UA-150858351-1
