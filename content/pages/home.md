@@ -1,8 +1,8 @@
 ---
 template: HomePage
-slug: ''
+slug: ""
 title: Yellow Lemon!!
-featuredImage: 'https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/'
+featuredImage: https://ucarecdn.com/e350fee7-857d-4e4f-a12e-0dbcdf62f192/
 subtitle: >
   Welcome to the ultimate Gatsby and Netlify starter project. This project uses
   Netlify CMS.
