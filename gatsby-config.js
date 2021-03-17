@@ -17,31 +17,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        runtimeCaching: [
-          {
-            // Use cacheFirst since these don't need to be revalidated (same RegExp
-            // and same reason as above)
-            urlPattern: /(\.js$|\.css$|static\/)/,
-            handler: `cacheFirst`
-          },
-          {
-            // Add runtime caching of various other page resources
-            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-            handler: `staleWhileRevalidate`
-          },
-          {
-            // uploadcare
-            urlPattern: /^https:\/\/ucarecdn.com\/[-a-zA-Z0-9@:%_\+.~#?&//=]*?\/10x\//,
-            handler: `staleWhileRevalidate`
-          }
-        ],
-        skipWaiting: true,
-        clientsClaim: true
-      }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'yellowcake',

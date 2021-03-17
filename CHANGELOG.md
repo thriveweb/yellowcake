@@ -1,3 +1,8 @@
+## 3.0.4 - 2021-04-17
+
+Thanks @FDiskas for the pull request
+Remove gatsby offline plugin due to errors.
+
 ## 3.0.3 - 2020-10-16
 
 Fix es lint from Nav component.
