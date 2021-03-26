@@ -6,7 +6,7 @@ import Logo from './Logo'
 
 import './Nav.css'
 
-export class Navigation extends Component {
+class Navigation extends Component {
   state = {
     active: false,
     activeSubNav: false,
@@ -126,6 +126,8 @@ export class Navigation extends Component {
   }
 }
 
-export default ({ subNav }) => (
+const Nav = ({ subNav }) => (
   <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
 )
+
+export default Nav;

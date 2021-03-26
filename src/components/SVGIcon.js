@@ -2,7 +2,7 @@ import React from 'react'
 
 import './SVGIcon.css'
 
-export default ({ src }) => {
+const SVGIcon = ({ src }) => {
   const icon = {
     maskImage: `url(${src})`,
     WebkitMaskImage: `url(${src})`
@@ -13,3 +13,5 @@ export default ({ src }) => {
     </div>
   )
 }
+
+export default SVGIcon;

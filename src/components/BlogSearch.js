@@ -3,7 +3,7 @@ import { navigate } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
 
-export default ({ pageCount }) => {
+const BlogSearch = ({ pageCount }) => {
   return (
     <Location>
       {({ location }) => {
@@ -31,3 +31,5 @@ export default ({ pageCount }) => {
     </Location>
   )
 }
+
+export default BlogSearch;

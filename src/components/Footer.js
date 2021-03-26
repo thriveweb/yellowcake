@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 
-export default () => (
+const Footer = () => (
   <div>
     <h2 className="taCenter">
       Follow us{' '}
@@ -18,3 +18,5 @@ export default () => (
     </footer>
   </div>
 )
+
+export default Footer;

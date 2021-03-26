@@ -1,7 +1,7 @@
 import React from 'react'
 import './GithubCorner.css'
 
-export default ({ url, style, className = '', color = '#151513' }) => (
+const GithubCorner = ({ url, style, className = '', color = '#151513' }) => (
   <a
     className={`GithubCorner ${className}`}
     href={url}
@@ -31,3 +31,5 @@ export default ({ url, style, className = '', color = '#151513' }) => (
     </svg>
   </a>
 )
+
+export default GithubCorner;
