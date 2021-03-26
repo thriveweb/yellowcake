@@ -19,7 +19,7 @@ An opinionated starter project for creating lightning-fast websites with [Gatsby
 
 1.  Hit the **Deploy to Netlify** button. This will:
 
-- Clone the repo into your Github account
+- Clone the repo into your Github account.
 - Create you a new project on Netlify, build & deploy
 
 1.  Once your Netlify project has been created, check a couple of settings:
