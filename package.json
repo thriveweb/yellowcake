@@ -38,6 +38,8 @@
     "modern-normalize": "^1.0.0",
     "netlify-cms-app": "^2.14.32",
     "netlify-cms-media-library-uploadcare": "^0.5.10",
+    "node-sass": "^5.0.0",
+    "path": "^0.12.7",
     "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -66,7 +68,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\""
   },
   "devDependencies": {
-    "prettier": "^1.19.1",
-    "sass": "^1.32.8"
+    "path-browserify": "^1.0.1",
+    "prettier": "^1.19.1"
   }
 }
