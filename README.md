@@ -56,7 +56,7 @@ If you are adding or editing content locally in the CMS, a couple of things to n
 
 ## Editing CMS fields
 
-The Netlify CMS configuration is located in `public/admin/config.yml`. This is where you will configure the pages, fields, posts and settings that are editable by the CMS.
+The Netlify CMS configuration is located in `static/admin/config.yml`. This is where you will configure the pages, fields, posts and settings that are editable by the CMS.
 
 Find out more in the [Netlify CMS Docs](https://www.netlifycms.org/docs/#configuration).
 
