@@ -10,6 +10,15 @@ import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 
+const config = {
+  media_library: {
+      config: {
+          publicKey: process.env.GATSBY_UPLOADCARE_PUBLIC_KEY
+      }
+  },
+}
+CMS.init({ config })
+
 CMS.registerMediaLibrary(uploadcare)
 
 if (
